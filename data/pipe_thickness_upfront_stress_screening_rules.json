@@ -1,0 +1,1226 @@
+{
+    "schema_version": "1.0.0",
+    "file_name": "pipe_thickness_upfront_stress_screening_rules.json",
+    "source_standard": {
+        "document_title": "NRL Expansion Project - Specification for Piping Stress Analysis",
+        "document_number": "TP-1ZZZA-PI-SPE-0001",
+        "tp_doc_ref": "082176C-ZZZ-JSD-1300-0004_D2",
+        "revision": "D2",
+        "revision_date": "2021-02-23",
+        "project": "Numaligarh Refinery Limited Expansion Project",
+        "basis_note": "Logic extracted for web-app upfront screening only. Final stress analysis shall be performed by competent piping stress engineer using applicable project codes, standards, line list, equipment data, vendor data, and approved project specifications."
+    },
+    "intended_use": {
+        "app_module": "Pipe Thickness Calculator",
+        "purpose": "Show upfront stress-analysis criticality, consult warnings, special-service warnings, and interface requirements while the engineer calculates minimum required pipe thickness.",
+        "important_limitation": "This JSON does not calculate minimum wall thickness. The source document itself states that verification of pipe and fitting thickness due to internal pressure is outside the scope of the piping stress-analysis specification.",
+        "recommended_app_behavior": "Run this screening after the user enters pipe size, service, design temperature, design pressure, pressure class, material, connected equipment, fluid/service flags, and special conditions. Display the highest required analysis level and all triggered warnings before accepting the selected pipe schedule."
+    },
+    "global_messages": {
+        "thickness_outside_stress_spec": "Pipe thickness due to internal pressure is outside this stress-analysis specification. Calculate minimum required pipe thickness separately as per applicable piping code, then use this screening to identify stress-analysis, support, flexibility, nozzle-load, dynamic, wind, seismic, flange-leakage, and consultation requirements.",
+        "minimum_thickness_not_final_pipe_acceptance": "Minimum pressure thickness alone is not final pipe acceptability. Pipe routing, supports, flexibility, nozzle loads, dynamic loads, wind, seismic, flange leakage, corrosion, testing, and vendor limits may govern final pipe specification or support design.",
+        "consult_stress_engineer": "Consult Piping Stress Engineer before finalizing pipe schedule, routing, supports, or nozzle connection.",
+        "consult_mechanical": "Consult Mechanical / Equipment Engineer for nozzle allowable loads, nozzle stiffness, vendor allowable reactions, equipment movements, and local stress checks.",
+        "consult_process_hse": "Consult Process / HSE Design for surge lines, slug/surge forces, two-phase-flow conditions, PSV reaction forces, and special operating cases.",
+        "consult_civil_structural": "Consult Civil / Structural Engineer for support loads, anchor loads, underground soil model, structure interface, wind/seismic support feasibility, and settlement inputs.",
+        "consult_vendor": "Consult Vendor for equipment allowable loads, actuator weights, package limits, pulsation study, expansion-joint data, spring support data, and equipment displacements.",
+        "engineering_department_warning": "Consult with your Engineering Department."
+    },
+    "user_input_schema": {
+        "required_inputs": [
+            {
+                "field": "nps_in",
+                "type": "number",
+                "unit": "inch",
+                "description": "Nominal pipe size used for screening. Use NPS/diameter equivalent consistently."
+            },
+            {
+                "field": "design_temperature_c",
+                "type": "number",
+                "unit": "degC"
+            },
+            {
+                "field": "ambient_temperature_for_flexibility_c",
+                "type": "number",
+                "unit": "degC",
+                "default": 21
+            },
+            {
+                "field": "design_pressure_bar",
+                "type": "number",
+                "unit": "bar"
+            },
+            {
+                "field": "pressure_class_lb",
+                "type": "number",
+                "allowed_examples": [
+                    150,
+                    300,
+                    600,
+                    900,
+                    1500,
+                    2500
+                ]
+            },
+            {
+                "field": "service_code",
+                "type": "string",
+                "examples": [
+                    "process",
+                    "utility",
+                    "steam",
+                    "BFW",
+                    "hydrogen",
+                    "flare",
+                    "cryogenic"
+                ]
+            },
+            {
+                "field": "material_family",
+                "type": "string",
+                "examples": [
+                    "carbon_steel",
+                    "low_temperature_carbon_steel",
+                    "stainless_steel",
+                    "non_metallic",
+                    "non_ferrous",
+                    "duplex",
+                    "alloy_steel"
+                ]
+            },
+            {
+                "field": "connected_equipment_type",
+                "type": "string",
+                "examples": [
+                    "none",
+                    "non_fragile_low_movement",
+                    "rotating_machine",
+                    "sensitive_equipment",
+                    "storage_tank",
+                    "heater",
+                    "furnace",
+                    "reactor",
+                    "pressure_vessel",
+                    "heat_exchanger",
+                    "air_cooler",
+                    "centrifugal_pump",
+                    "reciprocating_pump",
+                    "compressor",
+                    "turbine",
+                    "package"
+                ]
+            },
+            {
+                "field": "special_flags",
+                "type": "array[string]",
+                "examples": [
+                    "expansion_joint",
+                    "buried_line",
+                    "aboveground_connected_to_underground",
+                    "slug_flow",
+                    "surge_flow",
+                    "two_phase_flow",
+                    "psv_connected",
+                    "rupture_disc_connected",
+                    "esdv_connected",
+                    "block_valve_reaction_possible",
+                    "jacketed_piping",
+                    "reboiler_piping",
+                    "flare_header",
+                    "flare_sub_header",
+                    "bare_line",
+                    "steam_out",
+                    "revamp_existing_line",
+                    "sloped_line",
+                    "control_valve",
+                    "column_overhead_line",
+                    "transfer_line",
+                    "line_above_10m",
+                    "injection_point",
+                    "desuperheater"
+                ]
+            }
+        ],
+        "computed_inputs": [
+            {
+                "field": "temperature_delta_c",
+                "formula": "abs(design_temperature_c - ambient_temperature_for_flexibility_c)",
+                "default_basis": "Ambient temperature for flexibility analysis = 21 degC unless project-specific value is provided."
+            },
+            {
+                "field": "is_pressure_class_600_or_above",
+                "formula": "pressure_class_lb >= 600"
+            },
+            {
+                "field": "is_pressure_class_900_or_above",
+                "formula": "pressure_class_lb >= 900"
+            },
+            {
+                "field": "is_large_bore_18_or_above",
+                "formula": "nps_in >= 18"
+            },
+            {
+                "field": "is_large_bore_24_or_above",
+                "formula": "nps_in > 24"
+            },
+            {
+                "field": "is_size_above_2",
+                "formula": "nps_in > 2"
+            },
+            {
+                "field": "is_size_12_or_above",
+                "formula": "nps_in >= 12"
+            }
+        ]
+    },
+    "design_reference_constants": {
+        "minimum_ambient_temperature_c": 5,
+        "maximum_ambient_temperature_c": 38,
+        "solar_temperature_c": 65,
+        "ambient_temperature_for_flexibility_analysis_c": 21,
+        "design_life_years": 20,
+        "bourdon_effect_pressure_threshold_bar": 20,
+        "general_sustained_sag_limit_mm": 10,
+        "steam_line_sag_limit_mm": 5,
+        "steel_to_steel_friction_coefficient": 0.3,
+        "steel_to_ptfe_friction_coefficient": 0.1,
+        "slug_minimum_natural_frequency_hz": 6,
+        "surge_minimum_natural_frequency_hz": 4,
+        "heater_transfer_line_minimum_frequency_hz": 7,
+        "psv_dynamic_load_factor": 2,
+        "wind_basic_velocity_m_per_s": 50,
+        "wind_shape_factor_for_piping": 0.7,
+        "seismic_zone_factor": 0.36,
+        "seismic_response_reduction_factor": 2.5,
+        "seismic_importance_factor": 1.5,
+        "design_horizontal_seismic_coefficient_Ah": 0.378,
+        "design_vertical_seismic_coefficient_Av": 0.252,
+        "hydrotest_allowable_stress_factor_of_yield": 0.9
+    },
+    "analysis_level_definitions": {
+        "level_1": {
+            "label": "Level 1 - Visual Inspection",
+            "description": "Approximate visual inspection of routing and supporting for lines clearly having adequate flexibility. Detailed CAESAR II analysis is not required by this level.",
+            "web_app_output": "Level 1: Visual inspection may be acceptable, subject to engineering judgment and project approval."
+        },
+        "level_2": {
+            "label": "Level 2 - Simplified CAESAR II Analysis",
+            "description": "Simplified computer analysis using CAESAR II. CAESAR II report to be submitted for Owner/PMC review where applicable.",
+            "web_app_output": "Level 2: Simplified CAESAR II stress analysis required. Consult Piping Stress Engineer."
+        },
+        "level_3": {
+            "label": "Level 3 - Detailed CAESAR II Analysis",
+            "description": "Detailed computer analysis using CAESAR II to meet applicable code requirements such as ASME B31.1/B31.3. CAESAR II report to be submitted for Owner/PMC review where applicable.",
+            "web_app_output": "Level 3: Detailed CAESAR II stress analysis required. Do not finalize pipe schedule/routing without Piping Stress Engineer review."
+        }
+    },
+    "evaluation_logic": {
+        "rule_selection_method": "Evaluate all applicable table rules and special-service rules. Select the highest numeric stress level triggered. Always display every triggered warning and consult message.",
+        "level_priority": {
+            "level_1": 1,
+            "level_2": 2,
+            "level_3": 3
+        },
+        "temperature_band_boundary_policy": "For implementation, use lower level up to and including the stated boundary temperature delta; use the next higher level above that boundary. Example: <=260 degC uses the lower band, >260 degC uses the next band.",
+        "small_bore_policy": "The stress criticality table mainly starts above 1.5 inch. For NPS <= 1.5 inch, do not auto-clear. Apply special-service rules and show a warning to consult Stress Engineer where service, equipment, vibration, temperature, PSV, slug/surge, or safety criticality exists.",
+        "multi_category_policy": "A line may match more than one category, such as stainless steel plus rotating equipment plus high pressure. The app shall not average categories. It shall use the highest triggered analysis level and show all reasons."
+    },
+    "app_display_output_template": {
+        "recommended_fields": [
+            "applicable_code_basis",
+            "highest_required_stress_level",
+            "matched_table_categories",
+            "triggered_special_rules",
+            "stress_engineer_warning",
+            "mechanical_consult_warning",
+            "process_hse_consult_warning",
+            "civil_structural_consult_warning",
+            "vendor_consult_warning",
+            "thickness_scope_warning",
+            "flange_leakage_required",
+            "wind_analysis_required",
+            "seismic_analysis_required",
+            "dynamic_analysis_required",
+            "notes_for_engineer"
+        ]
+    },
+    "applicable_code_rules": [
+        {
+            "id": "CODE-001",
+            "condition_expression": "service_code not in ['steam', 'BFW']",
+            "applicable_code_basis": "ASME B31.3 Process Piping for process/utility piping unless a more specific project, statutory, or licensor requirement governs.",
+            "warnings": [
+                "Design temperature and pressure shall be taken from line list/design basis. Allowable stress and stress limits shall follow ASME B31.3."
+            ],
+            "source_section": "3, 10.2"
+        },
+        {
+            "id": "CODE-002",
+            "condition_expression": "service_code in ['steam', 'BFW']",
+            "applicable_code_basis": "IBR / ASME B31.1 for Steam and BFW piping.",
+            "minimum_stress_level": 2,
+            "warnings": [
+                "Lines > 2 inch subjected to IBR regulations are Level 2 minimum.",
+                "Consult with your Engineering Department."
+            ],
+            "source_section": "3, 9.1 Note v"
+        },
+        {
+            "id": "CODE-003",
+            "condition_expression": "pressure_class_lb >= 900",
+            "applicable_code_basis": "ASME B31.3 Chapter IX high-pressure piping definition/check applies.",
+            "warnings": [
+                "Piping 900# and above shall be defined in accordance with Chapter IX of ASME B31.3.",
+                "Consult Piping Stress Engineer."
+            ],
+            "source_section": "10.8"
+        }
+    ],
+    "stress_critical_line_list_rules": [
+        {
+            "category_code": "A",
+            "category_name": "Non-fragile equipment and/or low movements",
+            "applicable_when": "connected_equipment_type == 'non_fragile_low_movement' or special_flags contains 'non_fragile_low_movement'",
+            "pipe_size_rules": [
+                {
+                    "nps_gt": 1.5,
+                    "nps_lte": 3,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 260,
+                            "level": 1
+                        },
+                        {
+                            "delta_gt_c": 260,
+                            "level": 2
+                        }
+                    ]
+                },
+                {
+                    "nps_gt": 3,
+                    "nps_lte": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 90,
+                            "level": 1
+                        },
+                        {
+                            "delta_gt_c": 90,
+                            "delta_lte_c": 350,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 350,
+                            "level": 3
+                        }
+                    ]
+                },
+                {
+                    "nps_gt": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 150,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 150,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "source_section": "9.1 Table 1"
+        },
+        {
+            "category_code": "B",
+            "category_name": "Rotating machine and/or sensitive equipment",
+            "applicable_when": "connected_equipment_type in ['rotating_machine', 'sensitive_equipment', 'centrifugal_pump', 'compressor', 'turbine'] or special_flags contains any of ['plate_fin_exchanger', 'cold_box']",
+            "pipe_size_rules": [
+                {
+                    "nps_gt": 1.5,
+                    "nps_lte": 4,
+                    "temperature_delta_rules": [
+                        {
+                            "all_temperature_deltas": true,
+                            "level": 2
+                        }
+                    ]
+                },
+                {
+                    "nps_gt": 4,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 65,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 65,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "source_section": "9.1 Table 1 and Note ii"
+        },
+        {
+            "category_code": "C",
+            "category_name": "Storage tank",
+            "applicable_when": "connected_equipment_type == 'storage_tank'",
+            "pipe_size_rules": [
+                {
+                    "nps_gt": 1.5,
+                    "nps_lt": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 150,
+                            "level": 1
+                        },
+                        {
+                            "delta_gt_c": 150,
+                            "level": 2
+                        }
+                    ]
+                },
+                {
+                    "nps_gte": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 65,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 65,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "additional_warnings": [
+                "For tank nozzles, consider radial movement, downward rotation due to bulging, and vertical settlement."
+            ],
+            "source_section": "9.1 Table 1, 12.5"
+        },
+        {
+            "category_code": "D",
+            "category_name": "Stainless Steel",
+            "applicable_when": "material_family == 'stainless_steel'",
+            "pipe_size_rules": [
+                {
+                    "nps_gt": 1.5,
+                    "nps_lte": 3,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 260,
+                            "level": 1
+                        },
+                        {
+                            "delta_gt_c": 260,
+                            "level": 2
+                        }
+                    ]
+                },
+                {
+                    "nps_gt": 3,
+                    "nps_lte": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 65,
+                            "level": 1
+                        },
+                        {
+                            "delta_gt_c": 65,
+                            "delta_lte_c": 350,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 350,
+                            "level": 3
+                        }
+                    ]
+                },
+                {
+                    "nps_gt": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 150,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 150,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "source_section": "9.1 Table 1"
+        },
+        {
+            "category_code": "E",
+            "category_name": "Expansion Joint",
+            "applicable_when": "special_flags contains 'expansion_joint'",
+            "pipe_size_rules": [
+                {
+                    "all_pipe_sizes": true,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 65,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 65,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "additional_warnings": [
+                "Use of expansion joints shall be avoided as far as possible. Pressure thrust and equipment/support reactions must be verified. EJMA requirements apply."
+            ],
+            "source_section": "9.1 Table 1, 11.11"
+        },
+        {
+            "category_code": "F",
+            "category_name": "Non-metallic and non-ferrous",
+            "applicable_when": "material_family in ['non_metallic', 'non_ferrous']",
+            "pipe_size_rules": [
+                {
+                    "nps_gte": 3,
+                    "temperature_delta_rules": [
+                        {
+                            "all_temperature_deltas": true,
+                            "level": 2
+                        }
+                    ]
+                }
+            ],
+            "source_section": "9.1 Table 1"
+        },
+        {
+            "category_code": "G",
+            "category_name": "High pressure, Class 600 lb and above",
+            "applicable_when": "pressure_class_lb >= 600",
+            "pipe_size_rules": [
+                {
+                    "nps_gte": 2,
+                    "nps_lt": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 150,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 150,
+                            "level": 3
+                        }
+                    ]
+                },
+                {
+                    "nps_gte": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "all_temperature_deltas": true,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "additional_warnings": [
+                "If pressure class is 900# or above, ASME B31.3 Chapter IX high-pressure piping requirements shall be considered."
+            ],
+            "source_section": "9.1 Table 1, 10.8"
+        },
+        {
+            "category_code": "H",
+            "category_name": "Cryogenic",
+            "applicable_when": "service_code == 'cryogenic' or design_temperature_c < 0 or special_flags contains 'cryogenic'",
+            "pipe_size_rules": [
+                {
+                    "nps_gte": 2,
+                    "temperature_rules_by_design_temperature": [
+                        {
+                            "design_temp_gte_c": -45,
+                            "level": 2
+                        },
+                        {
+                            "design_temp_lte_c": -46,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "additional_warnings": [
+                "For low-temperature carbon steel below -45 degC, impact test requirement and stress ratio verification shall be checked with Materials group."
+            ],
+            "source_section": "9.1 Table 1, 10.5"
+        },
+        {
+            "category_code": "J",
+            "category_name": "Reciprocating machine, pumps and compressors",
+            "applicable_when": "connected_equipment_type in ['reciprocating_pump', 'reciprocating_compressor'] or special_flags contains 'reciprocating_machine'",
+            "pipe_size_rules": [
+                {
+                    "nps_gt": 1.5,
+                    "nps_lte": 3,
+                    "temperature_delta_rules": [
+                        {
+                            "all_temperature_deltas": true,
+                            "level": 2
+                        }
+                    ]
+                },
+                {
+                    "nps_gt": 3,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 65,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 65,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "additional_warnings": [
+                "Vendor shall perform analog/pulsation study. Maintain natural frequency requirements from vendor. Independent supports from grade are preferred for reciprocating equipment piping."
+            ],
+            "source_section": "9.1 Table 1, 12.9, 13"
+        },
+        {
+            "category_code": "K",
+            "category_name": "Heater, transfer line, compressor, turbine",
+            "applicable_when": "connected_equipment_type in ['heater', 'furnace', 'compressor', 'turbine'] or special_flags contains any of ['heater_transfer_line', 'to_from_heater', 'to_from_steam_generator']",
+            "pipe_size_rules": [
+                {
+                    "nps_gt": 1.5,
+                    "nps_lte": 3,
+                    "temperature_delta_rules": [
+                        {
+                            "all_temperature_deltas": true,
+                            "level": 2
+                        }
+                    ]
+                },
+                {
+                    "nps_gt": 3,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 65,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 65,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "additional_warnings": [
+                "All process lines to/from heaters and steam generators are critical category type K. Transfer lines from reactors to heaters are prone to vibration. Spring supports should be avoided as much as possible. Minimum acceptable frequency for transfer lines is 7 Hz."
+            ],
+            "source_section": "9.1 Table 1 and Note iii, 12.3"
+        },
+        {
+            "category_code": "L",
+            "category_name": "Buried lines",
+            "applicable_when": "special_flags contains 'buried_line' or special_flags contains 'aboveground_connected_to_underground'",
+            "pipe_size_rules": [
+                {
+                    "nps_gte": 3,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 65,
+                            "level": 1
+                        },
+                        {
+                            "delta_gt_c": 65,
+                            "delta_lte_c": 150,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 150,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "additional_warnings": [
+                "Aboveground piping connected to underground piping requires underground piping to be included in the stress model up to sufficient extent. Soil model from Civil is required."
+            ],
+            "source_section": "9.1 Table 1, 10.9"
+        },
+        {
+            "category_code": "M",
+            "category_name": "All other types except noted above",
+            "applicable_when": "No other specific category applies",
+            "pipe_size_rules": [
+                {
+                    "nps_gt": 1.5,
+                    "nps_lte": 6,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 260,
+                            "level": 1
+                        },
+                        {
+                            "delta_gt_c": 260,
+                            "level": 2
+                        }
+                    ]
+                },
+                {
+                    "nps_gt": 6,
+                    "nps_lte": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 150,
+                            "level": 1
+                        },
+                        {
+                            "delta_gt_c": 150,
+                            "delta_lte_c": 350,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 350,
+                            "level": 3
+                        }
+                    ]
+                },
+                {
+                    "nps_gt": 12,
+                    "temperature_delta_rules": [
+                        {
+                            "delta_lte_c": 260,
+                            "level": 2
+                        },
+                        {
+                            "delta_gt_c": 260,
+                            "level": 3
+                        }
+                    ]
+                }
+            ],
+            "source_section": "9.1 Table 1"
+        }
+    ],
+    "special_service_override_rules": [
+        {
+            "id": "SPECIAL-001",
+            "name": "Hydrogen high-pressure line",
+            "condition_expression": "service_code == 'hydrogen' and nps_in >= 4 and pressure_class_lb >= 900",
+            "minimum_stress_level": 2,
+            "warnings": [
+                "Hydrogen lines 4 inch and above with 900# rating are to be stress analyzed.",
+                "Also apply flange leakage screening for hydrogen lines."
+            ],
+            "consults": [
+                "stress_engineer"
+            ],
+            "source_section": "9.1 Note i, 14"
+        },
+        {
+            "id": "SPECIAL-002",
+            "name": "Sensitive equipment category mapping",
+            "condition_expression": "special_flags contains any of ['plate_fin_exchanger', 'cold_box']",
+            "apply_table_category": "B",
+            "warnings": [
+                "Lines connected to sensitive equipment such as plate fin exchangers and cold boxes shall be checked as category B."
+            ],
+            "consults": [
+                "stress_engineer",
+                "vendor",
+                "mechanical"
+            ],
+            "source_section": "9.1 Note ii"
+        },
+        {
+            "id": "SPECIAL-003",
+            "name": "Heater and steam generator process lines",
+            "condition_expression": "special_flags contains any of ['to_from_heater', 'to_from_steam_generator']",
+            "apply_table_category": "K",
+            "warnings": [
+                "All process lines to and from heaters and steam generators are included in critical category type K."
+            ],
+            "consults": [
+                "stress_engineer",
+                "mechanical",
+                "vendor"
+            ],
+            "source_section": "9.1 Note iii"
+        },
+        {
+            "id": "SPECIAL-004",
+            "name": "Reboiler, flare header/sub-header, jacketed piping critical category",
+            "condition_expression": "special_flags contains any of ['reboiler_piping', 'flare_header', 'flare_sub_header', 'jacketed_piping']",
+            "minimum_stress_level": 2,
+            "warnings": [
+                "Reboiler piping, flare headers/sub-headers, and jacketed piping are critical category. Consult Piping Stress Engineer.",
+                "For flare lines above 24 inch, obtain maximum percentage of liquid flow from Process for weight calculations.",
+                "For jacketed piping, check core-jacket buckling stress and weld strength."
+            ],
+            "consults": [
+                "stress_engineer",
+                "process_hse",
+                "mechanical"
+            ],
+            "source_section": "9.1 Note iv, 10.4, 11.12"
+        },
+        {
+            "id": "SPECIAL-005",
+            "name": "IBR regulated line above 2 inch",
+            "condition_expression": "special_flags contains 'IBR' and nps_in > 2",
+            "minimum_stress_level": 2,
+            "warnings": [
+                "Lines > 2 inch subjected to IBR regulations shall be Level 2 minimum."
+            ],
+            "consults": [
+                "stress_engineer"
+            ],
+            "source_section": "9.1 Note v"
+        },
+        {
+            "id": "SPECIAL-006",
+            "name": "Stress analyst discretion",
+            "condition_expression": "Any line assessed by engineer as requiring calculation due to complexity, safety consequence, special load, vibration, questionable support, poor routing, or equipment sensitivity",
+            "minimum_stress_level": 2,
+            "warnings": [
+                "The table does not exempt the engineer from making necessary calculations when assessed as necessary. Consult Stress Engineer."
+            ],
+            "consults": [
+                "stress_engineer"
+            ],
+            "source_section": "9.1 Note vi"
+        },
+        {
+            "id": "SPECIAL-007",
+            "name": "Two-phase slug or surge line above 2 inch",
+            "condition_expression": "nps_in > 2 and special_flags contains any of ['two_phase_flow', 'slug_flow', 'surge_flow']",
+            "minimum_stress_level": 2,
+            "dynamic_analysis_required": true,
+            "warnings": [
+                "Lines > 2 inch subjected to two-phase flow like slug or surge shall be Level 2 minimum.",
+                "Slug/surge loads and directions shall be shown on stress isometrics where applicable."
+            ],
+            "consults": [
+                "stress_engineer",
+                "process_hse",
+                "civil_structural"
+            ],
+            "source_section": "9.1 Note vii, 11.8, 11.9"
+        },
+        {
+            "id": "SPECIAL-008",
+            "name": "Relief valve, rupture disc, ESDV, or block valve reaction possibility above 2 inch",
+            "condition_expression": "nps_in > 2 and special_flags contains any of ['psv_connected', 'relief_valve_connected', 'rupture_disc_connected', 'esdv_connected', 'block_valve_reaction_possible']",
+            "minimum_stress_level": 2,
+            "warnings": [
+                "Lines > 2 inch connected to relief valves, rupture discs, ESDVs, or block valves with possible reaction force shall be Level 2 minimum.",
+                "PSV reaction forces shall be considered as per API RP 520 with dynamic load factor 2 where applicable."
+            ],
+            "consults": [
+                "stress_engineer",
+                "process_hse"
+            ],
+            "source_section": "9.1 Note viii, 11.10"
+        },
+        {
+            "id": "SPECIAL-009",
+            "name": "Low-temperature carbon steel below -45 degC",
+            "condition_expression": "material_family == 'low_temperature_carbon_steel' and design_temperature_c < -45",
+            "minimum_stress_level": 3,
+            "warnings": [
+                "For LTCS material usage below -45 degC, impact test requirement shall be verified with Materials group. If ASME B31.3 Sec. 323.2.2 is used, separate stress-ratio verification is required."
+            ],
+            "consults": [
+                "stress_engineer",
+                "mechanical",
+                "materials_group"
+            ],
+            "source_section": "10.5"
+        }
+    ],
+    "design_condition_warning_rules": [
+        {
+            "id": "DESIGN-001",
+            "name": "Bare line solar temperature",
+            "condition_expression": "special_flags contains 'bare_line' and design_temperature_c is missing_or_less_than_solar_basis",
+            "warnings": [
+                "For bare lines, solar temperature of 65 degC should be accounted if not mentioned in line list."
+            ],
+            "source_section": "10.1, 10.2"
+        },
+        {
+            "id": "DESIGN-002",
+            "name": "Steam-out temperature",
+            "condition_expression": "special_flags contains 'steam_out'",
+            "minimum_design_temperature_c_for_screening": 120,
+            "warnings": [
+                "All lines subjected to steam-out shall be designed at 120 degC minimum if not provided elsewhere."
+            ],
+            "source_section": "10.2, 11.1.3"
+        },
+        {
+            "id": "DESIGN-003",
+            "name": "Bourdon effect",
+            "condition_expression": "design_pressure_bar > 20",
+            "warnings": [
+                "Bourdon effect, translations only, shall be considered for lines subjected to design pressure above 20 bar. This is a stress/flexibility modeling warning, not a pressure-thickness formula."
+            ],
+            "consults": [
+                "stress_engineer"
+            ],
+            "source_section": "10.2"
+        },
+        {
+            "id": "DESIGN-004",
+            "name": "Existing revamp line all cases corroded",
+            "condition_expression": "special_flags contains 'revamp_existing_line'",
+            "warnings": [
+                "For calculations involving existing revamp areas, all cases corroded shall be activated in existing lines."
+            ],
+            "consults": [
+                "stress_engineer"
+            ],
+            "source_section": "10.5"
+        },
+        {
+            "id": "DESIGN-005",
+            "name": "Sustained sagging limit",
+            "condition_expression": "all_lines",
+            "warnings": [
+                "Sustained sagging limit is generally 10 mm, except steam lines limited to 5 mm and sloped lines as per required slope."
+            ],
+            "consults": [
+                "stress_engineer",
+                "civil_structural"
+            ],
+            "source_section": "11.1.1"
+        },
+        {
+            "id": "DESIGN-006",
+            "name": "Cyclic load count above 7000",
+            "condition_expression": "operating_cycles_over_design_life > 7000",
+            "warnings": [
+                "Stress range factor shall be calculated for systems having operating cycles more than 7000 during design life."
+            ],
+            "consults": [
+                "stress_engineer"
+            ],
+            "source_section": "11.5"
+        },
+        {
+            "id": "DESIGN-007",
+            "name": "Large D/t ratio",
+            "condition_expression": "diameter_to_thickness_ratio >= 100",
+            "warnings": [
+                "For D/T >= 100, SIFs at bends and branches are to be evaluated and manually edited in CAESAR where applicable."
+            ],
+            "consults": [
+                "stress_engineer"
+            ],
+            "source_section": "11.6"
+        },
+        {
+            "id": "DESIGN-008",
+            "name": "Control valve reaction and actuator weight",
+            "condition_expression": "special_flags contains 'control_valve'",
+            "warnings": [
+                "Control valve forces shall be studied, especially pressure control valves, blowdown valves, and emergency shutdown valves. Control valve and actuator weights shall be obtained from vendor data."
+            ],
+            "consults": [
+                "stress_engineer",
+                "vendor"
+            ],
+            "source_section": "10.4, 11.7"
+        }
+    ],
+    "wind_analysis_rules": [
+        {
+            "id": "WIND-001",
+            "condition_expression": "special_flags contains any of ['column_overhead_line', 'transfer_line', 'flare_header']",
+            "wind_analysis_required": true,
+            "warnings": [
+                "Wind analysis required for column overhead lines, transfer lines, and flare headers."
+            ],
+            "source_section": "10.6"
+        },
+        {
+            "id": "WIND-002",
+            "condition_expression": "nps_in >= 18 and special_flags contains 'line_above_10m'",
+            "wind_analysis_required": true,
+            "warnings": [
+                "Wind analysis required for line size 18 inch OD and above, including insulation if any, running above 10 m from HPP level."
+            ],
+            "source_section": "10.6"
+        }
+    ],
+    "seismic_analysis_rules": [
+        {
+            "id": "SEISMIC-001",
+            "condition_expression": "nps_in >= 12",
+            "seismic_analysis_required": true,
+            "warnings": [
+                "Seismic analysis shall be done for lines 12 inch and above."
+            ],
+            "source_section": "10.7"
+        }
+    ],
+    "dynamic_analysis_rules": [
+        {
+            "id": "DYN-001",
+            "name": "Slug flow",
+            "condition_expression": "special_flags contains 'slug_flow'",
+            "dynamic_analysis_required": true,
+            "minimum_stress_level": 2,
+            "formula_reference": {
+                "Fx": "rho * v^2 * A * (1 - cos(alpha))",
+                "Fy": "rho * v^2 * A * sin(alpha)",
+                "Fr": "rho * v^2 * A * sqrt(2 * (1 - cos(alpha)))",
+                "variables": {
+                    "rho": "slug density",
+                    "v": "slug velocity",
+                    "A": "inside cross-sectional area",
+                    "alpha": "bend angle or 90 degrees for tee"
+                }
+            },
+            "warnings": [
+                "For slug flow, provide stop with hold-down at each change of direction, hold-down supports on vertical pipe parts, and maintain minimum natural frequency of 6 Hz."
+            ],
+            "consults": [
+                "stress_engineer",
+                "process_hse",
+                "civil_structural"
+            ],
+            "source_section": "11.8"
+        },
+        {
+            "id": "DYN-002",
+            "name": "Surge flow",
+            "condition_expression": "special_flags contains 'surge_flow'",
+            "dynamic_analysis_required": true,
+            "minimum_stress_level": 2,
+            "warnings": [
+                "Surge may occur due to pump start-up, sudden shutdown, or rapid valve closure. Static force analysis and modal analysis are required where applicable. Minimum natural frequency is 4 Hz."
+            ],
+            "consults": [
+                "stress_engineer",
+                "process_hse",
+                "civil_structural"
+            ],
+            "source_section": "11.9"
+        },
+        {
+            "id": "DYN-003",
+            "name": "PSV reaction",
+            "condition_expression": "special_flags contains any of ['psv_connected', 'relief_valve_connected']",
+            "dynamic_analysis_required": true,
+            "warnings": [
+                "Safety valve reaction forces are calculated as per API RP 520. Dynamic load factor of 2 is considered."
+            ],
+            "consults": [
+                "stress_engineer",
+                "process_hse"
+            ],
+            "source_section": "11.10"
+        },
+        {
+            "id": "DYN-004",
+            "name": "Reciprocating equipment pulsation",
+            "condition_expression": "connected_equipment_type in ['reciprocating_pump', 'reciprocating_compressor']",
+            "dynamic_analysis_required": true,
+            "warnings": [
+                "Vendor shall perform analog/pulsation study. Piping shall be designed to avoid resonance with imposed dynamic loads."
+            ],
+            "consults": [
+                "stress_engineer",
+                "vendor",
+                "civil_structural"
+            ],
+            "source_section": "9.1, 12.9, 13"
+        }
+    ],
+    "flange_leakage_analysis_rules": [
+        {
+            "id": "FLANGE-001",
+            "condition_expression": "nps_in >= 18 and service_code not in ['air', 'water']",
+            "flange_leakage_analysis_required": true,
+            "warnings": [
+                "Flange leak check required for 18 inch and above all lines except air and water lines."
+            ],
+            "source_section": "14"
+        },
+        {
+            "id": "FLANGE-002",
+            "condition_expression": "service_code == 'hydrogen' and nps_in >= 4 and pressure_class_lb >= 600",
+            "flange_leakage_analysis_required": true,
+            "warnings": [
+                "Flange leak check required for hydrogen lines 4 inch and above with flange rating 600# and above."
+            ],
+            "source_section": "14"
+        },
+        {
+            "id": "FLANGE-003",
+            "condition_expression": "nps_in >= 8 and pressure_class_lb >= 900",
+            "flange_leakage_analysis_required": true,
+            "warnings": [
+                "Flange leak check required for 8 inch and above all lines with flange rating 900# and above."
+            ],
+            "source_section": "14"
+        },
+        {
+            "id": "FLANGE-004",
+            "condition_expression": "special_flags contains any of ['injection_point', 'desuperheater']",
+            "flange_leakage_analysis_required": true,
+            "warnings": [
+                "Flange leak check required for critical piping circuits such as injection points and desuperheaters."
+            ],
+            "source_section": "14"
+        },
+        {
+            "id": "FLANGE-005",
+            "condition_expression": "special_flags contains 'psv_inlet_flange'",
+            "flange_leakage_analysis_required": true,
+            "warnings": [
+                "Flange leak check required for all flanges connected to inlet of PSVs."
+            ],
+            "source_section": "14"
+        }
+    ],
+    "equipment_interface_rules": [
+        {
+            "id": "EQ-001",
+            "name": "Pressure vessels, columns, exchangers",
+            "condition_expression": "connected_equipment_type in ['pressure_vessel', 'column', 'heat_exchanger']",
+            "consults": [
+                "mechanical",
+                "stress_engineer"
+            ],
+            "warnings": [
+                "Nozzle loads shall be lower than allowable reactions accepted by Mechanical Department. If allowable data are not available, WRC 107/WRC 297 or other approved local stress methods are required."
+            ],
+            "source_section": "12.1"
+        },
+        {
+            "id": "EQ-002",
+            "name": "Air coolers",
+            "condition_expression": "connected_equipment_type == 'air_cooler'",
+            "consults": [
+                "mechanical",
+                "vendor",
+                "stress_engineer"
+            ],
+            "warnings": [
+                "Air cooler nozzle reactions shall be checked as per API 661. Individual nozzle, header, and bay checks are required for critical nozzle connections."
+            ],
+            "source_section": "12.2"
+        },
+        {
+            "id": "EQ-003",
+            "name": "Heaters and furnaces",
+            "condition_expression": "connected_equipment_type in ['heater', 'furnace']",
+            "consults": [
+                "mechanical",
+                "vendor",
+                "stress_engineer"
+            ],
+            "warnings": [
+                "Heater/furnace nozzle reactions shall be checked against API 560/vendor allowable loads. Heater transfer lines are vibration-prone; routing should be short and spring supports avoided where possible."
+            ],
+            "source_section": "12.3"
+        },
+        {
+            "id": "EQ-004",
+            "name": "Reactors",
+            "condition_expression": "connected_equipment_type == 'reactor'",
+            "consults": [
+                "process_hse",
+                "mechanical",
+                "stress_engineer"
+            ],
+            "warnings": [
+                "Reactor connected piping shall include all possible operating modes, cyclic conditions, and reactor thermal growth."
+            ],
+            "source_section": "12.4"
+        },
+        {
+            "id": "EQ-005",
+            "name": "Tanks",
+            "condition_expression": "connected_equipment_type == 'storage_tank'",
+            "consults": [
+                "mechanical",
+                "civil_structural",
+                "stress_engineer"
+            ],
+            "warnings": [
+                "Tank nozzle flexibility and stresses shall consider API 650 Appendix P, radial movement, downward rotation, and vertical settlement."
+            ],
+            "source_section": "12.5"
+        },
+        {
+            "id": "EQ-006",
+            "name": "Centrifugal pumps",
+            "condition_expression": "connected_equipment_type == 'centrifugal_pump'",
+            "consults": [
+                "mechanical",
+                "vendor",
+                "stress_engineer"
+            ],
+            "warnings": [
+                "Pump nozzle loads shall be checked as per API 610 where applicable. Flange alignment with spring hangers unlocked shall be checked. First rigid support from pump nozzle shall be adjustable."
+            ],
+            "source_section": "12.8"
+        },
+        {
+            "id": "EQ-007",
+            "name": "Centrifugal compressors and turbines",
+            "condition_expression": "connected_equipment_type in ['centrifugal_compressor', 'compressor', 'turbine']",
+            "consults": [
+                "mechanical",
+                "vendor",
+                "stress_engineer"
+            ],
+            "warnings": [
+                "Nozzle loads shall meet NEMA SM23 criteria/factor agreed with Mechanical specialist and vendor. Flange alignment is critical. Variable spring hanger variation shall be limited to 12 percent in these lines."
+            ],
+            "source_section": "12.10"
+        },
+        {
+            "id": "EQ-008",
+            "name": "Packages",
+            "condition_expression": "connected_equipment_type == 'package'",
+            "consults": [
+                "vendor",
+                "mechanical",
+                "stress_engineer"
+            ],
+            "warnings": [
+                "Package limits and nearby anchor feasibility shall be agreed with manufacturer. Stress model may need to include line inside package scope up to equipment."
+            ],
+            "source_section": "12.11"
+        }
+    ],
+    "web_app_result_mapping": {
+        "level_1": {
+            "badge": "Stress Screening: Level 1",
+            "severity": "info",
+            "user_message": "Visual stress screening may be acceptable for this line, subject to routing/support adequacy and engineering approval. Minimum pressure thickness calculation may continue, but final pipe schedule must still satisfy project requirements."
+        },
+        "level_2": {
+            "badge": "Stress Screening: Level 2",
+            "severity": "warning",
+            "user_message": "Simplified CAESAR II stress analysis is required. Do not treat minimum pressure thickness as final pipe acceptability. Consult Piping Stress Engineer."
+        },
+        "level_3": {
+            "badge": "Stress Screening: Level 3",
+            "severity": "critical",
+            "user_message": "Detailed CAESAR II stress analysis is required. Consult Piping Stress Engineer before finalizing selected schedule, routing, supports, nozzle loads, or procurement thickness."
+        },
+        "outside_scope": {
+            "badge": "Thickness Scope Warning",
+            "severity": "warning",
+            "user_message": "This stress-analysis specification does not calculate minimum pressure thickness. Use applicable piping code for thickness, and use this tool only for upfront stress-analysis criticality and warnings."
+        }
+    }
+}

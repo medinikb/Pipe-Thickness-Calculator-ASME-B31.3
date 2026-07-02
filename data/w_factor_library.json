@@ -1,0 +1,703 @@
+{
+  "metadata": {
+    "title": "ASME B31.3-2018 W factor library for pipe thickness web app",
+    "file_name": "w_factor_library.json",
+    "source": "ASME B31.3-2018, para. 302.3.5(e), para. 304.1.1, para. 304.1.2, and Table 302.3.5",
+    "code_edition": "ASME B31.3-2018",
+    "unit_system": "SI primary, USC reference retained",
+    "temperature_unit": "degC primary; degF reference included",
+    "w_factor_unit": "dimensionless",
+    "intended_use": "Private web app lookup library for weld joint strength reduction factor W used in ASME B31.3 pipe pressure thickness calculation.",
+    "contains_asme_table_values": true,
+    "public_github_warning": "Do not publish this file in a public GitHub Pages repository unless your organization has redistribution rights. Keep ASME-derived data private or load from a protected source.",
+    "schema_policy": "Top-level metadata plus formula_context, temperature_grid, w_factor_table, note_summaries, material_category_aliases, lookup_policy, reference_js_algorithm, and validation. Designed to be used with b31_3_2018_private_combined_stress_dataset.json and y_factor_library.json.",
+    "created_for": "Pipe thickness calculation based on ASME B31.3"
+  },
+  "formula_context": {
+    "straight_pipe_internal_pressure_eq_3a": "t = P * D / (2 * (S * E * W + P * Y))",
+    "straight_pipe_internal_pressure_eq_3b": "t = P * (d + 2*c) / (2 * (S * E * W + P * (1 - Y)))",
+    "meaning_of_W": "W is the weld joint strength reduction factor. In pipe pressure design, S*E is multiplied by W for the applicable pressure-temperature condition.",
+    "where_W_is_used": [
+      "ASME B31.3 para. 302.3.5(e)",
+      "ASME B31.3 para. 304.1.1",
+      "ASME B31.3 para. 304.1.2"
+    ],
+    "design_guardrail": "W is not a substitute for longitudinal weld joint quality factor E/Ej. Use both where applicable: S * E * W."
+  },
+  "temperature_grid": [
+    {
+      "degC": 427,
+      "degF": 800,
+      "label": "<=427"
+    },
+    {
+      "degC": 454,
+      "degF": 850,
+      "label": "454"
+    },
+    {
+      "degC": 482,
+      "degF": 900,
+      "label": "482"
+    },
+    {
+      "degC": 510,
+      "degF": 950,
+      "label": "510"
+    },
+    {
+      "degC": 538,
+      "degF": 1000,
+      "label": "538"
+    },
+    {
+      "degC": 566,
+      "degF": 1050,
+      "label": "566"
+    },
+    {
+      "degC": 593,
+      "degF": 1100,
+      "label": "593"
+    },
+    {
+      "degC": 621,
+      "degF": 1150,
+      "label": "621"
+    },
+    {
+      "degC": 649,
+      "degF": 1200,
+      "label": "649"
+    },
+    {
+      "degC": 677,
+      "degF": 1250,
+      "label": "677"
+    },
+    {
+      "degC": 704,
+      "degF": 1300,
+      "label": "704"
+    },
+    {
+      "degC": 732,
+      "degF": 1350,
+      "label": "732"
+    },
+    {
+      "degC": 760,
+      "degF": 1400,
+      "label": "760"
+    },
+    {
+      "degC": 788,
+      "degF": 1450,
+      "label": "788"
+    },
+    {
+      "degC": 816,
+      "degF": 1500,
+      "label": "816"
+    }
+  ],
+  "w_factor_table": [
+    {
+      "id": "carbon_steel",
+      "group": "Carbon Steel",
+      "description": "Carbon steel materials, including typical CS pipe grades. W is 1.0 through the listed carbon-steel temperature range in Table 302.3.5.",
+      "temperature_values_degC": [
+        427,
+        454,
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677,
+        704,
+        732,
+        760,
+        788,
+        816
+      ],
+      "w_values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "notes": [],
+      "applicability": "Use for carbon steel longitudinal or spiral welded components where W is required. For temperatures below the tabulated range, use W = 1.0 where W is required. For temperatures above the listed range, designer responsibility.",
+      "warning": "Do not use this row beyond the listed Appendix A allowable-stress temperature limit for the selected material.",
+      "formula": null,
+      "interpolation_allowed": true
+    },
+    {
+      "id": "crmo",
+      "group": "CrMo",
+      "description": "Chromium-molybdenum steels including 1/2Cr-1/2Mo, 1Cr-1/2Mo, 1-1/4Cr-1/2Mo-Si, 2-1/4Cr-1Mo, 3Cr-1Mo, 5Cr-1/2Mo, and 9Cr-1Mo.",
+      "temperature_values_degC": [
+        427,
+        454,
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677,
+        704,
+        732,
+        760,
+        788,
+        816
+      ],
+      "w_values": [
+        1,
+        0.95,
+        0.91,
+        0.86,
+        0.82,
+        0.77,
+        0.73,
+        0.68,
+        0.64,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "notes": [
+        1,
+        2,
+        3
+      ],
+      "applicability": "Use for CrMo longitudinal or spiral welded components where W is required and applicable heat treatment/examination conditions are satisfied.",
+      "warning": "Do not increase W above Table 302.3.5 for CrMo using creep-test data. Confirm PWHT, filler-metal carbon content, SAW flux basicity index, and examination requirements.",
+      "formula": null,
+      "interpolation_allowed": true
+    },
+    {
+      "id": "csef_normalized_tempered",
+      "group": "CSEF N+T",
+      "description": "Creep Strength Enhanced Ferritic steels, normalized plus tempered condition.",
+      "temperature_values_degC": [
+        427,
+        454,
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677,
+        704,
+        732,
+        760,
+        788,
+        816
+      ],
+      "w_values": [
+        null,
+        null,
+        null,
+        1,
+        0.95,
+        0.91,
+        0.86,
+        0.82,
+        0.77,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "notes": [
+        3,
+        4,
+        5
+      ],
+      "applicability": "Use for CSEF materials such as grades 91, 92, 911, 122, and 23 when N+T heat treatment condition is applicable.",
+      "warning": "CSEF material selection is high-risk. Require explicit MTC and WPS/PQR review before automatic calculation. Do not increase W above Table 302.3.5 for CSEF using creep-test data.",
+      "formula": null,
+      "interpolation_allowed": true
+    },
+    {
+      "id": "csef_subcritical_pwht",
+      "group": "CSEF Subcritical PWHT",
+      "description": "Creep Strength Enhanced Ferritic steels in subcritical PWHT condition.",
+      "temperature_values_degC": [
+        427,
+        454,
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677,
+        704,
+        732,
+        760,
+        788,
+        816
+      ],
+      "w_values": [
+        null,
+        null,
+        1,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "notes": [
+        3,
+        4
+      ],
+      "applicability": "Use for CSEF longitudinal or spiral welded components with subcritical PWHT condition.",
+      "warning": "This row can sharply reduce allowable pressure because W falls to 0.5 over much of the range. Require engineer confirmation.",
+      "formula": null,
+      "interpolation_allowed": true
+    },
+    {
+      "id": "austenitic_3xx_autogenous_solution_annealed",
+      "group": "Autogenous welds in austenitic stainless 3xx and N088xx/N066xx nickel alloys",
+      "description": "Autogenous welds without filler metal in austenitic stainless grade 3xx and listed austenitic nickel alloys, where solution anneal after welding is satisfied.",
+      "temperature_values_degC": [
+        427,
+        454,
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677,
+        704,
+        732,
+        760,
+        788,
+        816
+      ],
+      "w_values": [
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "notes": [
+        6
+      ],
+      "applicability": "Use only for qualifying autogenous welds without filler metal and with solution anneal after welding.",
+      "warning": "Do not apply this row to normal filler-metal welded A312/A358 pipe unless the autogenous weld and solution anneal conditions are proven.",
+      "formula": null,
+      "interpolation_allowed": true
+    },
+    {
+      "id": "austenitic_3xx_and_n088xx",
+      "group": "Austenitic stainless grade 3xx and N088xx nickel alloys",
+      "description": "Austenitic stainless steels grade 3xx and N088xx nickel alloys.",
+      "temperature_values_degC": [
+        427,
+        454,
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677,
+        704,
+        732,
+        760,
+        788,
+        816
+      ],
+      "w_values": [
+        null,
+        null,
+        null,
+        1,
+        0.95,
+        0.91,
+        0.86,
+        0.82,
+        0.77,
+        0.73,
+        0.68,
+        0.64,
+        0.59,
+        0.55,
+        0.5
+      ],
+      "notes": [
+        7,
+        8
+      ],
+      "applicability": "Use for longitudinal or spiral welded austenitic stainless grade 3xx and N088xx nickel alloy components where W is required.",
+      "warning": "For high-temperature service, check heat-specific HAZ embrittlement risk and whether solution annealing of weld area is required by project specification.",
+      "formula": null,
+      "interpolation_allowed": true
+    },
+    {
+      "id": "other_materials_formula",
+      "group": "Other materials",
+      "description": "Materials other than carbon steel, CrMo, CSEF, and listed austenitic alloys.",
+      "temperature_values_degC": [
+        427,
+        454,
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677,
+        704,
+        732,
+        760,
+        788,
+        816
+      ],
+      "w_values": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "notes": [
+        9
+      ],
+      "applicability": "Use formula only when material is not covered by the listed steel groups and Tcr is known.",
+      "warning": "If temperature exceeds upper Appendix A allowable-stress temperature for the base metal, W is designer responsibility.",
+      "formula": {
+        "SI": {
+          "if_Ti_less_than_or_equal_Tcr": "W = 1.0",
+          "if_Tcr_less_than_Ti_less_than_or_equal_816C": "W = 1 - 0.00164 * (Ti - Tcr)",
+          "temperature_unit": "degC"
+        },
+        "USC": {
+          "if_Ti_less_than_or_equal_Tcr": "W = 1.0",
+          "if_Tcr_less_than_Ti_less_than_or_equal_1500F": "W = 1 - 0.000909 * (Ti - Tcr)",
+          "temperature_unit": "degF"
+        }
+      },
+      "interpolation_allowed": false
+    }
+  ],
+  "note_summaries": {
+    "general_notes": {
+      "a": "Below the tabulated temperatures, use W = 1.0 where W is required. Above Appendix A temperature limits or outside Table 302.3.5 applicable range, W is designer responsibility.",
+      "b": "Tcr is defined as 25 degC below the temperature identifying the start of time-dependent properties in ASME BPVC Section II Part D for the base metals. For unlisted materials, Tcr is where creep-rate or stress-rupture criteria govern allowable stress. For dissimilar base metals, use the lower Tcr.",
+      "c": "Ti is the component temperature for the coincident operating pressure-temperature condition under consideration.",
+      "d": "Elevated-temperature weld life is affected by fabrication issues such as peaking at longitudinal seams and weld offset, which may increase stress and reduce service life.",
+      "e": "Linear interpolation may be used for intermediate temperature values."
+    },
+    "1": "CrMo steels include 1/2Cr-1/2Mo, 1Cr-1/2Mo, 1-1/4Cr-1/2Mo-Si, 2-1/4Cr-1Mo, 3Cr-1Mo, 5Cr-1/2Mo, and 9Cr-1Mo. Longitudinal and spiral seams require applicable heat treatment and examination.",
+    "2": "Longitudinal and spiral seam fusion welded construction is not permitted for C-1/2Mo steel above 454 degC.",
+    "3": "Weld filler metal carbon content and SAW flux basicity index requirements apply, with examination requirements.",
+    "4": "CSEF steels include grades 91, 92, 911, 122, and 23.",
+    "5": "N + T means Normalizing plus Tempering PWHT.",
+    "6": "Applies to autogenous welds without filler metal in austenitic stainless grade 3xx and listed austenitic nickel alloys. Solution anneal after welding is required.",
+    "7": "Alternative 100,000 hr stress rupture factors from ASME BPVC Section III, Division 1, Subsection NH may be used for specified materials and welding consumables.",
+    "8": "Certain austenitic stainless heats can suffer HAZ embrittlement at elevated temperature. Solution annealing of the weld area mitigates susceptibility.",
+    "9": "For other materials: W = 1.0 when Ti <= Tcr; in SI units, W = 1 - 0.00164(Ti - Tcr) for Tcr < Ti <= 816 degC. Above the base-metal Appendix A temperature limit, W is designer responsibility."
+  },
+  "material_category_aliases": {
+    "carbon_steel": {
+      "description": "Candidate mapping for CS pipe material descriptions. W row selection still depends on seam type and temperature.",
+      "aliases": [
+        "API 5L GR.B",
+        "API 5L GR.B PSL1",
+        "API 5L GRADE B",
+        "API 5L B",
+        "ASTM A106 GR.B",
+        "A106 GR.B",
+        "ASTM A 106 GR.B",
+        "ASTM A333 GR.6",
+        "A333 GR.6",
+        "ASTM A 333 GR.6",
+        "ASTM A671 GR.CC60",
+        "ASTM A 671 GR.CC60 CL.32",
+        "ASTM A672 GR.B60",
+        "ASTM A672 GR.B60 CL12",
+        "ASTM A672 GR.B60 CL.12",
+        "ASTM A672 GR.B60 CL.22",
+        "ASTM A672 GR.B60 CL.32",
+        "ASTM A672 GR.C70",
+        "ASTM A672 GR.C70 CL12",
+        "ASTM A672 GR C70 L22",
+        "IS-1239",
+        "IS-1239 BLACK",
+        "IS-1239 GALV",
+        "IS-3589 GR.330",
+        "IS-3589 GR.410"
+      ],
+      "w_group_id": "carbon_steel",
+      "important_warning": "IS-1239 and IS-3589 are only candidate material-family mappings for W factor. Do not permit full ASME B31.3 thickness calculation without approved unlisted-material allowable-stress basis.",
+      "normalized_aliases": [
+        "A106 GR B",
+        "A333 GR 6",
+        "API 5L B",
+        "API 5L GR B",
+        "API 5L GR B PSL1",
+        "API 5L GRADE B",
+        "ASTM A 106 GR B",
+        "ASTM A 333 GR 6",
+        "ASTM A 671 GR CC60 CL 32",
+        "ASTM A106 GR B",
+        "ASTM A333 GR 6",
+        "ASTM A671 GR CC60",
+        "ASTM A672 GR B60",
+        "ASTM A672 GR B60 CL 12",
+        "ASTM A672 GR B60 CL 22",
+        "ASTM A672 GR B60 CL 32",
+        "ASTM A672 GR B60 CL12",
+        "ASTM A672 GR C70",
+        "ASTM A672 GR C70 CL12",
+        "ASTM A672 GR C70 L22",
+        "IS 1239",
+        "IS 1239 BLACK",
+        "IS 1239 GALV",
+        "IS 3589 GR 330",
+        "IS 3589 GR 410"
+      ]
+    },
+    "crmo": {
+      "description": "Candidate mapping for chromium-molybdenum steels.",
+      "aliases": [
+        "ASTM A335 GR.P5",
+        "A335 P5",
+        "ASTM A 335 GR.P5",
+        "ASTM A335 GR.P11",
+        "A335 P11",
+        "ASTM A 335 GR.P11",
+        "ASTM A335 GR.P22",
+        "A335 P22",
+        "ASTM A 335 GR.P22",
+        "ASTM A691 GR.5CR CL42",
+        "ASTM A691 GR.5CR CL.42",
+        "A691 5CR",
+        "ASTM A691 GR.1.25CR CL42",
+        "ASTM A691 GR.1.25CR CL.42",
+        "A691 1.25CR"
+      ],
+      "w_group_id": "crmo",
+      "important_warning": "Confirm actual alloy family, heat treatment, seam type, WPS/PQR, filler metal, and examination before auto-calculation.",
+      "normalized_aliases": [
+        "A335 P11",
+        "A335 P22",
+        "A335 P5",
+        "A691 1 25CR",
+        "A691 5CR",
+        "ASTM A 335 GR P11",
+        "ASTM A 335 GR P22",
+        "ASTM A 335 GR P5",
+        "ASTM A335 GR P11",
+        "ASTM A335 GR P22",
+        "ASTM A335 GR P5",
+        "ASTM A691 GR 1 25CR CL 42",
+        "ASTM A691 GR 1 25CR CL42",
+        "ASTM A691 GR 5CR CL 42",
+        "ASTM A691 GR 5CR CL42"
+      ]
+    },
+    "austenitic_3xx": {
+      "description": "Candidate mapping for austenitic stainless 3xx materials.",
+      "aliases": [
+        "ASTM A312 TP304",
+        "ASTM A 312 TP304",
+        "A312 TP304",
+        "ASTM A312 TP304L",
+        "ASTM A 312 TP304L",
+        "A312 TP304L",
+        "ASTM A312 TP316",
+        "ASTM A 312 TP316",
+        "A312 TP316",
+        "ASTM A312 TP316L",
+        "ASTM A 312 TP316L",
+        "A312 TP316L",
+        "ASTM A312 TP316L SHTP",
+        "ASTM A 312 TP316L (SHTP)",
+        "ASTM A312 TP321",
+        "ASTM A 312 TP321",
+        "A312 TP321",
+        "ASTM A312 TP321 SHTP",
+        "ASTM A 312 TP321 (SHTP)",
+        "ASTM A312 TP321H",
+        "A312 TP321H",
+        "ASTM A358 TP304 CL1",
+        "ASTM A358 TP304 CL.1",
+        "ASTM A 358 TP304 CL.1",
+        "ASTM A358 TP316 CL1",
+        "ASTM A358 TP316 CL.1",
+        "ASTM A358 TP316L CL1",
+        "ASTM A358 TP316L CL.1",
+        "ASTM A 358 TP316L CL.1",
+        "ASTM A358 GR316LCL.1",
+        "ASTM A358 GR316L CL.1",
+        "ASTM A358 GR321 CL.1",
+        "ASTM A358 TP321 CL.1"
+      ],
+      "default_w_group_id": "austenitic_3xx_and_n088xx",
+      "autogenous_solution_annealed_w_group_id": "austenitic_3xx_autogenous_solution_annealed",
+      "important_warning": "Do not use the autogenous weld row unless the weld is without filler metal and solution annealed after welding. Normal A358/A312 welded pipe generally maps to the austenitic_3xx_and_n088xx row when W is required.",
+      "normalized_aliases": [
+        "A312 TP304",
+        "A312 TP304L",
+        "A312 TP316",
+        "A312 TP316L",
+        "A312 TP321",
+        "A312 TP321H",
+        "ASTM A 312 TP304",
+        "ASTM A 312 TP304L",
+        "ASTM A 312 TP316",
+        "ASTM A 312 TP316L",
+        "ASTM A 312 TP316L SHTP",
+        "ASTM A 312 TP321",
+        "ASTM A 312 TP321 SHTP",
+        "ASTM A 358 TP304 CL 1",
+        "ASTM A 358 TP316L CL 1",
+        "ASTM A312 TP304",
+        "ASTM A312 TP304L",
+        "ASTM A312 TP316",
+        "ASTM A312 TP316L",
+        "ASTM A312 TP316L SHTP",
+        "ASTM A312 TP321",
+        "ASTM A312 TP321 SHTP",
+        "ASTM A312 TP321H",
+        "ASTM A358 GR316L CL 1",
+        "ASTM A358 GR316LCL 1",
+        "ASTM A358 GR321 CL 1",
+        "ASTM A358 TP304 CL 1",
+        "ASTM A358 TP304 CL1",
+        "ASTM A358 TP316 CL 1",
+        "ASTM A358 TP316 CL1",
+        "ASTM A358 TP316L CL 1",
+        "ASTM A358 TP316L CL1",
+        "ASTM A358 TP321 CL 1"
+      ]
+    },
+    "csef": {
+      "description": "Creep Strength Enhanced Ferritic steels. Included for future expansion although not primary in current material lists.",
+      "aliases": [
+        "P91",
+        "GRADE 91",
+        "ASTM A335 P91",
+        "P92",
+        "P911",
+        "P122",
+        "P23"
+      ],
+      "normalized_tempered_w_group_id": "csef_normalized_tempered",
+      "subcritical_pwht_w_group_id": "csef_subcritical_pwht",
+      "important_warning": "Require explicit selection of N+T or subcritical PWHT. Never default blindly.",
+      "normalized_aliases": [
+        "ASTM A335 P91",
+        "GRADE 91",
+        "P122",
+        "P23",
+        "P91",
+        "P911",
+        "P92"
+      ]
+    }
+  },
+  "lookup_policy": {
+    "when_to_apply_w": [
+      "Apply W only where required by ASME B31.3 para. 302.3.5(e). It applies at weld locations in longitudinal or spiral welded piping components at elevated temperature.",
+      "For seamless pipe, set W = 1.0 unless project engineering explicitly applies W to another weld location.",
+      "For occasional loads, wind, earthquake, and permissible variations, W = 1.0 and W is not required for pressure rating of the occasional/permissible variation condition.",
+      "For displacement stress allowable range SA, W is not required.",
+      "For straight-pipe internal pressure under para. 304.1.2, the product SE is multiplied by W in the denominator."
+    ],
+    "temperature_lookup": {
+      "below_first_tabulated_temperature": "Use W = 1.0 where W is required, but table notes for the elevated-temperature range do not apply below the tabulated range.",
+      "intermediate_temperature": "Use linear interpolation between adjacent tabulated values where both values are numeric and the material row permits interpolation.",
+      "outside_applicable_range": "Block automatic calculation and require designer review.",
+      "other_materials": "Require Tcr. Use formula from Note 9. If Ti exceeds the upper Appendix A temperature for the base metal, block automatic calculation."
+    },
+    "required_inputs_for_web_app": [
+      "material_description",
+      "canonical_asme_material_id from stress dataset",
+      "design_temperature_degC",
+      "manufacturing_route_or_seam_type: seamless, ERW, EFW, SAW, LSAW, HSAW, spiral/helical, unknown",
+      "longitudinal_or_spiral_weld_present: true/false/unknown",
+      "service_condition_type: sustained/normal, occasional, test, displacement_stress",
+      "is_elevated_temperature_fluid_service: true/false/unknown",
+      "for CrMo/CSEF/austenitic high-temperature service: heat treatment and examination confirmation"
+    ],
+    "block_conditions": [
+      "seam type is unknown and design temperature is in elevated-temperature range",
+      "material maps to CSEF but heat treatment condition is unknown",
+      "material maps to other_materials_formula but Tcr is missing",
+      "computed temperature is outside the table/formula range",
+      "selected material is unlisted for allowable stress, such as IS-1239 or IS-3589, unless approved unlisted material basis is loaded"
+    ],
+    "default_recommendation": "For most refinery pipe thickness calculations below creep range, W will normally be 1.0. Still retain W in the calculation engine because it becomes critical for welded pipe at elevated temperature."
+  },
+  "reference_js_algorithm": "\nfunction interpolate(x, x1, y1, x2, y2) {\n  return y1 + ((x - x1) * (y2 - y1)) / (x2 - x1);\n}\n\nfunction lookupWFactor({ materialAlias, designTempC, seamType, serviceCondition, isElevatedTemp, heatTreatment, isAutogenousSolutionAnnealed, tcrC }, wLibrary) {\n  const warnings = [];\n\n  if ([\"occasional\", \"wind\", \"earthquake\", \"permissible_variation\", \"test\", \"displacement_stress\"].includes(serviceCondition)) {\n    return { W: 1.0, reason: \"W is not required for this service condition; use 1.0.\", warnings };\n  }\n\n  const seam = String(seamType || \"unknown\").toLowerCase();\n  const hasLongitudinalOrSpiralWeld = [\"erw\", \"efw\", \"saw\", \"lsaw\", \"hsaw\", \"spiral\", \"helical\", \"longitudinal\", \"welded\"].includes(seam);\n\n  if (!hasLongitudinalOrSpiralWeld) {\n    return { W: 1.0, reason: \"No longitudinal or spiral welded seam identified.\", warnings };\n  }\n\n  if (isElevatedTemp === false) {\n    return { W: 1.0, reason: \"Not elevated-temperature fluid service.\", warnings };\n  }\n\n  const groupId = resolveWGroupId(materialAlias, heatTreatment, isAutogenousSolutionAnnealed, wLibrary);\n  if (!groupId) throw new Error(\"Cannot resolve W factor group from material alias.\");\n\n  const row = wLibrary.w_factor_table.find(r => r.id === groupId);\n  if (!row) throw new Error(\"W factor row not found: \" + groupId);\n\n  if (row.id === \"other_materials_formula\") {\n    if (tcrC == null) throw new Error(\"Tcr is required for other-materials W factor formula.\");\n    if (designTempC <= tcrC) return { W: 1.0, reason: \"Ti <= Tcr\", warnings };\n    if (designTempC <= 816) return { W: 1 - 0.00164 * (designTempC - tcrC), reason: \"Note 9 formula\", warnings };\n    throw new Error(\"Temperature above formula range; designer responsibility.\");\n  }\n\n  const temps = row.temperature_values_degC;\n  const values = row.w_values;\n\n  // Below first numeric table point, use W = 1.0 where W is required.\n  const firstIdx = values.findIndex(v => typeof v === \"number\");\n  if (firstIdx < 0) throw new Error(\"No numeric W values in row.\");\n  if (designTempC <= temps[firstIdx]) {\n    return { W: 1.0, reason: \"Temperature at/below first applicable tabulated point.\", warnings };\n  }\n\n  for (let i = firstIdx; i < temps.length - 1; i++) {\n    const v1 = values[i];\n    const v2 = values[i + 1];\n    if (typeof v1 !== \"number\" || typeof v2 !== \"number\") continue;\n    if (designTempC === temps[i]) return { W: v1, reason: \"Exact table match\", warnings };\n    if (designTempC > temps[i] && designTempC <= temps[i + 1]) {\n      return { W: interpolate(designTempC, temps[i], v1, temps[i + 1], v2), reason: \"Linear interpolation\", warnings };\n    }\n  }\n\n  const exactIdx = temps.findIndex(t => t === designTempC);\n  if (exactIdx >= 0 && typeof values[exactIdx] === \"number\") {\n    return { W: values[exactIdx], reason: \"Exact table match\", warnings };\n  }\n\n  throw new Error(\"Design temperature outside applicable W factor range; designer review required.\");\n}\n",
+  "validation": {
+    "temperature_grid_count": 15,
+    "row_count": 7,
+    "all_row_lengths_match_temperature_grid": true,
+    "null_represents_not_applicable_or_designer_responsibility": true,
+    "contains_formula_for_other_materials_note_9": true,
+    "created_utc": "2026-06-29T15:14:55Z"
+  }
+}

@@ -1,0 +1,639 @@
+{
+  "metadata": {
+    "title": "ASME B31.3-2018 Y factor library for pipe thickness web app",
+    "file_name": "y_factor_library.json",
+    "source": "ASME B31.3-2018, para. 304.1.1 and Table 304.1.1",
+    "code_edition": "ASME B31.3-2018",
+    "unit_system": "SI primary, USC reference retained",
+    "temperature_unit": "degC primary; degF reference included",
+    "y_factor_unit": "dimensionless",
+    "intended_use": "Private web app lookup library for coefficient Y used in ASME B31.3 pipe pressure thickness calculation.",
+    "contains_asme_table_values": true,
+    "public_github_warning": "Do not publish this file in a public GitHub Pages repository unless your organization has redistribution rights. Keep ASME-derived data private or load from a protected source.",
+    "schema_policy": "Top-level metadata plus y_factor_table, material_category_aliases, lookup_policy, formula_context, and validation. Designed to be used with b31_3_2018_private_combined_stress_dataset.json.",
+    "created_for": "Pipe thickness calculation web app",
+    "created_date_utc": "2026-06-29"
+  },
+  "formula_context": {
+    "applies_to": "Straight pipe under internal pressure for ASME B31.3 para. 304.1.2, with Y from para. 304.1.1 and Table 304.1.1. Y is also used in selected pressure design equations where explicitly referenced by the Code.",
+    "thin_wall_condition": "Use Table 304.1.1 values for t < D/6 and for materials shown in the table.",
+    "intermediate_temperature_rule": "The value of Y may be interpolated for intermediate temperatures.",
+    "thick_wall_expression_text": "For t >= D/6, para. 304.1.1 defines Y using pipe inside diameter and allowance terms. However, para. 304.1.2(b) requires special consideration for t >= D/6 or P/SE > 0.385, so the app should stop automatic calculation and require engineer review.",
+    "equation_3a_text": "t = P*D / (2*(S*E*W + P*Y))",
+    "equation_3b_text": "t = P*(d + 2*c) / (2*(S*E*W - P*(1 - Y)))",
+    "symbols": {
+      "P": "Internal design gage pressure",
+      "D": "Outside diameter of pipe",
+      "d": "Inside diameter of pipe",
+      "c": "Sum of mechanical, corrosion, and erosion allowances",
+      "S": "Basic allowable stress for material at design temperature",
+      "E": "Quality factor",
+      "W": "Weld joint strength reduction factor",
+      "Y": "Coefficient from Table 304.1.1 for t < D/6 and materials shown",
+      "t": "Pressure design thickness"
+    }
+  },
+  "temperature_grid": {
+    "degC": [
+      482,
+      510,
+      538,
+      566,
+      593,
+      621,
+      649,
+      677
+    ],
+    "degF": [
+      900,
+      950,
+      1000,
+      1050,
+      1100,
+      1150,
+      1200,
+      1250
+    ],
+    "labels": [
+      "482_and_below",
+      "510",
+      "538",
+      "566",
+      "593",
+      "621",
+      "649",
+      "677_and_above"
+    ],
+    "boundary_labels": {
+      "first": "482 degC and below, 900 degF and below",
+      "last": "677 degC and above, 1250 degF and above"
+    }
+  },
+  "y_factor_table": [
+    {
+      "category_id": "ferritic_steel",
+      "material_group_label": "Ferritic steels",
+      "description": "Carbon steels, low-temperature carbon steels, low-alloy Cr-Mo ferritic steels, and similar ferritic steel pipe materials when allowed by ASME B31.3 material rules.",
+      "temperature_grid_c": [
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677
+      ],
+      "temperature_grid_f": [
+        900,
+        950,
+        1000,
+        1050,
+        1100,
+        1150,
+        1200,
+        1250
+      ],
+      "temperature_labels": [
+        "482_and_below",
+        "510",
+        "538",
+        "566",
+        "593",
+        "621",
+        "649",
+        "677_and_above"
+      ],
+      "y_values": [
+        0.4,
+        0.5,
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7,
+        0.7
+      ],
+      "below_first_temperature_policy": "Use 0.4 for 482 degC and below.",
+      "above_last_temperature_policy": "Use 0.7 for 677 degC and above, subject to material allowable stress limits and code applicability.",
+      "interpolation_policy": "Linear interpolation may be used for intermediate temperatures.",
+      "app_status": "active"
+    },
+    {
+      "category_id": "austenitic_steel",
+      "material_group_label": "Austenitic steels",
+      "description": "Austenitic stainless steels such as TP304, TP304L, TP316, TP316L, TP321, TP321H, and corresponding welded pipe grades when allowed by ASME B31.3 material rules.",
+      "temperature_grid_c": [
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677
+      ],
+      "temperature_grid_f": [
+        900,
+        950,
+        1000,
+        1050,
+        1100,
+        1150,
+        1200,
+        1250
+      ],
+      "temperature_labels": [
+        "482_and_below",
+        "510",
+        "538",
+        "566",
+        "593",
+        "621",
+        "649",
+        "677_and_above"
+      ],
+      "y_values": [
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.5,
+        0.7,
+        0.7,
+        0.7
+      ],
+      "below_first_temperature_policy": "Use 0.4 for 482 degC and below.",
+      "above_last_temperature_policy": "Use 0.7 for 677 degC and above, subject to material allowable stress limits and code applicability.",
+      "interpolation_policy": "Linear interpolation may be used for intermediate temperatures.",
+      "app_status": "active"
+    },
+    {
+      "category_id": "nickel_alloy_n06617_n08800_n08810_n08825",
+      "material_group_label": "Nickel alloys, limited UNS group",
+      "description": "Nickel alloys UNS N06617, N08800, N08810, and N08825 only. Do not apply this row to all nickel alloys without checking the code row and material specification.",
+      "temperature_grid_c": [
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677
+      ],
+      "temperature_grid_f": [
+        900,
+        950,
+        1000,
+        1050,
+        1100,
+        1150,
+        1200,
+        1250
+      ],
+      "temperature_labels": [
+        "482_and_below",
+        "510",
+        "538",
+        "566",
+        "593",
+        "621",
+        "649",
+        "677_and_above"
+      ],
+      "y_values": [
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.5,
+        0.7
+      ],
+      "below_first_temperature_policy": "Use 0.4 for 482 degC and below.",
+      "above_last_temperature_policy": "Use 0.7 for 677 degC and above, subject to material allowable stress limits and code applicability.",
+      "interpolation_policy": "Linear interpolation may be used for intermediate temperatures.",
+      "app_status": "active_with_uns_restriction"
+    },
+    {
+      "category_id": "gray_iron",
+      "material_group_label": "Gray iron",
+      "description": "Gray iron row from Table 304.1.1. Values above 482 degC are not provided in the table and should not be extrapolated.",
+      "temperature_grid_c": [
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677
+      ],
+      "temperature_grid_f": [
+        900,
+        950,
+        1000,
+        1050,
+        1100,
+        1150,
+        1200,
+        1250
+      ],
+      "temperature_labels": [
+        "482_and_below",
+        "510",
+        "538",
+        "566",
+        "593",
+        "621",
+        "649",
+        "677_and_above"
+      ],
+      "y_values": [
+        0.0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "below_first_temperature_policy": "Use 0.0 for 482 degC and below where gray iron is otherwise permitted by the Code and service restrictions.",
+      "above_last_temperature_policy": "No value. Block automatic lookup above 482 degC.",
+      "interpolation_policy": "Do not interpolate across null values. Treat unavailable values as calculation stop conditions.",
+      "app_status": "restricted"
+    },
+    {
+      "category_id": "other_ductile_metals",
+      "material_group_label": "Other ductile metals",
+      "description": "Other ductile metals not covered by the specific ferritic, austenitic, or limited nickel alloy rows, when otherwise permitted by ASME B31.3 material rules.",
+      "temperature_grid_c": [
+        482,
+        510,
+        538,
+        566,
+        593,
+        621,
+        649,
+        677
+      ],
+      "temperature_grid_f": [
+        900,
+        950,
+        1000,
+        1050,
+        1100,
+        1150,
+        1200,
+        1250
+      ],
+      "temperature_labels": [
+        "482_and_below",
+        "510",
+        "538",
+        "566",
+        "593",
+        "621",
+        "649",
+        "677_and_above"
+      ],
+      "y_values": [
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4
+      ],
+      "below_first_temperature_policy": "Use 0.4 for 482 degC and below.",
+      "above_last_temperature_policy": "Use 0.4 for 677 degC and above, subject to material allowable stress limits and code applicability.",
+      "interpolation_policy": "Linear interpolation may be used for intermediate temperatures, though all tabulated values are 0.4.",
+      "app_status": "active_with_engineer_confirmation"
+    }
+  ],
+  "material_category_aliases": [
+    {
+      "input_pattern": "API 5L GR.B PSL1",
+      "normalized_examples": [
+        "API 5L GR.B",
+        "API 5L GRADE B",
+        "API 5L GR B PSL1"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "PSL1 is procurement/manufacturing metadata. It does not create a separate Y factor row."
+    },
+    {
+      "input_pattern": "ASTM A106 GR.B",
+      "normalized_examples": [
+        "A106 GR.B",
+        "ASTM A 106 GRADE B"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Use only with a valid ASME B31.3 stress row and applicable temperature range."
+    },
+    {
+      "input_pattern": "ASTM A312 TP304",
+      "normalized_examples": [
+        "A312 TP304",
+        "ASTM A 312 TP 304"
+      ],
+      "assigned_y_category_id": "austenitic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Use austenitic steel Y factor. Stress row and notes remain separate from Y factor."
+    },
+    {
+      "input_pattern": "ASTM A312 TP304L",
+      "normalized_examples": [
+        "A312 TP304L",
+        "ASTM A 312 TP 304L"
+      ],
+      "assigned_y_category_id": "austenitic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Use austenitic steel Y factor. Stress row and notes remain separate from Y factor."
+    },
+    {
+      "input_pattern": "ASTM A312 TP316L",
+      "normalized_examples": [
+        "A312 TP316L",
+        "ASTM A 312 TP 316L"
+      ],
+      "assigned_y_category_id": "austenitic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Use austenitic steel Y factor. Stress row and notes remain separate from Y factor."
+    },
+    {
+      "input_pattern": "ASTM A312 TP321",
+      "normalized_examples": [
+        "A312 TP321",
+        "ASTM A 312 TP 321"
+      ],
+      "assigned_y_category_id": "austenitic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Y factor is austenitic steel, but the stress row may require TP321 variant selection by size and heat-treatment condition."
+    },
+    {
+      "input_pattern": "ASTM A333 GR.6",
+      "normalized_examples": [
+        "A333 GR.6",
+        "ASTM A 333 GRADE 6"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Low-temperature carbon steel. Use ferritic steel Y factor, with Table A-1M stress and notes controlling allowable stress."
+    },
+    {
+      "input_pattern": "ASTM A335 GR.P5",
+      "normalized_examples": [
+        "A335 P5",
+        "ASTM A 335 GR P5"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Ferritic Cr-Mo alloy steel. Use ferritic steel Y factor."
+    },
+    {
+      "input_pattern": "ASTM A335 GR.P11",
+      "normalized_examples": [
+        "A335 P11",
+        "ASTM A 335 GR P11"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Ferritic Cr-Mo alloy steel. Use ferritic steel Y factor."
+    },
+    {
+      "input_pattern": "ASTM A335 GR.P22",
+      "normalized_examples": [
+        "A335 P22",
+        "ASTM A 335 GR P22"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Ferritic Cr-Mo alloy steel. Use ferritic steel Y factor."
+    },
+    {
+      "input_pattern": "ASTM A358 TP304 CL.1",
+      "normalized_examples": [
+        "A358 TP304 CL1",
+        "ASTM A 358 TP304 CLASS 1"
+      ],
+      "assigned_y_category_id": "austenitic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "CL.1 affects weld quality and Ej logic, not the Y factor row. Use austenitic steel Y factor."
+    },
+    {
+      "input_pattern": "ASTM A358 TP316 CL.1",
+      "normalized_examples": [
+        "A358 TP316 CL1",
+        "ASTM A 358 TP316 CLASS 1"
+      ],
+      "assigned_y_category_id": "austenitic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "CL.1 affects weld quality and Ej logic, not the Y factor row. Use austenitic steel Y factor."
+    },
+    {
+      "input_pattern": "ASTM A358 TP316L CL.1",
+      "normalized_examples": [
+        "A358 TP316L CL1",
+        "ASTM A 358 TP316L CLASS 1"
+      ],
+      "assigned_y_category_id": "austenitic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "CL.1 affects weld quality and Ej logic, not the Y factor row. Use austenitic steel Y factor."
+    },
+    {
+      "input_pattern": "ASTM A358 GR321 CL.1",
+      "normalized_examples": [
+        "A358 TP321 CL1",
+        "ASTM A 358 GR321 CLASS 1"
+      ],
+      "assigned_y_category_id": "austenitic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "CL.1 affects weld quality and Ej logic. TP321 stress row may require variant selection."
+    },
+    {
+      "input_pattern": "ASTM A671 GR.CC60 CL.32",
+      "normalized_examples": [
+        "A671 CC60 CL32",
+        "ASTM A 671 GRADE CC60 CLASS 32"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Class number affects heat-treatment/testing procurement metadata, not the Y factor row."
+    },
+    {
+      "input_pattern": "ASTM A672 GR.B60 CL.12",
+      "normalized_examples": [
+        "A672 B60 CL12",
+        "ASTM A 672 GRADE B60 CLASS 12"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Class number affects heat-treatment/testing procurement metadata, not the Y factor row."
+    },
+    {
+      "input_pattern": "ASTM A672 GR.B60 CL.12 (200 BHN MAX)",
+      "normalized_examples": [
+        "A672 B60 CL12 200 BHN MAX"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Hardness limit is MTC/procurement validation metadata. It does not create a separate Y factor row."
+    },
+    {
+      "input_pattern": "ASTM A672 GR.B60 CL.22",
+      "normalized_examples": [
+        "A672 B60 CL22",
+        "ASTM A 672 GRADE B60 CLASS 22"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Class number affects heat-treatment/testing procurement metadata, not the Y factor row."
+    },
+    {
+      "input_pattern": "ASTM A672 GR.B60 CL.32",
+      "normalized_examples": [
+        "A672 B60 CL32",
+        "ASTM A 672 GRADE B60 CLASS 32"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Class number affects heat-treatment/testing procurement metadata, not the Y factor row."
+    },
+    {
+      "input_pattern": "ASTM A672 GR.C70 CL.12",
+      "normalized_examples": [
+        "A672 C70 CL12",
+        "ASTM A 672 GRADE C70 CLASS 12"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Class number affects heat-treatment/testing procurement metadata, not the Y factor row."
+    },
+    {
+      "input_pattern": "ASTM A672 GR.C70 CL.22",
+      "normalized_examples": [
+        "A672 C70 CL22",
+        "ASTM A 672 GRADE C70 CLASS 22"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Class number affects heat-treatment/testing procurement metadata, not the Y factor row."
+    },
+    {
+      "input_pattern": "ASTM A691 GR.5CR CL.42",
+      "normalized_examples": [
+        "A691 5CR CL42",
+        "ASTM A 691 GRADE 5CR CLASS 42"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Ferritic Cr-Mo alloy welded pipe. Class number affects procurement/testing metadata, not Y factor."
+    },
+    {
+      "input_pattern": "ASTM A691 GR.1.25CR CL.42",
+      "normalized_examples": [
+        "A691 1.25CR CL42",
+        "ASTM A 691 GRADE 1.25CR CLASS 42"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": true,
+      "material_listing_warning": "Ferritic Cr-Mo alloy welded pipe. Class number affects procurement/testing metadata, not Y factor."
+    },
+    {
+      "input_pattern": "IS-1239 BLACK",
+      "normalized_examples": [
+        "IS 1239 BLACK",
+        "IS-1239 (BLACK)"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": false,
+      "material_listing_warning": "Not directly listed in ASME B31.3 Table A-1M in the prepared stress dataset. Block full thickness calculation unless approved as an unlisted material with stress basis. If approved as carbon steel, ferritic steel Y factor is generally the candidate group."
+    },
+    {
+      "input_pattern": "IS-1239 GALV",
+      "normalized_examples": [
+        "IS 1239 GALV",
+        "IS-1239 (GALV)",
+        "IS 1239 GALVANIZED"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": false,
+      "material_listing_warning": "Not directly listed in ASME B31.3 Table A-1M in the prepared stress dataset. Galvanizing is coating metadata, not a separate Y factor. Block full thickness calculation unless approved as an unlisted material with stress basis."
+    },
+    {
+      "input_pattern": "IS-3589 GR.330",
+      "normalized_examples": [
+        "IS 3589 GR330",
+        "IS-3589 GRADE 330"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": false,
+      "material_listing_warning": "Not directly listed in ASME B31.3 Table A-1M in the prepared stress dataset. Block full thickness calculation unless approved as an unlisted material with stress basis. If approved as carbon steel, ferritic steel Y factor is generally the candidate group."
+    },
+    {
+      "input_pattern": "IS-3589 GR.410",
+      "normalized_examples": [
+        "IS 3589 GR410",
+        "IS-3589 GRADE 410"
+      ],
+      "assigned_y_category_id": "ferritic_steel",
+      "auto_y_lookup_allowed": false,
+      "material_listing_warning": "Not directly listed in ASME B31.3 Table A-1M in the prepared stress dataset. Block full thickness calculation unless approved as an unlisted material with stress basis. If approved as carbon steel, ferritic steel Y factor is generally the candidate group."
+    },
+    {
+      "input_pattern": "ASTM D3035 PE3406",
+      "normalized_examples": [
+        "ASTM D 3035 PE3406",
+        "PE3406"
+      ],
+      "assigned_y_category_id": null,
+      "auto_y_lookup_allowed": false,
+      "material_listing_warning": "Nonmetallic thermoplastic pipe. Do not use Table 304.1.1 metallic Y factor. Use the applicable nonmetallic piping rules and material-specific design basis."
+    }
+  ],
+  "lookup_policy": {
+    "recommended_engine_flow": [
+      "Normalize material description and select ASME stress row from the private stress dataset.",
+      "Read or assign y_category_id from this library.",
+      "Verify that stress row status is approved/listed before final thickness calculation.",
+      "For t < D/6, calculate Y from y_factor_table using design temperature and material category.",
+      "For intermediate temperatures, use linear interpolation between adjacent table values.",
+      "For temperature <= 482 degC, use the first tabulated value for the category.",
+      "For temperature >= 677 degC, use the last tabulated value for the category, except where the category contains null values or the material stress row has a lower maximum temperature.",
+      "For t >= D/6 or P/SE > 0.385, stop automatic calculation and require engineer review.",
+      "For unlisted materials such as IS-1239 or IS-3589, do not permit full ASME B31.3 thickness calculation unless unlisted material approval and allowable stress basis are documented."
+    ],
+    "null_value_policy": "A null Y value means the table does not provide a value. Do not extrapolate or silently replace with another material group.",
+    "nonmetallic_policy": "Do not use this metallic Y factor table for thermoplastic or other nonmetallic pipe calculations.",
+    "welded_pipe_policy": "Welded pipe class or weld quality affects E/Ej or procurement validation. It does not normally change the Y factor material group. Keep Y separate from weld joint quality factor logic."
+  },
+  "reference_js_algorithm": {
+    "function_name": "getYFactor(materialCategoryId, designTempC)",
+    "logic": [
+      "Find category in y_factor_table by category_id.",
+      "If designTempC <= 482, return y_values[0] if not null.",
+      "If designTempC >= 677, return y_values[last] if not null.",
+      "Find adjacent temperature bracket T1 <= designTempC <= T2.",
+      "If either adjacent Y value is null, throw error: Y factor unavailable for category and temperature.",
+      "Return Y1 + (Y2 - Y1) * (designTempC - T1) / (T2 - T1).",
+      "Round for display only. Keep full numeric value for calculation."
+    ],
+    "display_rounding_recommendation": "Show Y to 3 decimals in UI, but calculate using unrounded interpolated value."
+  },
+  "validation": {
+    "category_count": 5,
+    "alias_count": 28,
+    "all_y_value_arrays_match_temperature_grid": true,
+    "all_categories_have_unique_ids": true,
+    "table_reference": "Table 304.1.1 Values of Coefficient Y for t < D/6",
+    "manual_verification_required_before_production": "Verify table values, material mapping, and code applicability against the licensed ASME B31.3-2018 copy before engineering release."
+  }
+}

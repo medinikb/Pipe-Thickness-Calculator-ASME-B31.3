@@ -1,0 +1,4961 @@
+window.OD_SCHEDULE_LIBRARY_36_19 = {
+    "metadata":  {
+                     "file_name":  "od_schedule_library_36_19.json",
+                     "created_utc":  "2026-06-29T15:37:16+00:00",
+                     "source_standard":  "ASME_B36_19M_2004",
+                     "standard_display":  "ASME B36.19M-2004",
+                     "material_scope":  "Stainless steel pipe",
+                     "source_pdf":  "ASME_B36.19M-2004(1).pdf",
+                     "source_table":  "Table 1, Dimensions of Welded and Seamless Stainless Steel Pipe and Nominal Weights of Steel Pipe, Plain End",
+                     "nps_scope":  [
+                                       "1/2",
+                                       "3/4",
+                                       "1",
+                                       "1-1/2",
+                                       "2",
+                                       "3",
+                                       "4",
+                                       "6",
+                                       "8",
+                                       "10",
+                                       "12",
+                                       "14",
+                                       "16",
+                                       "18",
+                                       "20",
+                                       "22",
+                                       "24",
+                                       "26",
+                                       "28",
+                                       "30",
+                                       "32",
+                                       "34",
+                                       "36",
+                                       "38",
+                                       "40",
+                                       "42",
+                                       "44",
+                                       "46",
+                                       "48"
+                                   ],
+                     "primary_od_unit":  "inch",
+                     "units":  {
+                                   "od_in":  "inch",
+                                   "od_mm":  "mm",
+                                   "wall_in":  "inch",
+                                   "wall_mm":  "mm"
+                               },
+                     "web_app_note":  "Use this library for stainless steel pipe S-schedules. B36.19M schedule names use S suffix such as 5S, 10S, 40S, and 80S.",
+                     "selection_note":  "For pressure design, calculate required thickness as per governing code such as ASME B31.3, then select the next suitable tabulated wall thickness from this library."
+                 },
+    "nps_order":  [
+                      "1/2",
+                      "3/4",
+                      "1",
+                      "1-1/2",
+                      "2",
+                      "3",
+                      "4",
+                      "6",
+                      "8",
+                      "10",
+                      "12",
+                      "14",
+                      "16",
+                      "18",
+                      "20",
+                      "22",
+                      "24",
+                      "26",
+                      "28",
+                      "30",
+                      "32",
+                      "34",
+                      "36",
+                      "38",
+                      "40",
+                      "42",
+                      "44",
+                      "46",
+                      "48"
+                  ],
+    "data_by_nps":  {
+                        "1/2":  {
+                                    "nps":  "1/2",
+                                    "dn":  15,
+                                    "od_in":  0.84,
+                                    "od_mm":  21.3,
+                                    "schedule_count":  4,
+                                    "schedules":  {
+                                                      "5S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "1/2",
+                                                                 "dn":  15,
+                                                                 "od_in":  0.84,
+                                                                 "od_mm":  21.3,
+                                                                 "schedule":  "5S",
+                                                                 "wall_in":  0.065,
+                                                                 "wall_mm":  1.65,
+                                                                 "plain_end_weight_lb_ft":  0.54,
+                                                                 "plain_end_mass_kg_m":  0.8,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading"
+                                                                           ],
+                                                                 "source_pdf_page":  10
+                                                             },
+                                                      "10S":  {
+                                                                  "source_standard":  "ASME_B36_19M_2004",
+                                                                  "standard_display":  "ASME B36.19M-2004",
+                                                                  "material_scope":  "Stainless steel pipe",
+                                                                  "nps":  "1/2",
+                                                                  "dn":  15,
+                                                                  "od_in":  0.84,
+                                                                  "od_mm":  21.3,
+                                                                  "schedule":  "10S",
+                                                                  "wall_in":  0.083,
+                                                                  "wall_mm":  2.11,
+                                                                  "plain_end_weight_lb_ft":  0.67,
+                                                                  "plain_end_mass_kg_m":  1.0,
+                                                                  "designation":  null,
+                                                                  "notes":  [
+                                                                                "note_1_no_threading"
+                                                                            ],
+                                                                  "source_pdf_page":  10
+                                                              },
+                                                      "40S":  {
+                                                                  "source_standard":  "ASME_B36_19M_2004",
+                                                                  "standard_display":  "ASME B36.19M-2004",
+                                                                  "material_scope":  "Stainless steel pipe",
+                                                                  "nps":  "1/2",
+                                                                  "dn":  15,
+                                                                  "od_in":  0.84,
+                                                                  "od_mm":  21.3,
+                                                                  "schedule":  "40S",
+                                                                  "wall_in":  0.109,
+                                                                  "wall_mm":  2.77,
+                                                                  "plain_end_weight_lb_ft":  0.85,
+                                                                  "plain_end_mass_kg_m":  1.27,
+                                                                  "designation":  null,
+                                                                  "notes":  [
+
+                                                                            ],
+                                                                  "source_pdf_page":  10
+                                                              },
+                                                      "80S":  {
+                                                                  "source_standard":  "ASME_B36_19M_2004",
+                                                                  "standard_display":  "ASME B36.19M-2004",
+                                                                  "material_scope":  "Stainless steel pipe",
+                                                                  "nps":  "1/2",
+                                                                  "dn":  15,
+                                                                  "od_in":  0.84,
+                                                                  "od_mm":  21.3,
+                                                                  "schedule":  "80S",
+                                                                  "wall_in":  0.147,
+                                                                  "wall_mm":  3.73,
+                                                                  "plain_end_weight_lb_ft":  1.09,
+                                                                  "plain_end_mass_kg_m":  1.62,
+                                                                  "designation":  null,
+                                                                  "notes":  [
+
+                                                                            ],
+                                                                  "source_pdf_page":  10
+                                                              }
+                                                  },
+                                    "schedule_lookup":  {
+                                                            "5S":  {
+                                                                       "wall_in":  0.065,
+                                                                       "wall_mm":  1.65,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                            "10S":  {
+                                                                        "wall_in":  0.083,
+                                                                        "wall_mm":  2.11,
+                                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                                    },
+                                                            "40S":  {
+                                                                        "wall_in":  0.109,
+                                                                        "wall_mm":  2.77,
+                                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                                    },
+                                                            "80S":  {
+                                                                        "wall_in":  0.147,
+                                                                        "wall_mm":  3.73,
+                                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                                    }
+                                                        }
+                                },
+                        "3/4":  {
+                                    "nps":  "3/4",
+                                    "dn":  20,
+                                    "od_in":  1.05,
+                                    "od_mm":  26.7,
+                                    "schedule_count":  4,
+                                    "schedules":  {
+                                                      "5S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "3/4",
+                                                                 "dn":  20,
+                                                                 "od_in":  1.05,
+                                                                 "od_mm":  26.7,
+                                                                 "schedule":  "5S",
+                                                                 "wall_in":  0.065,
+                                                                 "wall_mm":  1.65,
+                                                                 "plain_end_weight_lb_ft":  0.68,
+                                                                 "plain_end_mass_kg_m":  1.02,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading"
+                                                                           ],
+                                                                 "source_pdf_page":  10
+                                                             },
+                                                      "10S":  {
+                                                                  "source_standard":  "ASME_B36_19M_2004",
+                                                                  "standard_display":  "ASME B36.19M-2004",
+                                                                  "material_scope":  "Stainless steel pipe",
+                                                                  "nps":  "3/4",
+                                                                  "dn":  20,
+                                                                  "od_in":  1.05,
+                                                                  "od_mm":  26.7,
+                                                                  "schedule":  "10S",
+                                                                  "wall_in":  0.083,
+                                                                  "wall_mm":  2.11,
+                                                                  "plain_end_weight_lb_ft":  0.86,
+                                                                  "plain_end_mass_kg_m":  1.28,
+                                                                  "designation":  null,
+                                                                  "notes":  [
+                                                                                "note_1_no_threading"
+                                                                            ],
+                                                                  "source_pdf_page":  10
+                                                              },
+                                                      "40S":  {
+                                                                  "source_standard":  "ASME_B36_19M_2004",
+                                                                  "standard_display":  "ASME B36.19M-2004",
+                                                                  "material_scope":  "Stainless steel pipe",
+                                                                  "nps":  "3/4",
+                                                                  "dn":  20,
+                                                                  "od_in":  1.05,
+                                                                  "od_mm":  26.7,
+                                                                  "schedule":  "40S",
+                                                                  "wall_in":  0.113,
+                                                                  "wall_mm":  2.87,
+                                                                  "plain_end_weight_lb_ft":  1.13,
+                                                                  "plain_end_mass_kg_m":  1.69,
+                                                                  "designation":  null,
+                                                                  "notes":  [
+
+                                                                            ],
+                                                                  "source_pdf_page":  10
+                                                              },
+                                                      "80S":  {
+                                                                  "source_standard":  "ASME_B36_19M_2004",
+                                                                  "standard_display":  "ASME B36.19M-2004",
+                                                                  "material_scope":  "Stainless steel pipe",
+                                                                  "nps":  "3/4",
+                                                                  "dn":  20,
+                                                                  "od_in":  1.05,
+                                                                  "od_mm":  26.7,
+                                                                  "schedule":  "80S",
+                                                                  "wall_in":  0.154,
+                                                                  "wall_mm":  3.91,
+                                                                  "plain_end_weight_lb_ft":  1.48,
+                                                                  "plain_end_mass_kg_m":  2.2,
+                                                                  "designation":  null,
+                                                                  "notes":  [
+
+                                                                            ],
+                                                                  "source_pdf_page":  10
+                                                              }
+                                                  },
+                                    "schedule_lookup":  {
+                                                            "5S":  {
+                                                                       "wall_in":  0.065,
+                                                                       "wall_mm":  1.65,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                            "10S":  {
+                                                                        "wall_in":  0.083,
+                                                                        "wall_mm":  2.11,
+                                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                                    },
+                                                            "40S":  {
+                                                                        "wall_in":  0.113,
+                                                                        "wall_mm":  2.87,
+                                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                                    },
+                                                            "80S":  {
+                                                                        "wall_in":  0.154,
+                                                                        "wall_mm":  3.91,
+                                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                                    }
+                                                        }
+                                },
+                        "1":  {
+                                  "nps":  "1",
+                                  "dn":  25,
+                                  "od_in":  1.315,
+                                  "od_mm":  33.4,
+                                  "schedule_count":  4,
+                                  "schedules":  {
+                                                    "5S":  {
+                                                               "source_standard":  "ASME_B36_19M_2004",
+                                                               "standard_display":  "ASME B36.19M-2004",
+                                                               "material_scope":  "Stainless steel pipe",
+                                                               "nps":  "1",
+                                                               "dn":  25,
+                                                               "od_in":  1.315,
+                                                               "od_mm":  33.4,
+                                                               "schedule":  "5S",
+                                                               "wall_in":  0.065,
+                                                               "wall_mm":  1.65,
+                                                               "plain_end_weight_lb_ft":  0.87,
+                                                               "plain_end_mass_kg_m":  1.29,
+                                                               "designation":  null,
+                                                               "notes":  [
+                                                                             "note_1_no_threading"
+                                                                         ],
+                                                               "source_pdf_page":  10
+                                                           },
+                                                    "10S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "1",
+                                                                "dn":  25,
+                                                                "od_in":  1.315,
+                                                                "od_mm":  33.4,
+                                                                "schedule":  "10S",
+                                                                "wall_in":  0.109,
+                                                                "wall_mm":  2.77,
+                                                                "plain_end_weight_lb_ft":  1.41,
+                                                                "plain_end_mass_kg_m":  2.09,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            },
+                                                    "40S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "1",
+                                                                "dn":  25,
+                                                                "od_in":  1.315,
+                                                                "od_mm":  33.4,
+                                                                "schedule":  "40S",
+                                                                "wall_in":  0.133,
+                                                                "wall_mm":  3.38,
+                                                                "plain_end_weight_lb_ft":  1.68,
+                                                                "plain_end_mass_kg_m":  2.5,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            },
+                                                    "80S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "1",
+                                                                "dn":  25,
+                                                                "od_in":  1.315,
+                                                                "od_mm":  33.4,
+                                                                "schedule":  "80S",
+                                                                "wall_in":  0.179,
+                                                                "wall_mm":  4.55,
+                                                                "plain_end_weight_lb_ft":  2.17,
+                                                                "plain_end_mass_kg_m":  3.24,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            }
+                                                },
+                                  "schedule_lookup":  {
+                                                          "5S":  {
+                                                                     "wall_in":  0.065,
+                                                                     "wall_mm":  1.65,
+                                                                     "source_standard":  "ASME_B36_19M_2004"
+                                                                 },
+                                                          "10S":  {
+                                                                      "wall_in":  0.109,
+                                                                      "wall_mm":  2.77,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "40S":  {
+                                                                      "wall_in":  0.133,
+                                                                      "wall_mm":  3.38,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "80S":  {
+                                                                      "wall_in":  0.179,
+                                                                      "wall_mm":  4.55,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  }
+                                                      }
+                              },
+                        "1-1/2":  {
+                                      "nps":  "1-1/2",
+                                      "dn":  40,
+                                      "od_in":  1.9,
+                                      "od_mm":  48.3,
+                                      "schedule_count":  4,
+                                      "schedules":  {
+                                                        "5S":  {
+                                                                   "source_standard":  "ASME_B36_19M_2004",
+                                                                   "standard_display":  "ASME B36.19M-2004",
+                                                                   "material_scope":  "Stainless steel pipe",
+                                                                   "nps":  "1-1/2",
+                                                                   "dn":  40,
+                                                                   "od_in":  1.9,
+                                                                   "od_mm":  48.3,
+                                                                   "schedule":  "5S",
+                                                                   "wall_in":  0.065,
+                                                                   "wall_mm":  1.65,
+                                                                   "plain_end_weight_lb_ft":  1.28,
+                                                                   "plain_end_mass_kg_m":  1.9,
+                                                                   "designation":  null,
+                                                                   "notes":  [
+                                                                                 "note_1_no_threading"
+                                                                             ],
+                                                                   "source_pdf_page":  10
+                                                               },
+                                                        "10S":  {
+                                                                    "source_standard":  "ASME_B36_19M_2004",
+                                                                    "standard_display":  "ASME B36.19M-2004",
+                                                                    "material_scope":  "Stainless steel pipe",
+                                                                    "nps":  "1-1/2",
+                                                                    "dn":  40,
+                                                                    "od_in":  1.9,
+                                                                    "od_mm":  48.3,
+                                                                    "schedule":  "10S",
+                                                                    "wall_in":  0.109,
+                                                                    "wall_mm":  2.77,
+                                                                    "plain_end_weight_lb_ft":  2.09,
+                                                                    "plain_end_mass_kg_m":  3.11,
+                                                                    "designation":  null,
+                                                                    "notes":  [
+                                                                                  "note_1_no_threading"
+                                                                              ],
+                                                                    "source_pdf_page":  10
+                                                                },
+                                                        "40S":  {
+                                                                    "source_standard":  "ASME_B36_19M_2004",
+                                                                    "standard_display":  "ASME B36.19M-2004",
+                                                                    "material_scope":  "Stainless steel pipe",
+                                                                    "nps":  "1-1/2",
+                                                                    "dn":  40,
+                                                                    "od_in":  1.9,
+                                                                    "od_mm":  48.3,
+                                                                    "schedule":  "40S",
+                                                                    "wall_in":  0.145,
+                                                                    "wall_mm":  3.68,
+                                                                    "plain_end_weight_lb_ft":  2.72,
+                                                                    "plain_end_mass_kg_m":  4.05,
+                                                                    "designation":  null,
+                                                                    "notes":  [
+
+                                                                              ],
+                                                                    "source_pdf_page":  10
+                                                                },
+                                                        "80S":  {
+                                                                    "source_standard":  "ASME_B36_19M_2004",
+                                                                    "standard_display":  "ASME B36.19M-2004",
+                                                                    "material_scope":  "Stainless steel pipe",
+                                                                    "nps":  "1-1/2",
+                                                                    "dn":  40,
+                                                                    "od_in":  1.9,
+                                                                    "od_mm":  48.3,
+                                                                    "schedule":  "80S",
+                                                                    "wall_in":  0.2,
+                                                                    "wall_mm":  5.08,
+                                                                    "plain_end_weight_lb_ft":  3.63,
+                                                                    "plain_end_mass_kg_m":  5.41,
+                                                                    "designation":  null,
+                                                                    "notes":  [
+
+                                                                              ],
+                                                                    "source_pdf_page":  10
+                                                                }
+                                                    },
+                                      "schedule_lookup":  {
+                                                              "5S":  {
+                                                                         "wall_in":  0.065,
+                                                                         "wall_mm":  1.65,
+                                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                                     },
+                                                              "10S":  {
+                                                                          "wall_in":  0.109,
+                                                                          "wall_mm":  2.77,
+                                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                                      },
+                                                              "40S":  {
+                                                                          "wall_in":  0.145,
+                                                                          "wall_mm":  3.68,
+                                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                                      },
+                                                              "80S":  {
+                                                                          "wall_in":  0.2,
+                                                                          "wall_mm":  5.08,
+                                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                                      }
+                                                          }
+                                  },
+                        "2":  {
+                                  "nps":  "2",
+                                  "dn":  50,
+                                  "od_in":  2.375,
+                                  "od_mm":  60.3,
+                                  "schedule_count":  4,
+                                  "schedules":  {
+                                                    "5S":  {
+                                                               "source_standard":  "ASME_B36_19M_2004",
+                                                               "standard_display":  "ASME B36.19M-2004",
+                                                               "material_scope":  "Stainless steel pipe",
+                                                               "nps":  "2",
+                                                               "dn":  50,
+                                                               "od_in":  2.375,
+                                                               "od_mm":  60.3,
+                                                               "schedule":  "5S",
+                                                               "wall_in":  0.065,
+                                                               "wall_mm":  1.65,
+                                                               "plain_end_weight_lb_ft":  1.61,
+                                                               "plain_end_mass_kg_m":  2.39,
+                                                               "designation":  null,
+                                                               "notes":  [
+                                                                             "note_1_no_threading"
+                                                                         ],
+                                                               "source_pdf_page":  10
+                                                           },
+                                                    "10S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "2",
+                                                                "dn":  50,
+                                                                "od_in":  2.375,
+                                                                "od_mm":  60.3,
+                                                                "schedule":  "10S",
+                                                                "wall_in":  0.109,
+                                                                "wall_mm":  2.77,
+                                                                "plain_end_weight_lb_ft":  2.64,
+                                                                "plain_end_mass_kg_m":  3.93,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            },
+                                                    "40S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "2",
+                                                                "dn":  50,
+                                                                "od_in":  2.375,
+                                                                "od_mm":  60.3,
+                                                                "schedule":  "40S",
+                                                                "wall_in":  0.154,
+                                                                "wall_mm":  3.91,
+                                                                "plain_end_weight_lb_ft":  3.66,
+                                                                "plain_end_mass_kg_m":  5.44,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            },
+                                                    "80S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "2",
+                                                                "dn":  50,
+                                                                "od_in":  2.375,
+                                                                "od_mm":  60.3,
+                                                                "schedule":  "80S",
+                                                                "wall_in":  0.218,
+                                                                "wall_mm":  5.54,
+                                                                "plain_end_weight_lb_ft":  5.03,
+                                                                "plain_end_mass_kg_m":  7.48,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            }
+                                                },
+                                  "schedule_lookup":  {
+                                                          "5S":  {
+                                                                     "wall_in":  0.065,
+                                                                     "wall_mm":  1.65,
+                                                                     "source_standard":  "ASME_B36_19M_2004"
+                                                                 },
+                                                          "10S":  {
+                                                                      "wall_in":  0.109,
+                                                                      "wall_mm":  2.77,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "40S":  {
+                                                                      "wall_in":  0.154,
+                                                                      "wall_mm":  3.91,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "80S":  {
+                                                                      "wall_in":  0.218,
+                                                                      "wall_mm":  5.54,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  }
+                                                      }
+                              },
+                        "3":  {
+                                  "nps":  "3",
+                                  "dn":  80,
+                                  "od_in":  3.5,
+                                  "od_mm":  88.9,
+                                  "schedule_count":  4,
+                                  "schedules":  {
+                                                    "5S":  {
+                                                               "source_standard":  "ASME_B36_19M_2004",
+                                                               "standard_display":  "ASME B36.19M-2004",
+                                                               "material_scope":  "Stainless steel pipe",
+                                                               "nps":  "3",
+                                                               "dn":  80,
+                                                               "od_in":  3.5,
+                                                               "od_mm":  88.9,
+                                                               "schedule":  "5S",
+                                                               "wall_in":  0.083,
+                                                               "wall_mm":  2.11,
+                                                               "plain_end_weight_lb_ft":  3.03,
+                                                               "plain_end_mass_kg_m":  4.52,
+                                                               "designation":  null,
+                                                               "notes":  [
+                                                                             "note_1_no_threading"
+                                                                         ],
+                                                               "source_pdf_page":  10
+                                                           },
+                                                    "10S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "3",
+                                                                "dn":  80,
+                                                                "od_in":  3.5,
+                                                                "od_mm":  88.9,
+                                                                "schedule":  "10S",
+                                                                "wall_in":  0.12,
+                                                                "wall_mm":  3.05,
+                                                                "plain_end_weight_lb_ft":  4.34,
+                                                                "plain_end_mass_kg_m":  6.46,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            },
+                                                    "40S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "3",
+                                                                "dn":  80,
+                                                                "od_in":  3.5,
+                                                                "od_mm":  88.9,
+                                                                "schedule":  "40S",
+                                                                "wall_in":  0.216,
+                                                                "wall_mm":  5.49,
+                                                                "plain_end_weight_lb_ft":  7.58,
+                                                                "plain_end_mass_kg_m":  11.29,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            },
+                                                    "80S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "3",
+                                                                "dn":  80,
+                                                                "od_in":  3.5,
+                                                                "od_mm":  88.9,
+                                                                "schedule":  "80S",
+                                                                "wall_in":  0.3,
+                                                                "wall_mm":  7.62,
+                                                                "plain_end_weight_lb_ft":  10.26,
+                                                                "plain_end_mass_kg_m":  15.27,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            }
+                                                },
+                                  "schedule_lookup":  {
+                                                          "5S":  {
+                                                                     "wall_in":  0.083,
+                                                                     "wall_mm":  2.11,
+                                                                     "source_standard":  "ASME_B36_19M_2004"
+                                                                 },
+                                                          "10S":  {
+                                                                      "wall_in":  0.12,
+                                                                      "wall_mm":  3.05,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "40S":  {
+                                                                      "wall_in":  0.216,
+                                                                      "wall_mm":  5.49,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "80S":  {
+                                                                      "wall_in":  0.3,
+                                                                      "wall_mm":  7.62,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  }
+                                                      }
+                              },
+                        "4":  {
+                                  "nps":  "4",
+                                  "dn":  100,
+                                  "od_in":  4.5,
+                                  "od_mm":  114.3,
+                                  "schedule_count":  4,
+                                  "schedules":  {
+                                                    "5S":  {
+                                                               "source_standard":  "ASME_B36_19M_2004",
+                                                               "standard_display":  "ASME B36.19M-2004",
+                                                               "material_scope":  "Stainless steel pipe",
+                                                               "nps":  "4",
+                                                               "dn":  100,
+                                                               "od_in":  4.5,
+                                                               "od_mm":  114.3,
+                                                               "schedule":  "5S",
+                                                               "wall_in":  0.083,
+                                                               "wall_mm":  2.11,
+                                                               "plain_end_weight_lb_ft":  3.92,
+                                                               "plain_end_mass_kg_m":  5.84,
+                                                               "designation":  null,
+                                                               "notes":  [
+                                                                             "note_1_no_threading"
+                                                                         ],
+                                                               "source_pdf_page":  11
+                                                           },
+                                                    "10S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "4",
+                                                                "dn":  100,
+                                                                "od_in":  4.5,
+                                                                "od_mm":  114.3,
+                                                                "schedule":  "10S",
+                                                                "wall_in":  0.12,
+                                                                "wall_mm":  3.05,
+                                                                "plain_end_weight_lb_ft":  5.62,
+                                                                "plain_end_mass_kg_m":  8.37,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                    "40S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "4",
+                                                                "dn":  100,
+                                                                "od_in":  4.5,
+                                                                "od_mm":  114.3,
+                                                                "schedule":  "40S",
+                                                                "wall_in":  0.237,
+                                                                "wall_mm":  6.02,
+                                                                "plain_end_weight_lb_ft":  10.8,
+                                                                "plain_end_mass_kg_m":  16.08,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                    "80S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "4",
+                                                                "dn":  100,
+                                                                "od_in":  4.5,
+                                                                "od_mm":  114.3,
+                                                                "schedule":  "80S",
+                                                                "wall_in":  0.337,
+                                                                "wall_mm":  8.56,
+                                                                "plain_end_weight_lb_ft":  15.0,
+                                                                "plain_end_mass_kg_m":  22.32,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            }
+                                                },
+                                  "schedule_lookup":  {
+                                                          "5S":  {
+                                                                     "wall_in":  0.083,
+                                                                     "wall_mm":  2.11,
+                                                                     "source_standard":  "ASME_B36_19M_2004"
+                                                                 },
+                                                          "10S":  {
+                                                                      "wall_in":  0.12,
+                                                                      "wall_mm":  3.05,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "40S":  {
+                                                                      "wall_in":  0.237,
+                                                                      "wall_mm":  6.02,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "80S":  {
+                                                                      "wall_in":  0.337,
+                                                                      "wall_mm":  8.56,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  }
+                                                      }
+                              },
+                        "6":  {
+                                  "nps":  "6",
+                                  "dn":  150,
+                                  "od_in":  6.625,
+                                  "od_mm":  168.3,
+                                  "schedule_count":  4,
+                                  "schedules":  {
+                                                    "5S":  {
+                                                               "source_standard":  "ASME_B36_19M_2004",
+                                                               "standard_display":  "ASME B36.19M-2004",
+                                                               "material_scope":  "Stainless steel pipe",
+                                                               "nps":  "6",
+                                                               "dn":  150,
+                                                               "od_in":  6.625,
+                                                               "od_mm":  168.3,
+                                                               "schedule":  "5S",
+                                                               "wall_in":  0.109,
+                                                               "wall_mm":  2.77,
+                                                               "plain_end_weight_lb_ft":  7.59,
+                                                               "plain_end_mass_kg_m":  11.31,
+                                                               "designation":  null,
+                                                               "notes":  [
+                                                                             "note_1_no_threading"
+                                                                         ],
+                                                               "source_pdf_page":  11
+                                                           },
+                                                    "10S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "6",
+                                                                "dn":  150,
+                                                                "od_in":  6.625,
+                                                                "od_mm":  168.3,
+                                                                "schedule":  "10S",
+                                                                "wall_in":  0.134,
+                                                                "wall_mm":  3.4,
+                                                                "plain_end_weight_lb_ft":  9.3,
+                                                                "plain_end_mass_kg_m":  13.83,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                    "40S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "6",
+                                                                "dn":  150,
+                                                                "od_in":  6.625,
+                                                                "od_mm":  168.3,
+                                                                "schedule":  "40S",
+                                                                "wall_in":  0.28,
+                                                                "wall_mm":  7.11,
+                                                                "plain_end_weight_lb_ft":  18.99,
+                                                                "plain_end_mass_kg_m":  28.26,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                    "80S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "6",
+                                                                "dn":  150,
+                                                                "od_in":  6.625,
+                                                                "od_mm":  168.3,
+                                                                "schedule":  "80S",
+                                                                "wall_in":  0.432,
+                                                                "wall_mm":  10.97,
+                                                                "plain_end_weight_lb_ft":  28.6,
+                                                                "plain_end_mass_kg_m":  42.56,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            }
+                                                },
+                                  "schedule_lookup":  {
+                                                          "5S":  {
+                                                                     "wall_in":  0.109,
+                                                                     "wall_mm":  2.77,
+                                                                     "source_standard":  "ASME_B36_19M_2004"
+                                                                 },
+                                                          "10S":  {
+                                                                      "wall_in":  0.134,
+                                                                      "wall_mm":  3.4,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "40S":  {
+                                                                      "wall_in":  0.28,
+                                                                      "wall_mm":  7.11,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "80S":  {
+                                                                      "wall_in":  0.432,
+                                                                      "wall_mm":  10.97,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  }
+                                                      }
+                              },
+                        "8":  {
+                                  "nps":  "8",
+                                  "dn":  200,
+                                  "od_in":  8.625,
+                                  "od_mm":  219.1,
+                                  "schedule_count":  4,
+                                  "schedules":  {
+                                                    "5S":  {
+                                                               "source_standard":  "ASME_B36_19M_2004",
+                                                               "standard_display":  "ASME B36.19M-2004",
+                                                               "material_scope":  "Stainless steel pipe",
+                                                               "nps":  "8",
+                                                               "dn":  200,
+                                                               "od_in":  8.625,
+                                                               "od_mm":  219.1,
+                                                               "schedule":  "5S",
+                                                               "wall_in":  0.109,
+                                                               "wall_mm":  2.77,
+                                                               "plain_end_weight_lb_ft":  9.92,
+                                                               "plain_end_mass_kg_m":  14.78,
+                                                               "designation":  null,
+                                                               "notes":  [
+                                                                             "note_1_no_threading"
+                                                                         ],
+                                                               "source_pdf_page":  11
+                                                           },
+                                                    "10S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "8",
+                                                                "dn":  200,
+                                                                "od_in":  8.625,
+                                                                "od_mm":  219.1,
+                                                                "schedule":  "10S",
+                                                                "wall_in":  0.148,
+                                                                "wall_mm":  3.76,
+                                                                "plain_end_weight_lb_ft":  13.41,
+                                                                "plain_end_mass_kg_m":  19.97,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                    "40S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "8",
+                                                                "dn":  200,
+                                                                "od_in":  8.625,
+                                                                "od_mm":  219.1,
+                                                                "schedule":  "40S",
+                                                                "wall_in":  0.322,
+                                                                "wall_mm":  8.18,
+                                                                "plain_end_weight_lb_ft":  28.58,
+                                                                "plain_end_mass_kg_m":  42.55,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                    "80S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "8",
+                                                                "dn":  200,
+                                                                "od_in":  8.625,
+                                                                "od_mm":  219.1,
+                                                                "schedule":  "80S",
+                                                                "wall_in":  0.5,
+                                                                "wall_mm":  12.7,
+                                                                "plain_end_weight_lb_ft":  43.43,
+                                                                "plain_end_mass_kg_m":  64.64,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            }
+                                                },
+                                  "schedule_lookup":  {
+                                                          "5S":  {
+                                                                     "wall_in":  0.109,
+                                                                     "wall_mm":  2.77,
+                                                                     "source_standard":  "ASME_B36_19M_2004"
+                                                                 },
+                                                          "10S":  {
+                                                                      "wall_in":  0.148,
+                                                                      "wall_mm":  3.76,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "40S":  {
+                                                                      "wall_in":  0.322,
+                                                                      "wall_mm":  8.18,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                          "80S":  {
+                                                                      "wall_in":  0.5,
+                                                                      "wall_mm":  12.7,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  }
+                                                      }
+                              },
+                        "10":  {
+                                   "nps":  "10",
+                                   "dn":  250,
+                                   "od_in":  10.75,
+                                   "od_mm":  273.1,
+                                   "schedule_count":  4,
+                                   "schedules":  {
+                                                     "5S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "10",
+                                                                "dn":  250,
+                                                                "od_in":  10.75,
+                                                                "od_mm":  273.1,
+                                                                "schedule":  "5S",
+                                                                "wall_in":  0.134,
+                                                                "wall_mm":  3.4,
+                                                                "plain_end_weight_lb_ft":  15.21,
+                                                                "plain_end_mass_kg_m":  22.61,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                     "10S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "10",
+                                                                 "dn":  250,
+                                                                 "od_in":  10.75,
+                                                                 "od_mm":  273.1,
+                                                                 "schedule":  "10S",
+                                                                 "wall_in":  0.165,
+                                                                 "wall_mm":  4.19,
+                                                                 "plain_end_weight_lb_ft":  18.67,
+                                                                 "plain_end_mass_kg_m":  27.79,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "40S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "10",
+                                                                 "dn":  250,
+                                                                 "od_in":  10.75,
+                                                                 "od_mm":  273.1,
+                                                                 "schedule":  "40S",
+                                                                 "wall_in":  0.365,
+                                                                 "wall_mm":  9.27,
+                                                                 "plain_end_weight_lb_ft":  40.52,
+                                                                 "plain_end_mass_kg_m":  60.31,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "80S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "10",
+                                                                 "dn":  250,
+                                                                 "od_in":  10.75,
+                                                                 "od_mm":  273.1,
+                                                                 "schedule":  "80S",
+                                                                 "wall_in":  0.5,
+                                                                 "wall_mm":  12.7,
+                                                                 "plain_end_weight_lb_ft":  54.79,
+                                                                 "plain_end_mass_kg_m":  81.56,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             }
+                                                 },
+                                   "schedule_lookup":  {
+                                                           "5S":  {
+                                                                      "wall_in":  0.134,
+                                                                      "wall_mm":  3.4,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                           "10S":  {
+                                                                       "wall_in":  0.165,
+                                                                       "wall_mm":  4.19,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "40S":  {
+                                                                       "wall_in":  0.365,
+                                                                       "wall_mm":  9.27,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "80S":  {
+                                                                       "wall_in":  0.5,
+                                                                       "wall_mm":  12.7,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   }
+                                                       }
+                               },
+                        "12":  {
+                                   "nps":  "12",
+                                   "dn":  300,
+                                   "od_in":  12.75,
+                                   "od_mm":  323.8,
+                                   "schedule_count":  4,
+                                   "schedules":  {
+                                                     "5S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "12",
+                                                                "dn":  300,
+                                                                "od_in":  12.75,
+                                                                "od_mm":  323.9,
+                                                                "schedule":  "5S",
+                                                                "wall_in":  0.156,
+                                                                "wall_mm":  3.96,
+                                                                "plain_end_weight_lb_ft":  21.0,
+                                                                "plain_end_mass_kg_m":  31.25,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                     "10S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "12",
+                                                                 "dn":  300,
+                                                                 "od_in":  12.75,
+                                                                 "od_mm":  323.9,
+                                                                 "schedule":  "10S",
+                                                                 "wall_in":  0.18,
+                                                                 "wall_mm":  4.57,
+                                                                 "plain_end_weight_lb_ft":  24.19,
+                                                                 "plain_end_mass_kg_m":  35.99,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "40S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "12",
+                                                                 "dn":  300,
+                                                                 "od_in":  12.75,
+                                                                 "od_mm":  323.9,
+                                                                 "schedule":  "40S",
+                                                                 "wall_in":  0.375,
+                                                                 "wall_mm":  9.53,
+                                                                 "plain_end_weight_lb_ft":  49.61,
+                                                                 "plain_end_mass_kg_m":  73.88,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "80S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "12",
+                                                                 "dn":  300,
+                                                                 "od_in":  12.75,
+                                                                 "od_mm":  323.9,
+                                                                 "schedule":  "80S",
+                                                                 "wall_in":  0.5,
+                                                                 "wall_mm":  12.7,
+                                                                 "plain_end_weight_lb_ft":  65.48,
+                                                                 "plain_end_mass_kg_m":  97.47,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             }
+                                                 },
+                                   "schedule_lookup":  {
+                                                           "5S":  {
+                                                                      "wall_in":  0.156,
+                                                                      "wall_mm":  3.96,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                           "10S":  {
+                                                                       "wall_in":  0.18,
+                                                                       "wall_mm":  4.57,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "40S":  {
+                                                                       "wall_in":  0.375,
+                                                                       "wall_mm":  9.53,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "80S":  {
+                                                                       "wall_in":  0.5,
+                                                                       "wall_mm":  12.7,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   }
+                                                       }
+                               },
+                        "14":  {
+                                   "nps":  "14",
+                                   "dn":  350,
+                                   "od_in":  14.0,
+                                   "od_mm":  355.6,
+                                   "schedule_count":  4,
+                                   "schedules":  {
+                                                     "5S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "14",
+                                                                "dn":  350,
+                                                                "od_in":  14.0,
+                                                                "od_mm":  355.6,
+                                                                "schedule":  "5S",
+                                                                "wall_in":  0.156,
+                                                                "wall_mm":  3.96,
+                                                                "plain_end_weight_lb_ft":  23.09,
+                                                                "plain_end_mass_kg_m":  34.34,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                     "10S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "14",
+                                                                 "dn":  350,
+                                                                 "od_in":  14.0,
+                                                                 "od_mm":  355.6,
+                                                                 "schedule":  "10S",
+                                                                 "wall_in":  0.188,
+                                                                 "wall_mm":  4.78,
+                                                                 "plain_end_weight_lb_ft":  27.76,
+                                                                 "plain_end_mass_kg_m":  41.36,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading",
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "40S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "14",
+                                                                 "dn":  350,
+                                                                 "od_in":  14.0,
+                                                                 "od_mm":  355.6,
+                                                                 "schedule":  "40S",
+                                                                 "wall_in":  0.375,
+                                                                 "wall_mm":  9.53,
+                                                                 "plain_end_weight_lb_ft":  54.62,
+                                                                 "plain_end_mass_kg_m":  81.33,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "80S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "14",
+                                                                 "dn":  350,
+                                                                 "od_in":  14.0,
+                                                                 "od_mm":  355.6,
+                                                                 "schedule":  "80S",
+                                                                 "wall_in":  0.5,
+                                                                 "wall_mm":  12.7,
+                                                                 "plain_end_weight_lb_ft":  72.16,
+                                                                 "plain_end_mass_kg_m":  107.4,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             }
+                                                 },
+                                   "schedule_lookup":  {
+                                                           "5S":  {
+                                                                      "wall_in":  0.156,
+                                                                      "wall_mm":  3.96,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                           "10S":  {
+                                                                       "wall_in":  0.188,
+                                                                       "wall_mm":  4.78,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "40S":  {
+                                                                       "wall_in":  0.375,
+                                                                       "wall_mm":  9.53,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "80S":  {
+                                                                       "wall_in":  0.5,
+                                                                       "wall_mm":  12.7,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   }
+                                                       }
+                               },
+                        "16":  {
+                                   "nps":  "16",
+                                   "dn":  400,
+                                   "od_in":  16.0,
+                                   "od_mm":  406.4,
+                                   "schedule_count":  4,
+                                   "schedules":  {
+                                                     "5S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "16",
+                                                                "dn":  400,
+                                                                "od_in":  16.0,
+                                                                "od_mm":  406.4,
+                                                                "schedule":  "5S",
+                                                                "wall_in":  0.165,
+                                                                "wall_mm":  4.19,
+                                                                "plain_end_weight_lb_ft":  27.93,
+                                                                "plain_end_mass_kg_m":  41.56,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                     "10S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "16",
+                                                                 "dn":  400,
+                                                                 "od_in":  16.0,
+                                                                 "od_mm":  406.4,
+                                                                 "schedule":  "10S",
+                                                                 "wall_in":  0.188,
+                                                                 "wall_mm":  4.78,
+                                                                 "plain_end_weight_lb_ft":  31.78,
+                                                                 "plain_end_mass_kg_m":  47.34,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading",
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "40S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "16",
+                                                                 "dn":  400,
+                                                                 "od_in":  16.0,
+                                                                 "od_mm":  406.4,
+                                                                 "schedule":  "40S",
+                                                                 "wall_in":  0.375,
+                                                                 "wall_mm":  9.53,
+                                                                 "plain_end_weight_lb_ft":  62.64,
+                                                                 "plain_end_mass_kg_m":  93.27,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "80S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "16",
+                                                                 "dn":  400,
+                                                                 "od_in":  16.0,
+                                                                 "od_mm":  406.4,
+                                                                 "schedule":  "80S",
+                                                                 "wall_in":  0.5,
+                                                                 "wall_mm":  12.7,
+                                                                 "plain_end_weight_lb_ft":  82.85,
+                                                                 "plain_end_mass_kg_m":  123.31,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             }
+                                                 },
+                                   "schedule_lookup":  {
+                                                           "5S":  {
+                                                                      "wall_in":  0.165,
+                                                                      "wall_mm":  4.19,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                           "10S":  {
+                                                                       "wall_in":  0.188,
+                                                                       "wall_mm":  4.78,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "40S":  {
+                                                                       "wall_in":  0.375,
+                                                                       "wall_mm":  9.53,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "80S":  {
+                                                                       "wall_in":  0.5,
+                                                                       "wall_mm":  12.7,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   }
+                                                       }
+                               },
+                        "18":  {
+                                   "nps":  "18",
+                                   "dn":  450,
+                                   "od_in":  18.0,
+                                   "od_mm":  457,
+                                   "schedule_count":  4,
+                                   "schedules":  {
+                                                     "5S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "18",
+                                                                "dn":  450,
+                                                                "od_in":  18.0,
+                                                                "od_mm":  457.0,
+                                                                "schedule":  "5S",
+                                                                "wall_in":  0.165,
+                                                                "wall_mm":  4.19,
+                                                                "plain_end_weight_lb_ft":  31.46,
+                                                                "plain_end_mass_kg_m":  46.79,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                     "10S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "18",
+                                                                 "dn":  450,
+                                                                 "od_in":  18.0,
+                                                                 "od_mm":  457.0,
+                                                                 "schedule":  "10S",
+                                                                 "wall_in":  0.188,
+                                                                 "wall_mm":  4.78,
+                                                                 "plain_end_weight_lb_ft":  35.8,
+                                                                 "plain_end_mass_kg_m":  53.31,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading",
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "40S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "18",
+                                                                 "dn":  450,
+                                                                 "od_in":  18.0,
+                                                                 "od_mm":  457.0,
+                                                                 "schedule":  "40S",
+                                                                 "wall_in":  0.375,
+                                                                 "wall_mm":  9.53,
+                                                                 "plain_end_weight_lb_ft":  70.65,
+                                                                 "plain_end_mass_kg_m":  null,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m",
+                                                                               "kg_m_blank_in_table"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "80S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "18",
+                                                                 "dn":  450,
+                                                                 "od_in":  18.0,
+                                                                 "od_mm":  457.0,
+                                                                 "schedule":  "80S",
+                                                                 "wall_in":  0.5,
+                                                                 "wall_mm":  12.7,
+                                                                 "plain_end_weight_lb_ft":  93.54,
+                                                                 "plain_end_mass_kg_m":  null,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m",
+                                                                               "kg_m_blank_in_table"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             }
+                                                 },
+                                   "schedule_lookup":  {
+                                                           "5S":  {
+                                                                      "wall_in":  0.165,
+                                                                      "wall_mm":  4.19,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                           "10S":  {
+                                                                       "wall_in":  0.188,
+                                                                       "wall_mm":  4.78,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "40S":  {
+                                                                       "wall_in":  0.375,
+                                                                       "wall_mm":  9.53,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "80S":  {
+                                                                       "wall_in":  0.5,
+                                                                       "wall_mm":  12.7,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   }
+                                                       }
+                               },
+                        "20":  {
+                                   "nps":  "20",
+                                   "dn":  500,
+                                   "od_in":  20.0,
+                                   "od_mm":  508,
+                                   "schedule_count":  4,
+                                   "schedules":  {
+                                                     "5S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "20",
+                                                                "dn":  500,
+                                                                "od_in":  20.0,
+                                                                "od_mm":  508.0,
+                                                                "schedule":  "5S",
+                                                                "wall_in":  0.188,
+                                                                "wall_mm":  4.78,
+                                                                "plain_end_weight_lb_ft":  39.82,
+                                                                "plain_end_mass_kg_m":  59.32,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  11
+                                                            },
+                                                     "10S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "20",
+                                                                 "dn":  500,
+                                                                 "od_in":  20.0,
+                                                                 "od_mm":  508.0,
+                                                                 "schedule":  "10S",
+                                                                 "wall_in":  0.218,
+                                                                 "wall_mm":  5.54,
+                                                                 "plain_end_weight_lb_ft":  46.1,
+                                                                 "plain_end_mass_kg_m":  68.65,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading",
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "40S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "20",
+                                                                 "dn":  500,
+                                                                 "od_in":  20.0,
+                                                                 "od_mm":  508.0,
+                                                                 "schedule":  "40S",
+                                                                 "wall_in":  0.375,
+                                                                 "wall_mm":  9.53,
+                                                                 "plain_end_weight_lb_ft":  78.67,
+                                                                 "plain_end_mass_kg_m":  117.15,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             },
+                                                     "80S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "20",
+                                                                 "dn":  500,
+                                                                 "od_in":  20.0,
+                                                                 "od_mm":  508.0,
+                                                                 "schedule":  "80S",
+                                                                 "wall_in":  0.5,
+                                                                 "wall_mm":  12.7,
+                                                                 "plain_end_weight_lb_ft":  104.23,
+                                                                 "plain_end_mass_kg_m":  155.13,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  11
+                                                             }
+                                                 },
+                                   "schedule_lookup":  {
+                                                           "5S":  {
+                                                                      "wall_in":  0.188,
+                                                                      "wall_mm":  4.78,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                           "10S":  {
+                                                                       "wall_in":  0.218,
+                                                                       "wall_mm":  5.54,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "40S":  {
+                                                                       "wall_in":  0.375,
+                                                                       "wall_mm":  9.53,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "80S":  {
+                                                                       "wall_in":  0.5,
+                                                                       "wall_mm":  12.7,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   }
+                                                       }
+                               },
+                        "22":  {
+                                   "nps":  "22",
+                                   "dn":  550,
+                                   "od_in":  22.0,
+                                   "od_mm":  559,
+                                   "schedule_count":  2,
+                                   "schedules":  {
+                                                     "5S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "22",
+                                                                "dn":  550,
+                                                                "od_in":  22.0,
+                                                                "od_mm":  559.0,
+                                                                "schedule":  "5S",
+                                                                "wall_in":  0.188,
+                                                                "wall_mm":  4.78,
+                                                                "plain_end_weight_lb_ft":  43.84,
+                                                                "plain_end_mass_kg_m":  65.33,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  12
+                                                            },
+                                                     "10S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "22",
+                                                                 "dn":  550,
+                                                                 "od_in":  22.0,
+                                                                 "od_mm":  559.0,
+                                                                 "schedule":  "10S",
+                                                                 "wall_in":  0.218,
+                                                                 "wall_mm":  5.54,
+                                                                 "plain_end_weight_lb_ft":  50.76,
+                                                                 "plain_end_mass_kg_m":  75.62,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading",
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  12
+                                                             }
+                                                 },
+                                   "schedule_lookup":  {
+                                                           "5S":  {
+                                                                      "wall_in":  0.188,
+                                                                      "wall_mm":  4.78,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                           "10S":  {
+                                                                       "wall_in":  0.218,
+                                                                       "wall_mm":  5.54,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   }
+                                                       },
+                                   "unavailable_schedule_rows":  [
+                                                                     {
+                                                                         "source_standard":  "ASME_B36_19M_2004",
+                                                                         "standard_display":  "ASME B36.19M-2004",
+                                                                         "material_scope":  "Stainless steel pipe",
+                                                                         "nps":  "22",
+                                                                         "dn":  550,
+                                                                         "od_in":  22.0,
+                                                                         "od_mm":  559.0,
+                                                                         "schedule":  "40S",
+                                                                         "wall_in":  null,
+                                                                         "wall_mm":  null,
+                                                                         "plain_end_weight_lb_ft":  null,
+                                                                         "plain_end_mass_kg_m":  null,
+                                                                         "designation":  null,
+                                                                         "is_tabulated":  false,
+                                                                         "notes":  [
+                                                                                       "not_tabulated"
+                                                                                   ],
+                                                                         "source_pdf_page":  12
+                                                                     },
+                                                                     {
+                                                                         "source_standard":  "ASME_B36_19M_2004",
+                                                                         "standard_display":  "ASME B36.19M-2004",
+                                                                         "material_scope":  "Stainless steel pipe",
+                                                                         "nps":  "22",
+                                                                         "dn":  550,
+                                                                         "od_in":  22.0,
+                                                                         "od_mm":  559.0,
+                                                                         "schedule":  "80S",
+                                                                         "wall_in":  null,
+                                                                         "wall_mm":  null,
+                                                                         "plain_end_weight_lb_ft":  null,
+                                                                         "plain_end_mass_kg_m":  null,
+                                                                         "designation":  null,
+                                                                         "is_tabulated":  false,
+                                                                         "notes":  [
+                                                                                       "not_tabulated"
+                                                                                   ],
+                                                                         "source_pdf_page":  12
+                                                                     }
+                                                                 ]
+                               },
+                        "24":  {
+                                   "nps":  "24",
+                                   "dn":  600,
+                                   "od_in":  24.0,
+                                   "od_mm":  610,
+                                   "schedule_count":  4,
+                                   "schedules":  {
+                                                     "5S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "24",
+                                                                "dn":  600,
+                                                                "od_in":  24.0,
+                                                                "od_mm":  610.0,
+                                                                "schedule":  "5S",
+                                                                "wall_in":  0.218,
+                                                                "wall_mm":  5.54,
+                                                                "plain_end_weight_lb_ft":  55.42,
+                                                                "plain_end_mass_kg_m":  82.58,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  12
+                                                            },
+                                                     "10S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "24",
+                                                                 "dn":  600,
+                                                                 "od_in":  24.0,
+                                                                 "od_mm":  610.0,
+                                                                 "schedule":  "10S",
+                                                                 "wall_in":  0.25,
+                                                                 "wall_mm":  6.35,
+                                                                 "plain_end_weight_lb_ft":  63.47,
+                                                                 "plain_end_mass_kg_m":  94.53,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading"
+                                                                           ],
+                                                                 "source_pdf_page":  12
+                                                             },
+                                                     "40S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "24",
+                                                                 "dn":  600,
+                                                                 "od_in":  24.0,
+                                                                 "od_mm":  610.0,
+                                                                 "schedule":  "40S",
+                                                                 "wall_in":  0.375,
+                                                                 "wall_mm":  9.53,
+                                                                 "plain_end_weight_lb_ft":  94.71,
+                                                                 "plain_end_mass_kg_m":  141.12,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  12
+                                                             },
+                                                     "80S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "24",
+                                                                 "dn":  600,
+                                                                 "od_in":  24.0,
+                                                                 "od_mm":  610.0,
+                                                                 "schedule":  "80S",
+                                                                 "wall_in":  0.5,
+                                                                 "wall_mm":  12.7,
+                                                                 "plain_end_weight_lb_ft":  125.61,
+                                                                 "plain_end_mass_kg_m":  187.07,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_2_not_conform_b36_10m"
+                                                                           ],
+                                                                 "source_pdf_page":  12
+                                                             }
+                                                 },
+                                   "schedule_lookup":  {
+                                                           "5S":  {
+                                                                      "wall_in":  0.218,
+                                                                      "wall_mm":  5.54,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                           "10S":  {
+                                                                       "wall_in":  0.25,
+                                                                       "wall_mm":  6.35,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "40S":  {
+                                                                       "wall_in":  0.375,
+                                                                       "wall_mm":  9.53,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   },
+                                                           "80S":  {
+                                                                       "wall_in":  0.5,
+                                                                       "wall_mm":  12.7,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   }
+                                                       }
+                               },
+                        "26":  {
+                                   "nps":  "26",
+                                   "dn":  650,
+                                   "od_in":  26.0,
+                                   "od_mm":  660,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "28":  {
+                                   "nps":  "28",
+                                   "dn":  700,
+                                   "od_in":  28.0,
+                                   "od_mm":  711,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "30":  {
+                                   "nps":  "30",
+                                   "dn":  750,
+                                   "od_in":  30.0,
+                                   "od_mm":  762,
+                                   "schedule_count":  2,
+                                   "schedules":  {
+                                                     "5S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "30",
+                                                                "dn":  750,
+                                                                "od_in":  30.0,
+                                                                "od_mm":  762.0,
+                                                                "schedule":  "5S",
+                                                                "wall_in":  0.25,
+                                                                "wall_mm":  6.35,
+                                                                "plain_end_weight_lb_ft":  79.51,
+                                                                "plain_end_mass_kg_m":  118.34,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  12
+                                                            },
+                                                     "10S":  {
+                                                                 "source_standard":  "ASME_B36_19M_2004",
+                                                                 "standard_display":  "ASME B36.19M-2004",
+                                                                 "material_scope":  "Stainless steel pipe",
+                                                                 "nps":  "30",
+                                                                 "dn":  750,
+                                                                 "od_in":  30.0,
+                                                                 "od_mm":  762.0,
+                                                                 "schedule":  "10S",
+                                                                 "wall_in":  0.312,
+                                                                 "wall_mm":  7.92,
+                                                                 "plain_end_weight_lb_ft":  99.02,
+                                                                 "plain_end_mass_kg_m":  147.29,
+                                                                 "designation":  null,
+                                                                 "notes":  [
+                                                                               "note_1_no_threading"
+                                                                           ],
+                                                                 "source_pdf_page":  12
+                                                             }
+                                                 },
+                                   "schedule_lookup":  {
+                                                           "5S":  {
+                                                                      "wall_in":  0.25,
+                                                                      "wall_mm":  6.35,
+                                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                                  },
+                                                           "10S":  {
+                                                                       "wall_in":  0.312,
+                                                                       "wall_mm":  7.92,
+                                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                                   }
+                                                       },
+                                   "unavailable_schedule_rows":  [
+                                                                     {
+                                                                         "source_standard":  "ASME_B36_19M_2004",
+                                                                         "standard_display":  "ASME B36.19M-2004",
+                                                                         "material_scope":  "Stainless steel pipe",
+                                                                         "nps":  "30",
+                                                                         "dn":  750,
+                                                                         "od_in":  30.0,
+                                                                         "od_mm":  762.0,
+                                                                         "schedule":  "40S",
+                                                                         "wall_in":  null,
+                                                                         "wall_mm":  null,
+                                                                         "plain_end_weight_lb_ft":  null,
+                                                                         "plain_end_mass_kg_m":  null,
+                                                                         "designation":  null,
+                                                                         "is_tabulated":  false,
+                                                                         "notes":  [
+                                                                                       "not_tabulated"
+                                                                                   ],
+                                                                         "source_pdf_page":  12
+                                                                     },
+                                                                     {
+                                                                         "source_standard":  "ASME_B36_19M_2004",
+                                                                         "standard_display":  "ASME B36.19M-2004",
+                                                                         "material_scope":  "Stainless steel pipe",
+                                                                         "nps":  "30",
+                                                                         "dn":  750,
+                                                                         "od_in":  30.0,
+                                                                         "od_mm":  762.0,
+                                                                         "schedule":  "80S",
+                                                                         "wall_in":  null,
+                                                                         "wall_mm":  null,
+                                                                         "plain_end_weight_lb_ft":  null,
+                                                                         "plain_end_mass_kg_m":  null,
+                                                                         "designation":  null,
+                                                                         "is_tabulated":  false,
+                                                                         "notes":  [
+                                                                                       "not_tabulated"
+                                                                                   ],
+                                                                         "source_pdf_page":  12
+                                                                     }
+                                                                 ]
+                               },
+                        "32":  {
+                                   "nps":  "32",
+                                   "dn":  800,
+                                   "od_in":  32.0,
+                                   "od_mm":  813,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "34":  {
+                                   "nps":  "34",
+                                   "dn":  850,
+                                   "od_in":  34.0,
+                                   "od_mm":  864,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "36":  {
+                                   "nps":  "36",
+                                   "dn":  900,
+                                   "od_in":  36.0,
+                                   "od_mm":  914,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "38":  {
+                                   "nps":  "38",
+                                   "dn":  950,
+                                   "od_in":  38.0,
+                                   "od_mm":  965,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "40":  {
+                                   "nps":  "40",
+                                   "dn":  1000,
+                                   "od_in":  40.0,
+                                   "od_mm":  1016,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "42":  {
+                                   "nps":  "42",
+                                   "dn":  1050,
+                                   "od_in":  42.0,
+                                   "od_mm":  1067,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "44":  {
+                                   "nps":  "44",
+                                   "dn":  1100,
+                                   "od_in":  44.0,
+                                   "od_mm":  1118,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "46":  {
+                                   "nps":  "46",
+                                   "dn":  1150,
+                                   "od_in":  46.0,
+                                   "od_mm":  1168,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               },
+                        "48":  {
+                                   "nps":  "48",
+                                   "dn":  1200,
+                                   "od_in":  48.0,
+                                   "od_mm":  1219,
+                                   "available":  false,
+                                   "schedule_count":  0,
+                                   "schedules":  {
+
+                                                 },
+                                   "schedule_lookup":  {
+
+                                                       }
+                               }
+                    },
+    "schedule_lookup_by_nps":  {
+                                   "1/2":  {
+                                               "5S":  {
+                                                          "wall_in":  0.065,
+                                                          "wall_mm":  1.65,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                               "10S":  {
+                                                           "wall_in":  0.083,
+                                                           "wall_mm":  2.11,
+                                                           "source_standard":  "ASME_B36_19M_2004"
+                                                       },
+                                               "40S":  {
+                                                           "wall_in":  0.109,
+                                                           "wall_mm":  2.77,
+                                                           "source_standard":  "ASME_B36_19M_2004"
+                                                       },
+                                               "80S":  {
+                                                           "wall_in":  0.147,
+                                                           "wall_mm":  3.73,
+                                                           "source_standard":  "ASME_B36_19M_2004"
+                                                       }
+                                           },
+                                   "3/4":  {
+                                               "5S":  {
+                                                          "wall_in":  0.065,
+                                                          "wall_mm":  1.65,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                               "10S":  {
+                                                           "wall_in":  0.083,
+                                                           "wall_mm":  2.11,
+                                                           "source_standard":  "ASME_B36_19M_2004"
+                                                       },
+                                               "40S":  {
+                                                           "wall_in":  0.113,
+                                                           "wall_mm":  2.87,
+                                                           "source_standard":  "ASME_B36_19M_2004"
+                                                       },
+                                               "80S":  {
+                                                           "wall_in":  0.154,
+                                                           "wall_mm":  3.91,
+                                                           "source_standard":  "ASME_B36_19M_2004"
+                                                       }
+                                           },
+                                   "1":  {
+                                             "5S":  {
+                                                        "wall_in":  0.065,
+                                                        "wall_mm":  1.65,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                             "10S":  {
+                                                         "wall_in":  0.109,
+                                                         "wall_mm":  2.77,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "40S":  {
+                                                         "wall_in":  0.133,
+                                                         "wall_mm":  3.38,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "80S":  {
+                                                         "wall_in":  0.179,
+                                                         "wall_mm":  4.55,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     }
+                                         },
+                                   "1-1/2":  {
+                                                 "5S":  {
+                                                            "wall_in":  0.065,
+                                                            "wall_mm":  1.65,
+                                                            "source_standard":  "ASME_B36_19M_2004"
+                                                        },
+                                                 "10S":  {
+                                                             "wall_in":  0.109,
+                                                             "wall_mm":  2.77,
+                                                             "source_standard":  "ASME_B36_19M_2004"
+                                                         },
+                                                 "40S":  {
+                                                             "wall_in":  0.145,
+                                                             "wall_mm":  3.68,
+                                                             "source_standard":  "ASME_B36_19M_2004"
+                                                         },
+                                                 "80S":  {
+                                                             "wall_in":  0.2,
+                                                             "wall_mm":  5.08,
+                                                             "source_standard":  "ASME_B36_19M_2004"
+                                                         }
+                                             },
+                                   "2":  {
+                                             "5S":  {
+                                                        "wall_in":  0.065,
+                                                        "wall_mm":  1.65,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                             "10S":  {
+                                                         "wall_in":  0.109,
+                                                         "wall_mm":  2.77,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "40S":  {
+                                                         "wall_in":  0.154,
+                                                         "wall_mm":  3.91,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "80S":  {
+                                                         "wall_in":  0.218,
+                                                         "wall_mm":  5.54,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     }
+                                         },
+                                   "3":  {
+                                             "5S":  {
+                                                        "wall_in":  0.083,
+                                                        "wall_mm":  2.11,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                             "10S":  {
+                                                         "wall_in":  0.12,
+                                                         "wall_mm":  3.05,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "40S":  {
+                                                         "wall_in":  0.216,
+                                                         "wall_mm":  5.49,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "80S":  {
+                                                         "wall_in":  0.3,
+                                                         "wall_mm":  7.62,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     }
+                                         },
+                                   "4":  {
+                                             "5S":  {
+                                                        "wall_in":  0.083,
+                                                        "wall_mm":  2.11,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                             "10S":  {
+                                                         "wall_in":  0.12,
+                                                         "wall_mm":  3.05,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "40S":  {
+                                                         "wall_in":  0.237,
+                                                         "wall_mm":  6.02,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "80S":  {
+                                                         "wall_in":  0.337,
+                                                         "wall_mm":  8.56,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     }
+                                         },
+                                   "6":  {
+                                             "5S":  {
+                                                        "wall_in":  0.109,
+                                                        "wall_mm":  2.77,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                             "10S":  {
+                                                         "wall_in":  0.134,
+                                                         "wall_mm":  3.4,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "40S":  {
+                                                         "wall_in":  0.28,
+                                                         "wall_mm":  7.11,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "80S":  {
+                                                         "wall_in":  0.432,
+                                                         "wall_mm":  10.97,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     }
+                                         },
+                                   "8":  {
+                                             "5S":  {
+                                                        "wall_in":  0.109,
+                                                        "wall_mm":  2.77,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                             "10S":  {
+                                                         "wall_in":  0.148,
+                                                         "wall_mm":  3.76,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "40S":  {
+                                                         "wall_in":  0.322,
+                                                         "wall_mm":  8.18,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                             "80S":  {
+                                                         "wall_in":  0.5,
+                                                         "wall_mm":  12.7,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     }
+                                         },
+                                   "10":  {
+                                              "5S":  {
+                                                         "wall_in":  0.134,
+                                                         "wall_mm":  3.4,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                              "10S":  {
+                                                          "wall_in":  0.165,
+                                                          "wall_mm":  4.19,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "40S":  {
+                                                          "wall_in":  0.365,
+                                                          "wall_mm":  9.27,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "80S":  {
+                                                          "wall_in":  0.5,
+                                                          "wall_mm":  12.7,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      }
+                                          },
+                                   "12":  {
+                                              "5S":  {
+                                                         "wall_in":  0.156,
+                                                         "wall_mm":  3.96,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                              "10S":  {
+                                                          "wall_in":  0.18,
+                                                          "wall_mm":  4.57,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "40S":  {
+                                                          "wall_in":  0.375,
+                                                          "wall_mm":  9.53,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "80S":  {
+                                                          "wall_in":  0.5,
+                                                          "wall_mm":  12.7,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      }
+                                          },
+                                   "14":  {
+                                              "5S":  {
+                                                         "wall_in":  0.156,
+                                                         "wall_mm":  3.96,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                              "10S":  {
+                                                          "wall_in":  0.188,
+                                                          "wall_mm":  4.78,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "40S":  {
+                                                          "wall_in":  0.375,
+                                                          "wall_mm":  9.53,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "80S":  {
+                                                          "wall_in":  0.5,
+                                                          "wall_mm":  12.7,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      }
+                                          },
+                                   "16":  {
+                                              "5S":  {
+                                                         "wall_in":  0.165,
+                                                         "wall_mm":  4.19,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                              "10S":  {
+                                                          "wall_in":  0.188,
+                                                          "wall_mm":  4.78,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "40S":  {
+                                                          "wall_in":  0.375,
+                                                          "wall_mm":  9.53,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "80S":  {
+                                                          "wall_in":  0.5,
+                                                          "wall_mm":  12.7,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      }
+                                          },
+                                   "18":  {
+                                              "5S":  {
+                                                         "wall_in":  0.165,
+                                                         "wall_mm":  4.19,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                              "10S":  {
+                                                          "wall_in":  0.188,
+                                                          "wall_mm":  4.78,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "40S":  {
+                                                          "wall_in":  0.375,
+                                                          "wall_mm":  9.53,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "80S":  {
+                                                          "wall_in":  0.5,
+                                                          "wall_mm":  12.7,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      }
+                                          },
+                                   "20":  {
+                                              "5S":  {
+                                                         "wall_in":  0.188,
+                                                         "wall_mm":  4.78,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                              "10S":  {
+                                                          "wall_in":  0.218,
+                                                          "wall_mm":  5.54,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "40S":  {
+                                                          "wall_in":  0.375,
+                                                          "wall_mm":  9.53,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "80S":  {
+                                                          "wall_in":  0.5,
+                                                          "wall_mm":  12.7,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      }
+                                          },
+                                   "22":  {
+                                              "5S":  {
+                                                         "wall_in":  0.188,
+                                                         "wall_mm":  4.78,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                              "10S":  {
+                                                          "wall_in":  0.218,
+                                                          "wall_mm":  5.54,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      }
+                                          },
+                                   "24":  {
+                                              "5S":  {
+                                                         "wall_in":  0.218,
+                                                         "wall_mm":  5.54,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                              "10S":  {
+                                                          "wall_in":  0.25,
+                                                          "wall_mm":  6.35,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "40S":  {
+                                                          "wall_in":  0.375,
+                                                          "wall_mm":  9.53,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      },
+                                              "80S":  {
+                                                          "wall_in":  0.5,
+                                                          "wall_mm":  12.7,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      }
+                                          },
+                                   "26":  {
+
+                                          },
+                                   "28":  {
+
+                                          },
+                                   "30":  {
+                                              "5S":  {
+                                                         "wall_in":  0.25,
+                                                         "wall_mm":  6.35,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                              "10S":  {
+                                                          "wall_in":  0.312,
+                                                          "wall_mm":  7.92,
+                                                          "source_standard":  "ASME_B36_19M_2004"
+                                                      }
+                                          },
+                                   "32":  {
+
+                                          },
+                                   "34":  {
+
+                                          },
+                                   "36":  {
+
+                                          },
+                                   "38":  {
+
+                                          },
+                                   "40":  {
+
+                                          },
+                                   "42":  {
+
+                                          },
+                                   "44":  {
+
+                                          },
+                                   "46":  {
+
+                                          },
+                                   "48":  {
+
+                                          }
+                               },
+    "full_schedule_data_by_nps":  {
+                                      "1/2":  {
+                                                  "5S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "1/2",
+                                                             "dn":  15,
+                                                             "od_in":  0.84,
+                                                             "od_mm":  21.3,
+                                                             "schedule":  "5S",
+                                                             "wall_in":  0.065,
+                                                             "wall_mm":  1.65,
+                                                             "plain_end_weight_lb_ft":  0.54,
+                                                             "plain_end_mass_kg_m":  0.8,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading"
+                                                                       ],
+                                                             "source_pdf_page":  10
+                                                         },
+                                                  "10S":  {
+                                                              "source_standard":  "ASME_B36_19M_2004",
+                                                              "standard_display":  "ASME B36.19M-2004",
+                                                              "material_scope":  "Stainless steel pipe",
+                                                              "nps":  "1/2",
+                                                              "dn":  15,
+                                                              "od_in":  0.84,
+                                                              "od_mm":  21.3,
+                                                              "schedule":  "10S",
+                                                              "wall_in":  0.083,
+                                                              "wall_mm":  2.11,
+                                                              "plain_end_weight_lb_ft":  0.67,
+                                                              "plain_end_mass_kg_m":  1.0,
+                                                              "designation":  null,
+                                                              "notes":  [
+                                                                            "note_1_no_threading"
+                                                                        ],
+                                                              "source_pdf_page":  10
+                                                          },
+                                                  "40S":  {
+                                                              "source_standard":  "ASME_B36_19M_2004",
+                                                              "standard_display":  "ASME B36.19M-2004",
+                                                              "material_scope":  "Stainless steel pipe",
+                                                              "nps":  "1/2",
+                                                              "dn":  15,
+                                                              "od_in":  0.84,
+                                                              "od_mm":  21.3,
+                                                              "schedule":  "40S",
+                                                              "wall_in":  0.109,
+                                                              "wall_mm":  2.77,
+                                                              "plain_end_weight_lb_ft":  0.85,
+                                                              "plain_end_mass_kg_m":  1.27,
+                                                              "designation":  null,
+                                                              "notes":  [
+
+                                                                        ],
+                                                              "source_pdf_page":  10
+                                                          },
+                                                  "80S":  {
+                                                              "source_standard":  "ASME_B36_19M_2004",
+                                                              "standard_display":  "ASME B36.19M-2004",
+                                                              "material_scope":  "Stainless steel pipe",
+                                                              "nps":  "1/2",
+                                                              "dn":  15,
+                                                              "od_in":  0.84,
+                                                              "od_mm":  21.3,
+                                                              "schedule":  "80S",
+                                                              "wall_in":  0.147,
+                                                              "wall_mm":  3.73,
+                                                              "plain_end_weight_lb_ft":  1.09,
+                                                              "plain_end_mass_kg_m":  1.62,
+                                                              "designation":  null,
+                                                              "notes":  [
+
+                                                                        ],
+                                                              "source_pdf_page":  10
+                                                          }
+                                              },
+                                      "3/4":  {
+                                                  "5S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "3/4",
+                                                             "dn":  20,
+                                                             "od_in":  1.05,
+                                                             "od_mm":  26.7,
+                                                             "schedule":  "5S",
+                                                             "wall_in":  0.065,
+                                                             "wall_mm":  1.65,
+                                                             "plain_end_weight_lb_ft":  0.68,
+                                                             "plain_end_mass_kg_m":  1.02,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading"
+                                                                       ],
+                                                             "source_pdf_page":  10
+                                                         },
+                                                  "10S":  {
+                                                              "source_standard":  "ASME_B36_19M_2004",
+                                                              "standard_display":  "ASME B36.19M-2004",
+                                                              "material_scope":  "Stainless steel pipe",
+                                                              "nps":  "3/4",
+                                                              "dn":  20,
+                                                              "od_in":  1.05,
+                                                              "od_mm":  26.7,
+                                                              "schedule":  "10S",
+                                                              "wall_in":  0.083,
+                                                              "wall_mm":  2.11,
+                                                              "plain_end_weight_lb_ft":  0.86,
+                                                              "plain_end_mass_kg_m":  1.28,
+                                                              "designation":  null,
+                                                              "notes":  [
+                                                                            "note_1_no_threading"
+                                                                        ],
+                                                              "source_pdf_page":  10
+                                                          },
+                                                  "40S":  {
+                                                              "source_standard":  "ASME_B36_19M_2004",
+                                                              "standard_display":  "ASME B36.19M-2004",
+                                                              "material_scope":  "Stainless steel pipe",
+                                                              "nps":  "3/4",
+                                                              "dn":  20,
+                                                              "od_in":  1.05,
+                                                              "od_mm":  26.7,
+                                                              "schedule":  "40S",
+                                                              "wall_in":  0.113,
+                                                              "wall_mm":  2.87,
+                                                              "plain_end_weight_lb_ft":  1.13,
+                                                              "plain_end_mass_kg_m":  1.69,
+                                                              "designation":  null,
+                                                              "notes":  [
+
+                                                                        ],
+                                                              "source_pdf_page":  10
+                                                          },
+                                                  "80S":  {
+                                                              "source_standard":  "ASME_B36_19M_2004",
+                                                              "standard_display":  "ASME B36.19M-2004",
+                                                              "material_scope":  "Stainless steel pipe",
+                                                              "nps":  "3/4",
+                                                              "dn":  20,
+                                                              "od_in":  1.05,
+                                                              "od_mm":  26.7,
+                                                              "schedule":  "80S",
+                                                              "wall_in":  0.154,
+                                                              "wall_mm":  3.91,
+                                                              "plain_end_weight_lb_ft":  1.48,
+                                                              "plain_end_mass_kg_m":  2.2,
+                                                              "designation":  null,
+                                                              "notes":  [
+
+                                                                        ],
+                                                              "source_pdf_page":  10
+                                                          }
+                                              },
+                                      "1":  {
+                                                "5S":  {
+                                                           "source_standard":  "ASME_B36_19M_2004",
+                                                           "standard_display":  "ASME B36.19M-2004",
+                                                           "material_scope":  "Stainless steel pipe",
+                                                           "nps":  "1",
+                                                           "dn":  25,
+                                                           "od_in":  1.315,
+                                                           "od_mm":  33.4,
+                                                           "schedule":  "5S",
+                                                           "wall_in":  0.065,
+                                                           "wall_mm":  1.65,
+                                                           "plain_end_weight_lb_ft":  0.87,
+                                                           "plain_end_mass_kg_m":  1.29,
+                                                           "designation":  null,
+                                                           "notes":  [
+                                                                         "note_1_no_threading"
+                                                                     ],
+                                                           "source_pdf_page":  10
+                                                       },
+                                                "10S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "1",
+                                                            "dn":  25,
+                                                            "od_in":  1.315,
+                                                            "od_mm":  33.4,
+                                                            "schedule":  "10S",
+                                                            "wall_in":  0.109,
+                                                            "wall_mm":  2.77,
+                                                            "plain_end_weight_lb_ft":  1.41,
+                                                            "plain_end_mass_kg_m":  2.09,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  10
+                                                        },
+                                                "40S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "1",
+                                                            "dn":  25,
+                                                            "od_in":  1.315,
+                                                            "od_mm":  33.4,
+                                                            "schedule":  "40S",
+                                                            "wall_in":  0.133,
+                                                            "wall_mm":  3.38,
+                                                            "plain_end_weight_lb_ft":  1.68,
+                                                            "plain_end_mass_kg_m":  2.5,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  10
+                                                        },
+                                                "80S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "1",
+                                                            "dn":  25,
+                                                            "od_in":  1.315,
+                                                            "od_mm":  33.4,
+                                                            "schedule":  "80S",
+                                                            "wall_in":  0.179,
+                                                            "wall_mm":  4.55,
+                                                            "plain_end_weight_lb_ft":  2.17,
+                                                            "plain_end_mass_kg_m":  3.24,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  10
+                                                        }
+                                            },
+                                      "1-1/2":  {
+                                                    "5S":  {
+                                                               "source_standard":  "ASME_B36_19M_2004",
+                                                               "standard_display":  "ASME B36.19M-2004",
+                                                               "material_scope":  "Stainless steel pipe",
+                                                               "nps":  "1-1/2",
+                                                               "dn":  40,
+                                                               "od_in":  1.9,
+                                                               "od_mm":  48.3,
+                                                               "schedule":  "5S",
+                                                               "wall_in":  0.065,
+                                                               "wall_mm":  1.65,
+                                                               "plain_end_weight_lb_ft":  1.28,
+                                                               "plain_end_mass_kg_m":  1.9,
+                                                               "designation":  null,
+                                                               "notes":  [
+                                                                             "note_1_no_threading"
+                                                                         ],
+                                                               "source_pdf_page":  10
+                                                           },
+                                                    "10S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "1-1/2",
+                                                                "dn":  40,
+                                                                "od_in":  1.9,
+                                                                "od_mm":  48.3,
+                                                                "schedule":  "10S",
+                                                                "wall_in":  0.109,
+                                                                "wall_mm":  2.77,
+                                                                "plain_end_weight_lb_ft":  2.09,
+                                                                "plain_end_mass_kg_m":  3.11,
+                                                                "designation":  null,
+                                                                "notes":  [
+                                                                              "note_1_no_threading"
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            },
+                                                    "40S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "1-1/2",
+                                                                "dn":  40,
+                                                                "od_in":  1.9,
+                                                                "od_mm":  48.3,
+                                                                "schedule":  "40S",
+                                                                "wall_in":  0.145,
+                                                                "wall_mm":  3.68,
+                                                                "plain_end_weight_lb_ft":  2.72,
+                                                                "plain_end_mass_kg_m":  4.05,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            },
+                                                    "80S":  {
+                                                                "source_standard":  "ASME_B36_19M_2004",
+                                                                "standard_display":  "ASME B36.19M-2004",
+                                                                "material_scope":  "Stainless steel pipe",
+                                                                "nps":  "1-1/2",
+                                                                "dn":  40,
+                                                                "od_in":  1.9,
+                                                                "od_mm":  48.3,
+                                                                "schedule":  "80S",
+                                                                "wall_in":  0.2,
+                                                                "wall_mm":  5.08,
+                                                                "plain_end_weight_lb_ft":  3.63,
+                                                                "plain_end_mass_kg_m":  5.41,
+                                                                "designation":  null,
+                                                                "notes":  [
+
+                                                                          ],
+                                                                "source_pdf_page":  10
+                                                            }
+                                                },
+                                      "2":  {
+                                                "5S":  {
+                                                           "source_standard":  "ASME_B36_19M_2004",
+                                                           "standard_display":  "ASME B36.19M-2004",
+                                                           "material_scope":  "Stainless steel pipe",
+                                                           "nps":  "2",
+                                                           "dn":  50,
+                                                           "od_in":  2.375,
+                                                           "od_mm":  60.3,
+                                                           "schedule":  "5S",
+                                                           "wall_in":  0.065,
+                                                           "wall_mm":  1.65,
+                                                           "plain_end_weight_lb_ft":  1.61,
+                                                           "plain_end_mass_kg_m":  2.39,
+                                                           "designation":  null,
+                                                           "notes":  [
+                                                                         "note_1_no_threading"
+                                                                     ],
+                                                           "source_pdf_page":  10
+                                                       },
+                                                "10S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "2",
+                                                            "dn":  50,
+                                                            "od_in":  2.375,
+                                                            "od_mm":  60.3,
+                                                            "schedule":  "10S",
+                                                            "wall_in":  0.109,
+                                                            "wall_mm":  2.77,
+                                                            "plain_end_weight_lb_ft":  2.64,
+                                                            "plain_end_mass_kg_m":  3.93,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  10
+                                                        },
+                                                "40S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "2",
+                                                            "dn":  50,
+                                                            "od_in":  2.375,
+                                                            "od_mm":  60.3,
+                                                            "schedule":  "40S",
+                                                            "wall_in":  0.154,
+                                                            "wall_mm":  3.91,
+                                                            "plain_end_weight_lb_ft":  3.66,
+                                                            "plain_end_mass_kg_m":  5.44,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  10
+                                                        },
+                                                "80S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "2",
+                                                            "dn":  50,
+                                                            "od_in":  2.375,
+                                                            "od_mm":  60.3,
+                                                            "schedule":  "80S",
+                                                            "wall_in":  0.218,
+                                                            "wall_mm":  5.54,
+                                                            "plain_end_weight_lb_ft":  5.03,
+                                                            "plain_end_mass_kg_m":  7.48,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  10
+                                                        }
+                                            },
+                                      "3":  {
+                                                "5S":  {
+                                                           "source_standard":  "ASME_B36_19M_2004",
+                                                           "standard_display":  "ASME B36.19M-2004",
+                                                           "material_scope":  "Stainless steel pipe",
+                                                           "nps":  "3",
+                                                           "dn":  80,
+                                                           "od_in":  3.5,
+                                                           "od_mm":  88.9,
+                                                           "schedule":  "5S",
+                                                           "wall_in":  0.083,
+                                                           "wall_mm":  2.11,
+                                                           "plain_end_weight_lb_ft":  3.03,
+                                                           "plain_end_mass_kg_m":  4.52,
+                                                           "designation":  null,
+                                                           "notes":  [
+                                                                         "note_1_no_threading"
+                                                                     ],
+                                                           "source_pdf_page":  10
+                                                       },
+                                                "10S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "3",
+                                                            "dn":  80,
+                                                            "od_in":  3.5,
+                                                            "od_mm":  88.9,
+                                                            "schedule":  "10S",
+                                                            "wall_in":  0.12,
+                                                            "wall_mm":  3.05,
+                                                            "plain_end_weight_lb_ft":  4.34,
+                                                            "plain_end_mass_kg_m":  6.46,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  10
+                                                        },
+                                                "40S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "3",
+                                                            "dn":  80,
+                                                            "od_in":  3.5,
+                                                            "od_mm":  88.9,
+                                                            "schedule":  "40S",
+                                                            "wall_in":  0.216,
+                                                            "wall_mm":  5.49,
+                                                            "plain_end_weight_lb_ft":  7.58,
+                                                            "plain_end_mass_kg_m":  11.29,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  10
+                                                        },
+                                                "80S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "3",
+                                                            "dn":  80,
+                                                            "od_in":  3.5,
+                                                            "od_mm":  88.9,
+                                                            "schedule":  "80S",
+                                                            "wall_in":  0.3,
+                                                            "wall_mm":  7.62,
+                                                            "plain_end_weight_lb_ft":  10.26,
+                                                            "plain_end_mass_kg_m":  15.27,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  10
+                                                        }
+                                            },
+                                      "4":  {
+                                                "5S":  {
+                                                           "source_standard":  "ASME_B36_19M_2004",
+                                                           "standard_display":  "ASME B36.19M-2004",
+                                                           "material_scope":  "Stainless steel pipe",
+                                                           "nps":  "4",
+                                                           "dn":  100,
+                                                           "od_in":  4.5,
+                                                           "od_mm":  114.3,
+                                                           "schedule":  "5S",
+                                                           "wall_in":  0.083,
+                                                           "wall_mm":  2.11,
+                                                           "plain_end_weight_lb_ft":  3.92,
+                                                           "plain_end_mass_kg_m":  5.84,
+                                                           "designation":  null,
+                                                           "notes":  [
+                                                                         "note_1_no_threading"
+                                                                     ],
+                                                           "source_pdf_page":  11
+                                                       },
+                                                "10S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "4",
+                                                            "dn":  100,
+                                                            "od_in":  4.5,
+                                                            "od_mm":  114.3,
+                                                            "schedule":  "10S",
+                                                            "wall_in":  0.12,
+                                                            "wall_mm":  3.05,
+                                                            "plain_end_weight_lb_ft":  5.62,
+                                                            "plain_end_mass_kg_m":  8.37,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                "40S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "4",
+                                                            "dn":  100,
+                                                            "od_in":  4.5,
+                                                            "od_mm":  114.3,
+                                                            "schedule":  "40S",
+                                                            "wall_in":  0.237,
+                                                            "wall_mm":  6.02,
+                                                            "plain_end_weight_lb_ft":  10.8,
+                                                            "plain_end_mass_kg_m":  16.08,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                "80S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "4",
+                                                            "dn":  100,
+                                                            "od_in":  4.5,
+                                                            "od_mm":  114.3,
+                                                            "schedule":  "80S",
+                                                            "wall_in":  0.337,
+                                                            "wall_mm":  8.56,
+                                                            "plain_end_weight_lb_ft":  15.0,
+                                                            "plain_end_mass_kg_m":  22.32,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        }
+                                            },
+                                      "6":  {
+                                                "5S":  {
+                                                           "source_standard":  "ASME_B36_19M_2004",
+                                                           "standard_display":  "ASME B36.19M-2004",
+                                                           "material_scope":  "Stainless steel pipe",
+                                                           "nps":  "6",
+                                                           "dn":  150,
+                                                           "od_in":  6.625,
+                                                           "od_mm":  168.3,
+                                                           "schedule":  "5S",
+                                                           "wall_in":  0.109,
+                                                           "wall_mm":  2.77,
+                                                           "plain_end_weight_lb_ft":  7.59,
+                                                           "plain_end_mass_kg_m":  11.31,
+                                                           "designation":  null,
+                                                           "notes":  [
+                                                                         "note_1_no_threading"
+                                                                     ],
+                                                           "source_pdf_page":  11
+                                                       },
+                                                "10S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "6",
+                                                            "dn":  150,
+                                                            "od_in":  6.625,
+                                                            "od_mm":  168.3,
+                                                            "schedule":  "10S",
+                                                            "wall_in":  0.134,
+                                                            "wall_mm":  3.4,
+                                                            "plain_end_weight_lb_ft":  9.3,
+                                                            "plain_end_mass_kg_m":  13.83,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                "40S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "6",
+                                                            "dn":  150,
+                                                            "od_in":  6.625,
+                                                            "od_mm":  168.3,
+                                                            "schedule":  "40S",
+                                                            "wall_in":  0.28,
+                                                            "wall_mm":  7.11,
+                                                            "plain_end_weight_lb_ft":  18.99,
+                                                            "plain_end_mass_kg_m":  28.26,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                "80S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "6",
+                                                            "dn":  150,
+                                                            "od_in":  6.625,
+                                                            "od_mm":  168.3,
+                                                            "schedule":  "80S",
+                                                            "wall_in":  0.432,
+                                                            "wall_mm":  10.97,
+                                                            "plain_end_weight_lb_ft":  28.6,
+                                                            "plain_end_mass_kg_m":  42.56,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        }
+                                            },
+                                      "8":  {
+                                                "5S":  {
+                                                           "source_standard":  "ASME_B36_19M_2004",
+                                                           "standard_display":  "ASME B36.19M-2004",
+                                                           "material_scope":  "Stainless steel pipe",
+                                                           "nps":  "8",
+                                                           "dn":  200,
+                                                           "od_in":  8.625,
+                                                           "od_mm":  219.1,
+                                                           "schedule":  "5S",
+                                                           "wall_in":  0.109,
+                                                           "wall_mm":  2.77,
+                                                           "plain_end_weight_lb_ft":  9.92,
+                                                           "plain_end_mass_kg_m":  14.78,
+                                                           "designation":  null,
+                                                           "notes":  [
+                                                                         "note_1_no_threading"
+                                                                     ],
+                                                           "source_pdf_page":  11
+                                                       },
+                                                "10S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "8",
+                                                            "dn":  200,
+                                                            "od_in":  8.625,
+                                                            "od_mm":  219.1,
+                                                            "schedule":  "10S",
+                                                            "wall_in":  0.148,
+                                                            "wall_mm":  3.76,
+                                                            "plain_end_weight_lb_ft":  13.41,
+                                                            "plain_end_mass_kg_m":  19.97,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                "40S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "8",
+                                                            "dn":  200,
+                                                            "od_in":  8.625,
+                                                            "od_mm":  219.1,
+                                                            "schedule":  "40S",
+                                                            "wall_in":  0.322,
+                                                            "wall_mm":  8.18,
+                                                            "plain_end_weight_lb_ft":  28.58,
+                                                            "plain_end_mass_kg_m":  42.55,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                "80S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "8",
+                                                            "dn":  200,
+                                                            "od_in":  8.625,
+                                                            "od_mm":  219.1,
+                                                            "schedule":  "80S",
+                                                            "wall_in":  0.5,
+                                                            "wall_mm":  12.7,
+                                                            "plain_end_weight_lb_ft":  43.43,
+                                                            "plain_end_mass_kg_m":  64.64,
+                                                            "designation":  null,
+                                                            "notes":  [
+
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        }
+                                            },
+                                      "10":  {
+                                                 "5S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "10",
+                                                            "dn":  250,
+                                                            "od_in":  10.75,
+                                                            "od_mm":  273.1,
+                                                            "schedule":  "5S",
+                                                            "wall_in":  0.134,
+                                                            "wall_mm":  3.4,
+                                                            "plain_end_weight_lb_ft":  15.21,
+                                                            "plain_end_mass_kg_m":  22.61,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                 "10S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "10",
+                                                             "dn":  250,
+                                                             "od_in":  10.75,
+                                                             "od_mm":  273.1,
+                                                             "schedule":  "10S",
+                                                             "wall_in":  0.165,
+                                                             "wall_mm":  4.19,
+                                                             "plain_end_weight_lb_ft":  18.67,
+                                                             "plain_end_mass_kg_m":  27.79,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "40S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "10",
+                                                             "dn":  250,
+                                                             "od_in":  10.75,
+                                                             "od_mm":  273.1,
+                                                             "schedule":  "40S",
+                                                             "wall_in":  0.365,
+                                                             "wall_mm":  9.27,
+                                                             "plain_end_weight_lb_ft":  40.52,
+                                                             "plain_end_mass_kg_m":  60.31,
+                                                             "designation":  null,
+                                                             "notes":  [
+
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "80S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "10",
+                                                             "dn":  250,
+                                                             "od_in":  10.75,
+                                                             "od_mm":  273.1,
+                                                             "schedule":  "80S",
+                                                             "wall_in":  0.5,
+                                                             "wall_mm":  12.7,
+                                                             "plain_end_weight_lb_ft":  54.79,
+                                                             "plain_end_mass_kg_m":  81.56,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         }
+                                             },
+                                      "12":  {
+                                                 "5S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "12",
+                                                            "dn":  300,
+                                                            "od_in":  12.75,
+                                                            "od_mm":  323.9,
+                                                            "schedule":  "5S",
+                                                            "wall_in":  0.156,
+                                                            "wall_mm":  3.96,
+                                                            "plain_end_weight_lb_ft":  21.0,
+                                                            "plain_end_mass_kg_m":  31.25,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                 "10S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "12",
+                                                             "dn":  300,
+                                                             "od_in":  12.75,
+                                                             "od_mm":  323.9,
+                                                             "schedule":  "10S",
+                                                             "wall_in":  0.18,
+                                                             "wall_mm":  4.57,
+                                                             "plain_end_weight_lb_ft":  24.19,
+                                                             "plain_end_mass_kg_m":  35.99,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "40S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "12",
+                                                             "dn":  300,
+                                                             "od_in":  12.75,
+                                                             "od_mm":  323.9,
+                                                             "schedule":  "40S",
+                                                             "wall_in":  0.375,
+                                                             "wall_mm":  9.53,
+                                                             "plain_end_weight_lb_ft":  49.61,
+                                                             "plain_end_mass_kg_m":  73.88,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "80S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "12",
+                                                             "dn":  300,
+                                                             "od_in":  12.75,
+                                                             "od_mm":  323.9,
+                                                             "schedule":  "80S",
+                                                             "wall_in":  0.5,
+                                                             "wall_mm":  12.7,
+                                                             "plain_end_weight_lb_ft":  65.48,
+                                                             "plain_end_mass_kg_m":  97.47,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         }
+                                             },
+                                      "14":  {
+                                                 "5S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "14",
+                                                            "dn":  350,
+                                                            "od_in":  14.0,
+                                                            "od_mm":  355.6,
+                                                            "schedule":  "5S",
+                                                            "wall_in":  0.156,
+                                                            "wall_mm":  3.96,
+                                                            "plain_end_weight_lb_ft":  23.09,
+                                                            "plain_end_mass_kg_m":  34.34,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                 "10S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "14",
+                                                             "dn":  350,
+                                                             "od_in":  14.0,
+                                                             "od_mm":  355.6,
+                                                             "schedule":  "10S",
+                                                             "wall_in":  0.188,
+                                                             "wall_mm":  4.78,
+                                                             "plain_end_weight_lb_ft":  27.76,
+                                                             "plain_end_mass_kg_m":  41.36,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading",
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "40S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "14",
+                                                             "dn":  350,
+                                                             "od_in":  14.0,
+                                                             "od_mm":  355.6,
+                                                             "schedule":  "40S",
+                                                             "wall_in":  0.375,
+                                                             "wall_mm":  9.53,
+                                                             "plain_end_weight_lb_ft":  54.62,
+                                                             "plain_end_mass_kg_m":  81.33,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "80S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "14",
+                                                             "dn":  350,
+                                                             "od_in":  14.0,
+                                                             "od_mm":  355.6,
+                                                             "schedule":  "80S",
+                                                             "wall_in":  0.5,
+                                                             "wall_mm":  12.7,
+                                                             "plain_end_weight_lb_ft":  72.16,
+                                                             "plain_end_mass_kg_m":  107.4,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         }
+                                             },
+                                      "16":  {
+                                                 "5S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "16",
+                                                            "dn":  400,
+                                                            "od_in":  16.0,
+                                                            "od_mm":  406.4,
+                                                            "schedule":  "5S",
+                                                            "wall_in":  0.165,
+                                                            "wall_mm":  4.19,
+                                                            "plain_end_weight_lb_ft":  27.93,
+                                                            "plain_end_mass_kg_m":  41.56,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                 "10S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "16",
+                                                             "dn":  400,
+                                                             "od_in":  16.0,
+                                                             "od_mm":  406.4,
+                                                             "schedule":  "10S",
+                                                             "wall_in":  0.188,
+                                                             "wall_mm":  4.78,
+                                                             "plain_end_weight_lb_ft":  31.78,
+                                                             "plain_end_mass_kg_m":  47.34,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading",
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "40S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "16",
+                                                             "dn":  400,
+                                                             "od_in":  16.0,
+                                                             "od_mm":  406.4,
+                                                             "schedule":  "40S",
+                                                             "wall_in":  0.375,
+                                                             "wall_mm":  9.53,
+                                                             "plain_end_weight_lb_ft":  62.64,
+                                                             "plain_end_mass_kg_m":  93.27,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "80S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "16",
+                                                             "dn":  400,
+                                                             "od_in":  16.0,
+                                                             "od_mm":  406.4,
+                                                             "schedule":  "80S",
+                                                             "wall_in":  0.5,
+                                                             "wall_mm":  12.7,
+                                                             "plain_end_weight_lb_ft":  82.85,
+                                                             "plain_end_mass_kg_m":  123.31,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         }
+                                             },
+                                      "18":  {
+                                                 "5S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "18",
+                                                            "dn":  450,
+                                                            "od_in":  18.0,
+                                                            "od_mm":  457.0,
+                                                            "schedule":  "5S",
+                                                            "wall_in":  0.165,
+                                                            "wall_mm":  4.19,
+                                                            "plain_end_weight_lb_ft":  31.46,
+                                                            "plain_end_mass_kg_m":  46.79,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                 "10S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "18",
+                                                             "dn":  450,
+                                                             "od_in":  18.0,
+                                                             "od_mm":  457.0,
+                                                             "schedule":  "10S",
+                                                             "wall_in":  0.188,
+                                                             "wall_mm":  4.78,
+                                                             "plain_end_weight_lb_ft":  35.8,
+                                                             "plain_end_mass_kg_m":  53.31,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading",
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "40S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "18",
+                                                             "dn":  450,
+                                                             "od_in":  18.0,
+                                                             "od_mm":  457.0,
+                                                             "schedule":  "40S",
+                                                             "wall_in":  0.375,
+                                                             "wall_mm":  9.53,
+                                                             "plain_end_weight_lb_ft":  70.65,
+                                                             "plain_end_mass_kg_m":  null,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m",
+                                                                           "kg_m_blank_in_table"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "80S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "18",
+                                                             "dn":  450,
+                                                             "od_in":  18.0,
+                                                             "od_mm":  457.0,
+                                                             "schedule":  "80S",
+                                                             "wall_in":  0.5,
+                                                             "wall_mm":  12.7,
+                                                             "plain_end_weight_lb_ft":  93.54,
+                                                             "plain_end_mass_kg_m":  null,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m",
+                                                                           "kg_m_blank_in_table"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         }
+                                             },
+                                      "20":  {
+                                                 "5S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "20",
+                                                            "dn":  500,
+                                                            "od_in":  20.0,
+                                                            "od_mm":  508.0,
+                                                            "schedule":  "5S",
+                                                            "wall_in":  0.188,
+                                                            "wall_mm":  4.78,
+                                                            "plain_end_weight_lb_ft":  39.82,
+                                                            "plain_end_mass_kg_m":  59.32,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  11
+                                                        },
+                                                 "10S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "20",
+                                                             "dn":  500,
+                                                             "od_in":  20.0,
+                                                             "od_mm":  508.0,
+                                                             "schedule":  "10S",
+                                                             "wall_in":  0.218,
+                                                             "wall_mm":  5.54,
+                                                             "plain_end_weight_lb_ft":  46.1,
+                                                             "plain_end_mass_kg_m":  68.65,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading",
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "40S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "20",
+                                                             "dn":  500,
+                                                             "od_in":  20.0,
+                                                             "od_mm":  508.0,
+                                                             "schedule":  "40S",
+                                                             "wall_in":  0.375,
+                                                             "wall_mm":  9.53,
+                                                             "plain_end_weight_lb_ft":  78.67,
+                                                             "plain_end_mass_kg_m":  117.15,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         },
+                                                 "80S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "20",
+                                                             "dn":  500,
+                                                             "od_in":  20.0,
+                                                             "od_mm":  508.0,
+                                                             "schedule":  "80S",
+                                                             "wall_in":  0.5,
+                                                             "wall_mm":  12.7,
+                                                             "plain_end_weight_lb_ft":  104.23,
+                                                             "plain_end_mass_kg_m":  155.13,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  11
+                                                         }
+                                             },
+                                      "22":  {
+                                                 "5S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "22",
+                                                            "dn":  550,
+                                                            "od_in":  22.0,
+                                                            "od_mm":  559.0,
+                                                            "schedule":  "5S",
+                                                            "wall_in":  0.188,
+                                                            "wall_mm":  4.78,
+                                                            "plain_end_weight_lb_ft":  43.84,
+                                                            "plain_end_mass_kg_m":  65.33,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  12
+                                                        },
+                                                 "10S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "22",
+                                                             "dn":  550,
+                                                             "od_in":  22.0,
+                                                             "od_mm":  559.0,
+                                                             "schedule":  "10S",
+                                                             "wall_in":  0.218,
+                                                             "wall_mm":  5.54,
+                                                             "plain_end_weight_lb_ft":  50.76,
+                                                             "plain_end_mass_kg_m":  75.62,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading",
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  12
+                                                         }
+                                             },
+                                      "24":  {
+                                                 "5S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "24",
+                                                            "dn":  600,
+                                                            "od_in":  24.0,
+                                                            "od_mm":  610.0,
+                                                            "schedule":  "5S",
+                                                            "wall_in":  0.218,
+                                                            "wall_mm":  5.54,
+                                                            "plain_end_weight_lb_ft":  55.42,
+                                                            "plain_end_mass_kg_m":  82.58,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  12
+                                                        },
+                                                 "10S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "24",
+                                                             "dn":  600,
+                                                             "od_in":  24.0,
+                                                             "od_mm":  610.0,
+                                                             "schedule":  "10S",
+                                                             "wall_in":  0.25,
+                                                             "wall_mm":  6.35,
+                                                             "plain_end_weight_lb_ft":  63.47,
+                                                             "plain_end_mass_kg_m":  94.53,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading"
+                                                                       ],
+                                                             "source_pdf_page":  12
+                                                         },
+                                                 "40S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "24",
+                                                             "dn":  600,
+                                                             "od_in":  24.0,
+                                                             "od_mm":  610.0,
+                                                             "schedule":  "40S",
+                                                             "wall_in":  0.375,
+                                                             "wall_mm":  9.53,
+                                                             "plain_end_weight_lb_ft":  94.71,
+                                                             "plain_end_mass_kg_m":  141.12,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  12
+                                                         },
+                                                 "80S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "24",
+                                                             "dn":  600,
+                                                             "od_in":  24.0,
+                                                             "od_mm":  610.0,
+                                                             "schedule":  "80S",
+                                                             "wall_in":  0.5,
+                                                             "wall_mm":  12.7,
+                                                             "plain_end_weight_lb_ft":  125.61,
+                                                             "plain_end_mass_kg_m":  187.07,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_2_not_conform_b36_10m"
+                                                                       ],
+                                                             "source_pdf_page":  12
+                                                         }
+                                             },
+                                      "26":  {
+
+                                             },
+                                      "28":  {
+
+                                             },
+                                      "30":  {
+                                                 "5S":  {
+                                                            "source_standard":  "ASME_B36_19M_2004",
+                                                            "standard_display":  "ASME B36.19M-2004",
+                                                            "material_scope":  "Stainless steel pipe",
+                                                            "nps":  "30",
+                                                            "dn":  750,
+                                                            "od_in":  30.0,
+                                                            "od_mm":  762.0,
+                                                            "schedule":  "5S",
+                                                            "wall_in":  0.25,
+                                                            "wall_mm":  6.35,
+                                                            "plain_end_weight_lb_ft":  79.51,
+                                                            "plain_end_mass_kg_m":  118.34,
+                                                            "designation":  null,
+                                                            "notes":  [
+                                                                          "note_1_no_threading"
+                                                                      ],
+                                                            "source_pdf_page":  12
+                                                        },
+                                                 "10S":  {
+                                                             "source_standard":  "ASME_B36_19M_2004",
+                                                             "standard_display":  "ASME B36.19M-2004",
+                                                             "material_scope":  "Stainless steel pipe",
+                                                             "nps":  "30",
+                                                             "dn":  750,
+                                                             "od_in":  30.0,
+                                                             "od_mm":  762.0,
+                                                             "schedule":  "10S",
+                                                             "wall_in":  0.312,
+                                                             "wall_mm":  7.92,
+                                                             "plain_end_weight_lb_ft":  99.02,
+                                                             "plain_end_mass_kg_m":  147.29,
+                                                             "designation":  null,
+                                                             "notes":  [
+                                                                           "note_1_no_threading"
+                                                                       ],
+                                                             "source_pdf_page":  12
+                                                         }
+                                             },
+                                      "32":  {
+
+                                             },
+                                      "34":  {
+
+                                             },
+                                      "36":  {
+
+                                             },
+                                      "38":  {
+
+                                             },
+                                      "40":  {
+
+                                             },
+                                      "42":  {
+
+                                             },
+                                      "44":  {
+
+                                             },
+                                      "46":  {
+
+                                             },
+                                      "48":  {
+
+                                             }
+                                  },
+    "designation_lookup_by_nps":  {
+                                      "1/2":  {
+
+                                              },
+                                      "3/4":  {
+
+                                              },
+                                      "1":  {
+
+                                            },
+                                      "1-1/2":  {
+
+                                                },
+                                      "2":  {
+
+                                            },
+                                      "3":  {
+
+                                            },
+                                      "4":  {
+
+                                            },
+                                      "6":  {
+
+                                            },
+                                      "8":  {
+
+                                            },
+                                      "10":  {
+
+                                             },
+                                      "12":  {
+
+                                             },
+                                      "14":  {
+
+                                             },
+                                      "16":  {
+
+                                             },
+                                      "18":  {
+
+                                             },
+                                      "20":  {
+
+                                             },
+                                      "22":  {
+
+                                             },
+                                      "24":  {
+
+                                             },
+                                      "26":  {
+
+                                             },
+                                      "28":  {
+
+                                             },
+                                      "30":  {
+
+                                             },
+                                      "32":  {
+
+                                             },
+                                      "34":  {
+
+                                             },
+                                      "36":  {
+
+                                             },
+                                      "38":  {
+
+                                             },
+                                      "40":  {
+
+                                             },
+                                      "42":  {
+
+                                             },
+                                      "44":  {
+
+                                             },
+                                      "46":  {
+
+                                             },
+                                      "48":  {
+
+                                             }
+                                  },
+    "wall_lookup_by_nps":  {
+                               "1/2":  {
+                                           "0.065":  {
+                                                         "wall_in":  0.065,
+                                                         "wall_mm":  1.65,
+                                                         "schedule":  "5S",
+                                                         "designation":  null,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                           "0.083":  {
+                                                         "wall_in":  0.083,
+                                                         "wall_mm":  2.11,
+                                                         "schedule":  "10S",
+                                                         "designation":  null,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                           "0.109":  {
+                                                         "wall_in":  0.109,
+                                                         "wall_mm":  2.77,
+                                                         "schedule":  "40S",
+                                                         "designation":  null,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                           "0.147":  {
+                                                         "wall_in":  0.147,
+                                                         "wall_mm":  3.73,
+                                                         "schedule":  "80S",
+                                                         "designation":  null,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     }
+                                       },
+                               "3/4":  {
+                                           "0.065":  {
+                                                         "wall_in":  0.065,
+                                                         "wall_mm":  1.65,
+                                                         "schedule":  "5S",
+                                                         "designation":  null,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                           "0.083":  {
+                                                         "wall_in":  0.083,
+                                                         "wall_mm":  2.11,
+                                                         "schedule":  "10S",
+                                                         "designation":  null,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                           "0.113":  {
+                                                         "wall_in":  0.113,
+                                                         "wall_mm":  2.87,
+                                                         "schedule":  "40S",
+                                                         "designation":  null,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     },
+                                           "0.154":  {
+                                                         "wall_in":  0.154,
+                                                         "wall_mm":  3.91,
+                                                         "schedule":  "80S",
+                                                         "designation":  null,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     }
+                                       },
+                               "1":  {
+                                         "0.065":  {
+                                                       "wall_in":  0.065,
+                                                       "wall_mm":  1.65,
+                                                       "schedule":  "5S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.109":  {
+                                                       "wall_in":  0.109,
+                                                       "wall_mm":  2.77,
+                                                       "schedule":  "10S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.133":  {
+                                                       "wall_in":  0.133,
+                                                       "wall_mm":  3.38,
+                                                       "schedule":  "40S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.179":  {
+                                                       "wall_in":  0.179,
+                                                       "wall_mm":  4.55,
+                                                       "schedule":  "80S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   }
+                                     },
+                               "1-1/2":  {
+                                             "0.065":  {
+                                                           "wall_in":  0.065,
+                                                           "wall_mm":  1.65,
+                                                           "schedule":  "5S",
+                                                           "designation":  null,
+                                                           "source_standard":  "ASME_B36_19M_2004"
+                                                       },
+                                             "0.109":  {
+                                                           "wall_in":  0.109,
+                                                           "wall_mm":  2.77,
+                                                           "schedule":  "10S",
+                                                           "designation":  null,
+                                                           "source_standard":  "ASME_B36_19M_2004"
+                                                       },
+                                             "0.145":  {
+                                                           "wall_in":  0.145,
+                                                           "wall_mm":  3.68,
+                                                           "schedule":  "40S",
+                                                           "designation":  null,
+                                                           "source_standard":  "ASME_B36_19M_2004"
+                                                       },
+                                             "0.2":  {
+                                                         "wall_in":  0.2,
+                                                         "wall_mm":  5.08,
+                                                         "schedule":  "80S",
+                                                         "designation":  null,
+                                                         "source_standard":  "ASME_B36_19M_2004"
+                                                     }
+                                         },
+                               "2":  {
+                                         "0.065":  {
+                                                       "wall_in":  0.065,
+                                                       "wall_mm":  1.65,
+                                                       "schedule":  "5S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.109":  {
+                                                       "wall_in":  0.109,
+                                                       "wall_mm":  2.77,
+                                                       "schedule":  "10S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.154":  {
+                                                       "wall_in":  0.154,
+                                                       "wall_mm":  3.91,
+                                                       "schedule":  "40S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.218":  {
+                                                       "wall_in":  0.218,
+                                                       "wall_mm":  5.54,
+                                                       "schedule":  "80S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   }
+                                     },
+                               "3":  {
+                                         "0.083":  {
+                                                       "wall_in":  0.083,
+                                                       "wall_mm":  2.11,
+                                                       "schedule":  "5S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.12":  {
+                                                      "wall_in":  0.12,
+                                                      "wall_mm":  3.05,
+                                                      "schedule":  "10S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  },
+                                         "0.216":  {
+                                                       "wall_in":  0.216,
+                                                       "wall_mm":  5.49,
+                                                       "schedule":  "40S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.3":  {
+                                                     "wall_in":  0.3,
+                                                     "wall_mm":  7.62,
+                                                     "schedule":  "80S",
+                                                     "designation":  null,
+                                                     "source_standard":  "ASME_B36_19M_2004"
+                                                 }
+                                     },
+                               "4":  {
+                                         "0.083":  {
+                                                       "wall_in":  0.083,
+                                                       "wall_mm":  2.11,
+                                                       "schedule":  "5S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.12":  {
+                                                      "wall_in":  0.12,
+                                                      "wall_mm":  3.05,
+                                                      "schedule":  "10S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  },
+                                         "0.237":  {
+                                                       "wall_in":  0.237,
+                                                       "wall_mm":  6.02,
+                                                       "schedule":  "40S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.337":  {
+                                                       "wall_in":  0.337,
+                                                       "wall_mm":  8.56,
+                                                       "schedule":  "80S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   }
+                                     },
+                               "6":  {
+                                         "0.109":  {
+                                                       "wall_in":  0.109,
+                                                       "wall_mm":  2.77,
+                                                       "schedule":  "5S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.134":  {
+                                                       "wall_in":  0.134,
+                                                       "wall_mm":  3.4,
+                                                       "schedule":  "10S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.28":  {
+                                                      "wall_in":  0.28,
+                                                      "wall_mm":  7.11,
+                                                      "schedule":  "40S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  },
+                                         "0.432":  {
+                                                       "wall_in":  0.432,
+                                                       "wall_mm":  10.97,
+                                                       "schedule":  "80S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   }
+                                     },
+                               "8":  {
+                                         "0.109":  {
+                                                       "wall_in":  0.109,
+                                                       "wall_mm":  2.77,
+                                                       "schedule":  "5S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.148":  {
+                                                       "wall_in":  0.148,
+                                                       "wall_mm":  3.76,
+                                                       "schedule":  "10S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.322":  {
+                                                       "wall_in":  0.322,
+                                                       "wall_mm":  8.18,
+                                                       "schedule":  "40S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                         "0.5":  {
+                                                     "wall_in":  0.5,
+                                                     "wall_mm":  12.7,
+                                                     "schedule":  "80S",
+                                                     "designation":  null,
+                                                     "source_standard":  "ASME_B36_19M_2004"
+                                                 }
+                                     },
+                               "10":  {
+                                          "0.134":  {
+                                                        "wall_in":  0.134,
+                                                        "wall_mm":  3.4,
+                                                        "schedule":  "5S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.165":  {
+                                                        "wall_in":  0.165,
+                                                        "wall_mm":  4.19,
+                                                        "schedule":  "10S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.365":  {
+                                                        "wall_in":  0.365,
+                                                        "wall_mm":  9.27,
+                                                        "schedule":  "40S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.5":  {
+                                                      "wall_in":  0.5,
+                                                      "wall_mm":  12.7,
+                                                      "schedule":  "80S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  }
+                                      },
+                               "12":  {
+                                          "0.156":  {
+                                                        "wall_in":  0.156,
+                                                        "wall_mm":  3.96,
+                                                        "schedule":  "5S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.18":  {
+                                                       "wall_in":  0.18,
+                                                       "wall_mm":  4.57,
+                                                       "schedule":  "10S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                          "0.375":  {
+                                                        "wall_in":  0.375,
+                                                        "wall_mm":  9.53,
+                                                        "schedule":  "40S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.5":  {
+                                                      "wall_in":  0.5,
+                                                      "wall_mm":  12.7,
+                                                      "schedule":  "80S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  }
+                                      },
+                               "14":  {
+                                          "0.156":  {
+                                                        "wall_in":  0.156,
+                                                        "wall_mm":  3.96,
+                                                        "schedule":  "5S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.188":  {
+                                                        "wall_in":  0.188,
+                                                        "wall_mm":  4.78,
+                                                        "schedule":  "10S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.375":  {
+                                                        "wall_in":  0.375,
+                                                        "wall_mm":  9.53,
+                                                        "schedule":  "40S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.5":  {
+                                                      "wall_in":  0.5,
+                                                      "wall_mm":  12.7,
+                                                      "schedule":  "80S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  }
+                                      },
+                               "16":  {
+                                          "0.165":  {
+                                                        "wall_in":  0.165,
+                                                        "wall_mm":  4.19,
+                                                        "schedule":  "5S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.188":  {
+                                                        "wall_in":  0.188,
+                                                        "wall_mm":  4.78,
+                                                        "schedule":  "10S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.375":  {
+                                                        "wall_in":  0.375,
+                                                        "wall_mm":  9.53,
+                                                        "schedule":  "40S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.5":  {
+                                                      "wall_in":  0.5,
+                                                      "wall_mm":  12.7,
+                                                      "schedule":  "80S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  }
+                                      },
+                               "18":  {
+                                          "0.165":  {
+                                                        "wall_in":  0.165,
+                                                        "wall_mm":  4.19,
+                                                        "schedule":  "5S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.188":  {
+                                                        "wall_in":  0.188,
+                                                        "wall_mm":  4.78,
+                                                        "schedule":  "10S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.375":  {
+                                                        "wall_in":  0.375,
+                                                        "wall_mm":  9.53,
+                                                        "schedule":  "40S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.5":  {
+                                                      "wall_in":  0.5,
+                                                      "wall_mm":  12.7,
+                                                      "schedule":  "80S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  }
+                                      },
+                               "20":  {
+                                          "0.188":  {
+                                                        "wall_in":  0.188,
+                                                        "wall_mm":  4.78,
+                                                        "schedule":  "5S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.218":  {
+                                                        "wall_in":  0.218,
+                                                        "wall_mm":  5.54,
+                                                        "schedule":  "10S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.375":  {
+                                                        "wall_in":  0.375,
+                                                        "wall_mm":  9.53,
+                                                        "schedule":  "40S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.5":  {
+                                                      "wall_in":  0.5,
+                                                      "wall_mm":  12.7,
+                                                      "schedule":  "80S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  }
+                                      },
+                               "22":  {
+                                          "0.188":  {
+                                                        "wall_in":  0.188,
+                                                        "wall_mm":  4.78,
+                                                        "schedule":  "5S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.218":  {
+                                                        "wall_in":  0.218,
+                                                        "wall_mm":  5.54,
+                                                        "schedule":  "10S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    }
+                                      },
+                               "24":  {
+                                          "0.218":  {
+                                                        "wall_in":  0.218,
+                                                        "wall_mm":  5.54,
+                                                        "schedule":  "5S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.25":  {
+                                                       "wall_in":  0.25,
+                                                       "wall_mm":  6.35,
+                                                       "schedule":  "10S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                          "0.375":  {
+                                                        "wall_in":  0.375,
+                                                        "wall_mm":  9.53,
+                                                        "schedule":  "40S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    },
+                                          "0.5":  {
+                                                      "wall_in":  0.5,
+                                                      "wall_mm":  12.7,
+                                                      "schedule":  "80S",
+                                                      "designation":  null,
+                                                      "source_standard":  "ASME_B36_19M_2004"
+                                                  }
+                                      },
+                               "26":  {
+
+                                      },
+                               "28":  {
+
+                                      },
+                               "30":  {
+                                          "0.25":  {
+                                                       "wall_in":  0.25,
+                                                       "wall_mm":  6.35,
+                                                       "schedule":  "5S",
+                                                       "designation":  null,
+                                                       "source_standard":  "ASME_B36_19M_2004"
+                                                   },
+                                          "0.312":  {
+                                                        "wall_in":  0.312,
+                                                        "wall_mm":  7.92,
+                                                        "schedule":  "10S",
+                                                        "designation":  null,
+                                                        "source_standard":  "ASME_B36_19M_2004"
+                                                    }
+                                      },
+                               "32":  {
+
+                                      },
+                               "34":  {
+
+                                      },
+                               "36":  {
+
+                                      },
+                               "38":  {
+
+                                      },
+                               "40":  {
+
+                                      },
+                               "42":  {
+
+                                      },
+                               "44":  {
+
+                                      },
+                               "46":  {
+
+                                      },
+                               "48":  {
+
+                                      }
+                           },
+    "od_lookup_in":  {
+                         "1/2":  0.84,
+                         "3/4":  1.05,
+                         "1":  1.315,
+                         "1-1/2":  1.9,
+                         "2":  2.375,
+                         "3":  3.5,
+                         "4":  4.5,
+                         "6":  6.625,
+                         "8":  8.625,
+                         "10":  10.75,
+                         "12":  12.75,
+                         "14":  14.0,
+                         "16":  16.0,
+                         "18":  18.0,
+                         "20":  20.0,
+                         "22":  22.0,
+                         "24":  24.0,
+                         "26":  26.0,
+                         "28":  28.0,
+                         "30":  30.0,
+                         "32":  32.0,
+                         "34":  34.0,
+                         "36":  36.0,
+                         "38":  38.0,
+                         "40":  40.0,
+                         "42":  42.0,
+                         "44":  44.0,
+                         "46":  46.0,
+                         "48":  48.0
+                     },
+    "od_lookup_mm":  {
+                         "1/2":  21.3,
+                         "3/4":  26.7,
+                         "1":  33.4,
+                         "1-1/2":  48.3,
+                         "2":  60.3,
+                         "3":  88.9,
+                         "4":  114.3,
+                         "6":  168.3,
+                         "8":  219.1,
+                         "10":  273.1,
+                         "12":  323.8,
+                         "14":  355.6,
+                         "16":  406.4,
+                         "18":  457,
+                         "20":  508,
+                         "22":  559,
+                         "24":  610,
+                         "26":  660,
+                         "28":  711,
+                         "30":  762,
+                         "32":  813,
+                         "34":  864,
+                         "36":  914,
+                         "38":  965,
+                         "40":  1016,
+                         "42":  1067,
+                         "44":  1118,
+                         "46":  1168,
+                         "48":  1219
+                     },
+    "dn_lookup":  {
+                      "15":  "1/2",
+                      "20":  "3/4",
+                      "25":  "1",
+                      "40":  "1-1/2",
+                      "50":  "2",
+                      "80":  "3",
+                      "100":  "4",
+                      "150":  "6",
+                      "200":  "8",
+                      "250":  "10",
+                      "300":  "12",
+                      "350":  "14",
+                      "400":  "16",
+                      "450":  "18",
+                      "500":  "20",
+                      "550":  "22",
+                      "600":  "24",
+                      "650":  "26",
+                      "700":  "28",
+                      "750":  "30",
+                      "800":  "32",
+                      "850":  "34",
+                      "900":  "36",
+                      "950":  "38",
+                      "1000":  "40",
+                      "1050":  "42",
+                      "1100":  "44",
+                      "1150":  "46",
+                      "1200":  "48"
+                  },
+    "alias_lookup":  {
+                         "1":  "1",
+                         "1\"":  "1",
+                         "DN 25":  "1",
+                         "DN25":  "1",
+                         "NPS 1":  "1",
+                         "NPS1":  "1",
+                         "1 1/2":  "1-1/2",
+                         "1-1/2":  "1-1/2",
+                         "1-1/2\"":  "1-1/2",
+                         "1.5":  "1-1/2",
+                         "1.5\"":  "1-1/2",
+                         "1½":  "1-1/2",
+                         "DN 40":  "1-1/2",
+                         "DN40":  "1-1/2",
+                         "NPS 1 1/2":  "1-1/2",
+                         "NPS 1-1/2":  "1-1/2",
+                         "NPS 1½":  "1-1/2",
+                         "NPS1 1/2":  "1-1/2",
+                         "NPS1-1/2":  "1-1/2",
+                         "NPS1½":  "1-1/2",
+                         "0.5":  "1/2",
+                         "0.5\"":  "1/2",
+                         "1/2":  "1/2",
+                         "1/2\"":  "1/2",
+                         "DN 15":  "1/2",
+                         "DN15":  "1/2",
+                         "NPS 0.5":  "1/2",
+                         "NPS 1/2":  "1/2",
+                         "NPS1/2":  "1/2",
+                         "10":  "10",
+                         "10\"":  "10",
+                         "DN 250":  "10",
+                         "DN250":  "10",
+                         "NPS 10":  "10",
+                         "NPS10":  "10",
+                         "12":  "12",
+                         "12\"":  "12",
+                         "DN 300":  "12",
+                         "DN300":  "12",
+                         "NPS 12":  "12",
+                         "NPS12":  "12",
+                         "14":  "14",
+                         "14\"":  "14",
+                         "DN 350":  "14",
+                         "DN350":  "14",
+                         "NPS 14":  "14",
+                         "NPS14":  "14",
+                         "16":  "16",
+                         "16\"":  "16",
+                         "DN 400":  "16",
+                         "DN400":  "16",
+                         "NPS 16":  "16",
+                         "NPS16":  "16",
+                         "18":  "18",
+                         "18\"":  "18",
+                         "DN 450":  "18",
+                         "DN450":  "18",
+                         "NPS 18":  "18",
+                         "NPS18":  "18",
+                         "2":  "2",
+                         "2\"":  "2",
+                         "DN 50":  "2",
+                         "DN50":  "2",
+                         "NPS 2":  "2",
+                         "NPS2":  "2",
+                         "20":  "20",
+                         "20\"":  "20",
+                         "DN 500":  "20",
+                         "DN500":  "20",
+                         "NPS 20":  "20",
+                         "NPS20":  "20",
+                         "22":  "22",
+                         "22\"":  "22",
+                         "DN 550":  "22",
+                         "DN550":  "22",
+                         "NPS 22":  "22",
+                         "NPS22":  "22",
+                         "24":  "24",
+                         "24\"":  "24",
+                         "DN 600":  "24",
+                         "DN600":  "24",
+                         "NPS 24":  "24",
+                         "NPS24":  "24",
+                         "26":  "26",
+                         "26\"":  "26",
+                         "DN 650":  "26",
+                         "DN650":  "26",
+                         "NPS 26":  "26",
+                         "NPS26":  "26",
+                         "28":  "28",
+                         "28\"":  "28",
+                         "DN 700":  "28",
+                         "DN700":  "28",
+                         "NPS 28":  "28",
+                         "NPS28":  "28",
+                         "3":  "3",
+                         "3\"":  "3",
+                         "DN 80":  "3",
+                         "DN80":  "3",
+                         "NPS 3":  "3",
+                         "NPS3":  "3",
+                         "0.75":  "3/4",
+                         "0.75\"":  "3/4",
+                         "3/4":  "3/4",
+                         "3/4\"":  "3/4",
+                         "DN 20":  "3/4",
+                         "DN20":  "3/4",
+                         "NPS 0.75":  "3/4",
+                         "NPS 3/4":  "3/4",
+                         "NPS3/4":  "3/4",
+                         "30":  "30",
+                         "30\"":  "30",
+                         "DN 750":  "30",
+                         "DN750":  "30",
+                         "NPS 30":  "30",
+                         "NPS30":  "30",
+                         "32":  "32",
+                         "32\"":  "32",
+                         "DN 800":  "32",
+                         "DN800":  "32",
+                         "NPS 32":  "32",
+                         "NPS32":  "32",
+                         "34":  "34",
+                         "34\"":  "34",
+                         "DN 850":  "34",
+                         "DN850":  "34",
+                         "NPS 34":  "34",
+                         "NPS34":  "34",
+                         "36":  "36",
+                         "36\"":  "36",
+                         "DN 900":  "36",
+                         "DN900":  "36",
+                         "NPS 36":  "36",
+                         "NPS36":  "36",
+                         "38":  "38",
+                         "38\"":  "38",
+                         "DN 950":  "38",
+                         "DN950":  "38",
+                         "NPS 38":  "38",
+                         "NPS38":  "38",
+                         "4":  "4",
+                         "4\"":  "4",
+                         "DN 100":  "4",
+                         "DN100":  "4",
+                         "NPS 4":  "4",
+                         "NPS4":  "4",
+                         "40":  "40",
+                         "40\"":  "40",
+                         "DN 1000":  "40",
+                         "DN1000":  "40",
+                         "NPS 40":  "40",
+                         "NPS40":  "40",
+                         "42":  "42",
+                         "42\"":  "42",
+                         "DN 1050":  "42",
+                         "DN1050":  "42",
+                         "NPS 42":  "42",
+                         "NPS42":  "42",
+                         "44":  "44",
+                         "44\"":  "44",
+                         "DN 1100":  "44",
+                         "DN1100":  "44",
+                         "NPS 44":  "44",
+                         "NPS44":  "44",
+                         "46":  "46",
+                         "46\"":  "46",
+                         "DN 1150":  "46",
+                         "DN1150":  "46",
+                         "NPS 46":  "46",
+                         "NPS46":  "46",
+                         "48":  "48",
+                         "48\"":  "48",
+                         "DN 1200":  "48",
+                         "DN1200":  "48",
+                         "NPS 48":  "48",
+                         "NPS48":  "48",
+                         "6":  "6",
+                         "6\"":  "6",
+                         "DN 150":  "6",
+                         "DN150":  "6",
+                         "NPS 6":  "6",
+                         "NPS6":  "6",
+                         "8":  "8",
+                         "8\"":  "8",
+                         "DN 200":  "8",
+                         "DN200":  "8",
+                         "NPS 8":  "8",
+                         "NPS8":  "8"
+                     },
+    "validation_summary":  {
+                               "requested_nps_count":  30,
+                               "available_nps_count":  19,
+                               "not_tabulated_for_requested_nps":  [
+                                                                       "26",
+                                                                       "28",
+                                                                       "32",
+                                                                       "34",
+                                                                       "36",
+                                                                       "38",
+                                                                       "40",
+                                                                       "42",
+                                                                       "44",
+                                                                       "46",
+                                                                       "48"
+                                                                   ],
+                               "full_schedule_option_count":  72,
+                               "direct_schedule_lookup_count":  72,
+                               "unavailable_schedule_rows_count":  4,
+                               "unavailable_schedule_rows":  [
+                                                                 {
+                                                                     "source_standard":  "ASME_B36_19M_2004",
+                                                                     "standard_display":  "ASME B36.19M-2004",
+                                                                     "material_scope":  "Stainless steel pipe",
+                                                                     "nps":  "22",
+                                                                     "dn":  550,
+                                                                     "od_in":  22.0,
+                                                                     "od_mm":  559.0,
+                                                                     "schedule":  "40S",
+                                                                     "wall_in":  null,
+                                                                     "wall_mm":  null,
+                                                                     "plain_end_weight_lb_ft":  null,
+                                                                     "plain_end_mass_kg_m":  null,
+                                                                     "designation":  null,
+                                                                     "is_tabulated":  false,
+                                                                     "notes":  [
+                                                                                   "not_tabulated"
+                                                                               ],
+                                                                     "source_pdf_page":  12
+                                                                 },
+                                                                 {
+                                                                     "source_standard":  "ASME_B36_19M_2004",
+                                                                     "standard_display":  "ASME B36.19M-2004",
+                                                                     "material_scope":  "Stainless steel pipe",
+                                                                     "nps":  "22",
+                                                                     "dn":  550,
+                                                                     "od_in":  22.0,
+                                                                     "od_mm":  559.0,
+                                                                     "schedule":  "80S",
+                                                                     "wall_in":  null,
+                                                                     "wall_mm":  null,
+                                                                     "plain_end_weight_lb_ft":  null,
+                                                                     "plain_end_mass_kg_m":  null,
+                                                                     "designation":  null,
+                                                                     "is_tabulated":  false,
+                                                                     "notes":  [
+                                                                                   "not_tabulated"
+                                                                               ],
+                                                                     "source_pdf_page":  12
+                                                                 },
+                                                                 {
+                                                                     "source_standard":  "ASME_B36_19M_2004",
+                                                                     "standard_display":  "ASME B36.19M-2004",
+                                                                     "material_scope":  "Stainless steel pipe",
+                                                                     "nps":  "30",
+                                                                     "dn":  750,
+                                                                     "od_in":  30.0,
+                                                                     "od_mm":  762.0,
+                                                                     "schedule":  "40S",
+                                                                     "wall_in":  null,
+                                                                     "wall_mm":  null,
+                                                                     "plain_end_weight_lb_ft":  null,
+                                                                     "plain_end_mass_kg_m":  null,
+                                                                     "designation":  null,
+                                                                     "is_tabulated":  false,
+                                                                     "notes":  [
+                                                                                   "not_tabulated"
+                                                                               ],
+                                                                     "source_pdf_page":  12
+                                                                 },
+                                                                 {
+                                                                     "source_standard":  "ASME_B36_19M_2004",
+                                                                     "standard_display":  "ASME B36.19M-2004",
+                                                                     "material_scope":  "Stainless steel pipe",
+                                                                     "nps":  "30",
+                                                                     "dn":  750,
+                                                                     "od_in":  30.0,
+                                                                     "od_mm":  762.0,
+                                                                     "schedule":  "80S",
+                                                                     "wall_in":  null,
+                                                                     "wall_mm":  null,
+                                                                     "plain_end_weight_lb_ft":  null,
+                                                                     "plain_end_mass_kg_m":  null,
+                                                                     "designation":  null,
+                                                                     "is_tabulated":  false,
+                                                                     "notes":  [
+                                                                                   "not_tabulated"
+                                                                               ],
+                                                                     "source_pdf_page":  12
+                                                                 }
+                                                             ]
+                           }
+};
